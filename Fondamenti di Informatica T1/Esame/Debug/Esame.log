@@ -1,0 +1,13 @@
+﻿  time.c
+  sort.c
+  OGGETTO_ARRAY.c
+  main.c
+  list.c
+  file.c
+  element.c
+  date.c
+  array.c
+  Generazione del codice in corso...
+c:\users\urbin\desktop\fondamenti di informatica t1\esame\element.c(133): warning C4700: utilizzata variabile locale 'e' non inizializzata
+  Esame.vcxproj -> C:\Users\urbin\Desktop\Fondamenti di Informatica T1\Esame\Debug\Esame.exe
+  Esame.vcxproj -> C:\Users\urbin\Desktop\Fondamenti di Informatica T1\Esame\Debug\Esame.pdb (Partial PDB)

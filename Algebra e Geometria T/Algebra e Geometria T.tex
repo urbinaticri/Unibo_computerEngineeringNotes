@@ -1,0 +1,1726 @@
+%% LyX 2.2.3 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{geometry}
+\geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=1cm,rmargin=1cm,footskip=1cm}
+\pagestyle{empty}
+\setlength{\parindent}{0cm}
+\usepackage{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{stackrel}
+\usepackage{graphicx}
+\usepackage{wasysym}
+\usepackage[unicode=true]
+ {hyperref}
+\usepackage{breakurl}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% A simple dot to overcome graphicx limitations
+\newcommand{\lyxdot}{.}
+
+
+\makeatother
+
+\begin{document}
+
+\title{Algebra e Geometria T}
+
+\author{Urbinati Cristian}
+
+\date{10/01/2018}
+\maketitle
+\begin{center}
+\href{mailto:cristian.urbinati@studio.unibo.it}{e-mail: cristian.urbinati@studio.unibo.it}
+\par\end{center}
+
+\begin{center}
+\href{https://github.com/urbinaticri/Unibo_computerEngineeringNotes}{Altro per Ingegneria Informatica}
+\par\end{center}
+
+\begin{center}
+Materiale distribuito con licenza \href{https://creativecommons.org/licenses/by-nc-sa/2.0/it/}{Creative Commons}
+\par\end{center}
+
+\begin{center}
+Attribuzione - Non commerciale - Condividi allo stesso modo 2.0 Italia
+(CC BY-NC-SA 2.0 IT)
+\par\end{center}
+
+\begin{center}
+\includegraphics[scale=0.05]{Cc-by-nc-sa_icon\lyxdot svg}
+\par\end{center}
+
+\section{Introduzione}
+
+\textbf{Definizione (Struttura algebrica)}
+
+Definiamo struttura algebrica la struttura composta da un insieme
+e $k$ operazioni interne (con $k\in\mathbb{N}$)
+
+Es: $(\mathbb{Z},+,\cdot)$
+
+\textbf{Proprietà:}
+
+Supponiamo di avere la struttura algebrica $(A,\clubsuit,\spadesuit)$
+
+\textbf{Proprietà associativa }Se $(a_{1}\clubsuit a_{2})\clubsuit a_{3}=a_{1}\clubsuit(a_{2}\clubsuit a_{3})$
+
+\textbf{Proprietà commutativa }Se $a_{1}\clubsuit a_{2}=a_{2}\clubsuit a_{1}$
+
+\textbf{Properietà distributiva }Se $a_{1}\clubsuit(a_{2}\spadesuit a_{3})=(a_{1}\clubsuit a_{2})\spadesuit(a_{1}\clubsuit a_{3})$
+
+$\,$
+
+\textbf{Definizione (Elemento neutro)}
+
+Sia $(A,\clubsuit)$ una struttura algebrica, se $(a\clubsuit u)=(u\clubsuit a)=a\:\forall a\in A,\:u\in A$
+allora $u$ è un elemento neutro (unità).
+
+\textbf{Definizine (Inverso di un elemento)}
+
+Sia $(A,\clubsuit)$ una struttura algebrica, se $\exists u\in A$
+elemento neutro allora $a'$è inverso di $a$ se $(a\clubsuit a')=(a'\clubsuit a)=u$.
+
+$\,$
+
+\textbf{Definizione (Gruppo)}
+
+Sia $(A,\clubsuit)$ una struttura algebrica, diremo che essa è gruppo
+se:
+
+- $\clubsuit$è associativa
+
+- $\exists!u\in A$ elemento neutro
+
+- $\forall a\in A\:\exists!a'$ elemento inverso
+
+\textbf{Definizione (Anello)}
+
+Sia $(A,\clubsuit,\spadesuit)$ una struttura algebrica binaria (2
+operazioni), diremo che essa è anello se:
+
+- $(A,\clubsuit)$ è un gruppo commutativo (abeliano)
+
+- $\spadesuit$è associativa
+
+- $\spadesuit$è distributiva rispetto a $\clubsuit$
+
+\textbf{Definizione (Campo)}
+
+Sia $(A,\clubsuit,\spadesuit)$ una struttura algebrica binaria, diremo
+che essa è un campo se:
+
+- $(A,\clubsuit,\spadesuit)$ è un anello commutativo con unità
+
+- $\exists a\in A\neq0_{A}$ ($0_{A}$elemento nullo di A)
+
+- $\forall a\in A\neq0_{A}\:\exists a'$elemento inverso
+
+\textbf{Osservazione}
+
+$(\mathbb{Z},+,\cdot)$ non è un campo. Al contrario, $(\mathbb{Q},+,\cdot)$
+, $(\mathbb{\mathbb{R}},+,\cdot)$ , $(\mathbb{\mathbb{\mathbb{C}}},+,\cdot)$
+lo sono.
+
+$(\mathbb{Z}_{n},+,\cdot)$ è un campo se e solo se $n$ è primo.
+
+\pagebreak{}
+
+\section{Spazi vettoriali}
+
+\textbf{Definizione (Spazio Vettoriale)}
+
+Si dice spazio vettoriale la quaterna campo, insieme, operazione interna
+e operazione non interna (che coinvolge insieme e campo) se per $(K,V,\clubsuit,\spadesuit)$
+valgono le proprietà:
+
+-$(V,\clubsuit)$è un gruppo commutativo (abeliano)
+
+-$\alpha(v+w)=\alpha v+\alpha w\;\forall\alpha\in K,\,\forall v,w\in V$
+
+-$(\alpha+\beta)v=\alpha v+\beta v\;\forall\alpha,\beta\in K,\,\forall v\in V$
+
+-$\alpha(\beta v)=(\alpha v)\beta\;\forall\alpha,\beta\in K,\,\forall v\in V$
+
+-$1v=v\;\forall v\in V$
+
+\textbf{Dimostrazione $0v=0_{v}\;\forall v\in V$}
+
+$(1+0)v=v+0_{v}=v\Rightarrow0v=0_{v}$
+
+$\,$
+
+\textbf{Definizione (Omomorfismo tra spazi vettoriali)}
+
+Siano $V$ e $W$ due spazi vettoriali sullo stesso campo $K$
+
+Sia $f\,:\,V\rightarrow W$ una funzione tale che:
+
+-$f(v_{1}+v_{2})=f(v_{1})+f(v_{2})\;\forall v_{1},v_{2}\in V$
+
+-$f(\alpha v)=\alpha f(v)\;\forall\alpha\in K,\,\forall v\in V$
+
+allora diremo che esiste un \textbf{omomorfismo} tra i due spazi vettoriali 
+
+Allo stesso modo diremo che esiste:
+
+un \textbf{endomorfismo} se $f\,:\,V\rightarrow V$
+
+un \textbf{isomorfismo} se $f\,:\,V\stackrel[su]{1-1}{\rightarrow}W$
+
+un \textbf{automorfismo} se $f\,:\,V\stackrel[su]{1-1}{\rightarrow}V$
+
+$\,$
+
+\textbf{Definizione (Combinazione lineare)}
+
+Sia $V$ uno spazio vettoriale, siano $v_{1,}\ldots,v_{k}\in V$,
+siano $\alpha_{1},\ldots,\alpha_{k}\in K$
+
+Chiameremo combinazione lineare di $v_{1},\ldots,v_{k}$ ogni espressione
+$\alpha_{1}v_{1}+\ldots+\alpha_{k}v_{k}$
+
+$\,$
+
+\textbf{Definizione (Sistema di generatori)}
+
+Un sottoinsieme $G\subseteq V$ si dice sistema di generatori per
+$V$ se ogni vettore $v\in V$ può essere scritto come combinazione
+lineare di vettori di $G$.
+
+$\,$
+
+\textbf{Definizione (Insieme linearmente indipendente)}
+
+Preso un insieme di vettori $V=\left\{ v_{1},\ldots,v_{k}\right\} $
+esso si dice linearmente indipendente se nessuno dei vettori si può
+scrivere come combinazione lineare dei rimanenti vettori. Allo stesso
+modo si deve avere che $\alpha_{1}v_{1}+\ldots+\alpha_{k}v_{k}=0_{v}\Longrightarrow\alpha_{1}=\ldots=\alpha_{k}=0$.
+
+$\,$
+
+\textbf{Definizione (Base di uno spazio vettoriale)}
+
+Chiamiamo base di uno spazio vettoriale $V$ un sistema di generatori
+per $V$ linearmente indipendente.
+
+\textbf{Osservazione} Se $V$ ha una base, allora ne ha infinite (
+a meno che non sia lo spazio $(K_{p},\mathbb{\mathbb{Z}}_{n},\clubsuit,\spadesuit)$
+con p numero primo )
+
+\textbf{Osservazione} Nessuna base può contenere il vettore nullo
+
+\textbf{Osservazione} L'unica base per $(K,\left\{ 0_{v}\right\} ,\clubsuit,\spadesuit)$
+è l'insieme vuoto
+
+$\,$
+
+\textbf{Definizione (Dimensione di uno spazio vettoriale)}
+
+Si dice dimensione di uno spazio vettoriale la cardinalità di una
+sua qualunque base.
+
+\textbf{Teorema:}
+
+Ogni spazio vettoriale finitamente generato ammette almeno una base
+
+\textbf{Dimostrazione:}
+
+Prendiamo un insieme finito di generatori $\left\{ v_{1},\ldots,v_{k}\right\} $.
+Se $\left\{ v_{1},\ldots,v_{k}\right\} $è linearmente indipendente
+abbiamo la base cercata. Se non lo è esisterà un vettore $v_{i}$
+che si può scrivere come combinazione lineare dei vettori rimanenti.
+Togliamo $v_{i}$ dall'insieme e ripetiamo il procedimento fino a
+trovare una base.
+
+$\,$
+
+\textbf{Definizione (Sottospazio vettoriale)}
+
+Un sottoinsieme $W\subset V$ che è chiuso rispetto alle operazioni
+dello spazio vettoriale $(K,V,\clubsuit,\spadesuit)$ è detto sottospazio
+vettoriale di $V$. E si ha che:
+
+-$0_{v}\in W$
+
+-$(\alpha\spadesuit v_{1})\:\clubsuit\:(\beta\spadesuit v_{2})\in W\;\forall\alpha,\beta\in K,\:\forall v_{1},v_{2}\in W$
+
+$\,$
+
+\textbf{Definizione (Base ordinata)}
+
+Chiamiamo $\left(v_{1},\ldots,v_{n}\right)$ una base ordinata per
+$V$.
+
+\textbf{Teorema:}
+
+Sia $\left(v_{1},\ldots,v_{n}\right)$ una base ordinata per $V$,
+allora $\forall v\in V\;\exists!$ n-upla $\left(\alpha_{1},\ldots,\alpha_{n}\right)\in K\::\:v=\alpha_{1}v_{1}+\ldots+\alpha_{n}v_{n}$
+
+\textbf{Dimostrazione:}
+
+-L'esistenza è banale visto che $\left(v_{1},\ldots,v_{n}\right)$
+essendo una base è un sistema di generatori
+
+-L'unicità si dimostra per assurdo: supponiamo che $v=\alpha_{1}v_{1}+\ldots+\alpha_{n}v_{n}=\beta_{1}v_{1}+\ldots+\beta_{n}v_{n}$
+con $\left(\alpha_{1},\ldots,\alpha_{n}\right)\neq\left(\beta_{1},\ldots,\beta_{n}\right)$,
+allora $(\alpha_{1}-\beta_{1})v_{1}+\ldots+(\alpha_{n}-\beta_{n})v_{n}=0_{v}$
+il che è assurdo.
+
+$\,$
+
+\textbf{Definizione (Coordinate del vettore)}
+
+Si dicono coordinate del vettore $v$ rispetto alla base ordinata
+$\left(v_{1}\ldots v_{n}\right)$ i coefficenti ordinati $\left(\alpha_{1}\ldots\alpha_{n}\right)$
+per ottenere $v$ mediante la base.
+
+$\,$
+
+\textbf{Teorema:}
+
+Ogni base di $\mathbb{R}^{n}$ ha cardinalità $n$.
+
+$\,$
+
+\textbf{Teorema:}
+
+Sia $\left(v_{1},\ldots,v_{n}\right)$ una base per $V$. La funzione
+$f\::\:V\rightarrow\mathbb{R}^{n}$è un isomorfismo di spazi vettoriali.
+
+$\,$
+
+\textbf{Teorema:}
+
+Gli isomorfismi conservano la proprietà di essere sistema di generatori
+e la proprietà di essere un insieme linearmente indipendente.
+
+$\,$
+
+\textbf{Teorema:}
+
+Due spazi vettoriali finitamente generati hanno la stessa dimensione
+se e solo se sono isomorfi.
+
+$\,$
+
+\textbf{Teorema (Intersezione tra sottospazi vettoriali):}
+
+Siano $U,W$ due sottospazi vettoriali di $V$, allora $U\cap W$è
+un sottospazio vettoriale di $V$.
+
+\textbf{Dimostrazione:} Siano $v_{1},v_{2}\in U\cap W$. Allora visto
+che $U$ e $W$ sono spazi vettoriali, $v_{1}+v_{2}\in U$ e $v_{1}+v_{2}\in W$.
+Quindi $v_{1}+v_{2}\in U\cap W$. Inoltre $\forall\alpha\in\mathbb{R}$,
+$v\in U$ e $v\in W$ si ha che $\alpha\cdot v\in U$ e $\alpha\cdot v\in W$.
+Quindi anche $\alpha\cdot v\in U\cap W$.
+
+$\,$
+
+\textbf{Definizione (Spazio somma):}
+
+Siano $V_{1},V_{2}$ due sottospazi vettoriali di $V$, chiamiamo
+spazio somma il più piccolo sottospazio vettoriale di $V$ contenente
+$V_{1}$ e $V_{2}$ e scriveremo $V_{1}+V_{2}=\left\{ v_{1}+v_{2}:\:v_{1}\in V_{1},v_{2}\in V_{2}\right\} $
+.
+
+Se $V_{1}\cap V_{2}=\left\{ 0_{v}\right\} $ allora la somma viene
+detta \textbf{somma diretta} e la indicheremo con $V_{1}\oplus V_{2}$.
+
+$\,$
+
+\textbf{Definizione (Chiusura lineare)}
+
+Siano $v_{1},v_{2},...,v_{s}\in V$ vettori. Si dice chiusura lineare
+di $v_{1},...,v_{s}$ l'insieme di tutte le combinazioni lineari di
+$v_{1},...,v_{s}$ e si scrive $<v_{1},\ldots,v_{s}>$.
+
+\textbf{Osservazione} La chiusura lineare di $v_{1},...,v_{s}$ è
+sempre un sottospazio di $V$
+
+\textbf{Proposizione} La chiusura lineare è anche il più piccolo sottospazio
+vettoriale di $V$ contenente $v_{1},...,v_{s}$.
+
+$\,$
+
+\textbf{Proposizione }Intersezione e somma tra sottospazi vettoriali
+generano a loro volta un sottospazio. L'unione tra sottospazi, in
+generale, no.
+
+\pagebreak{}
+
+\textbf{Teorema (Relazione di Grassman)}
+
+Siano $V_{1}$ e $V_{2}$ spazi vettoriali finitamente generati. Allora
+$\text{dim}(V_{1}+V_{2})=\text{dim}V_{1}+\text{dim}V_{2}-\text{dim}V_{1}\cap V_{2}$
+
+\textbf{Dimostrazione:} Prendiamo una base $S=\{v_{1},...,v_{s}\}$
+di $V_{1}\cap V_{2}$. Completiamo $S$ a una base $B_{V_{1}}$ di
+$V_{1}$ e a una base $B_{V_{2}}$ di $V_{2}$.
+
+$B_{V_{1}}=\{v_{1},...,v_{s},w_{s+1},...,w_{s+r}\}$
+
+$B_{V_{2}}=\{v_{1},...,v_{s},w'_{s+1},...,w'_{s+t}\}$
+
+Dobbiamo ora dimostrare che $S=\{v_{1},...,v_{s},w_{s+1},...,w_{s+r},w'_{s+1},...,w'_{s+t}\}$
+è una base per $V_{1}+V_{2}$.
+
+Osserviamo prima di tutto che $S=\{v_{1},...,v_{s},w_{s+1},...,w_{s+r},w'_{s+1},...,w'_{s+t}\}$
+è un sistema di generatori per $V_{1}+V_{2}$. Infatti, qualunque
+combinazione lineare di questi vettori ci dà un vettore di $V_{1}+V_{2}$.
+
+Dimostriamo che i vettori di $S$ sono linearmente indipendenti. Consideriamo
+la seguente uguaglianza:
+
+$a_{1}v_{1}+...+a_{s}v_{s}+b_{s+1}w_{s+1}+...+b_{s+r}w_{s+r}+c_{s+1}w'_{s+1}+...+c_{s+t}w'_{s+t}=0_{V}$.
+
+Ricaviamo:
+
+$a_{1}v_{1}+...+a_{s}v_{s}+b_{s+1}w_{s+1}+...+b_{s+r}w_{s+r}=-c_{s+1}w'_{s+1}-...-c_{s+t}w'_{s+t}$
+
+Sappiamo che il vettore a sinistra appartiene a $V_{1}$, mentre quello
+a destra appartiene a $V_{2}$. Quindi entrambi appartengono a $V_{1}\cap V_{2}$.
+
+Inoltre, si ha necessariemente che $c_{s+1}=...=c_{s+t}=0$, altrimenti
+il vettore a destra potrebbe essere scritto come combinazione lineare
+dei vettori $v_{1},...,v_{s}$; ciò però non può accadere perché i
+vettori $w'_{s+1},...,w'_{s+t}$ e $v_{1},...,v_{s}$ sono linearmente
+indipendenti dato che formano una base per $V_{2}$.
+
+Analogamente si può dimostrare che necessariamente $b_{s+1}=...=b_{s+r}=0$.
+
+Si ottiene quindi l'equazione $a_{1}v_{1}+...+a_{s}v_{s}=0_{V}$.
+
+Quindi anche $a_{1}=...=a_{s}=0$.
+
+Perciò $dim(S)=s$ è la cardinalità di $V_{1}\cap V_{2}$ e: 
+
+$\text{dim}(V_{1})=s+r$ 
+
+$\text{dim}(V_{2})=s+t$ 
+
+$\text{dim(}V_{1}+V_{2})=s+r+t$ 
+
+$\,$
+
+\textbf{Osservazione} $\text{dim}V_{1}\oplus V_{2}=r+t$ 
+
+\pagebreak{}
+
+\section{Matrici}
+
+\textbf{Definizione (Matrice)}
+
+Definiamo matrice una funzione $f\::\:\left\{ 1,\ldots,m\right\} \times\left\{ 1,\ldots,n\right\} \rightarrow K$.
+Scriveremo $M_{m\times n}(K)$ è insieme delle matrici $m\times n$
+($m$ righe e $n$ colonne) a coefficienti nel campo $K$.
+
+\textbf{$\,$}
+
+\textbf{Definizione} Siano $A,B\in M_{m\times n}(K)$, $A=(a_{i\,j})$,
+$B=(b_{i\,j})$ e $\lambda\in K$. Si definiscono
+
+-$A+B=(a_{i\,j}+b_{i\,j})$ 
+
+-$\lambda A=(\lambda a_{i\,j})$ 
+
+\textbf{$\,$}
+
+\textbf{Definizione (Operazioni riga su matrice)}
+
+1)Scambiare due righe
+
+2)Moliplicare una riga per $\lambda\in K$ non nullo
+
+3)Aggiungere ad una riga il multiplo di un'altra
+
+\textbf{$\,$}
+
+\textbf{Teorema}
+
+Un numero finito di operazioni riga applicate ad una matrice generano
+una matrice equivalente a quella di partenza tale che:
+
+-Le righe della matrice di partenza hanno la stessa chiusura lineare
+delle righe della matrice di arrivo
+
+-Le righe della matrice di partenza sono linearmente indipendenti
+se e solo se lo sono quelle della matrice di arrivo
+
+\textbf{$\,$}
+
+\textbf{Definizione (Pivot)}
+
+Chiamiamo pivot di riga di una matrice il primo elemento non nullo
+della riga.
+
+\textbf{$\,$}
+
+\textbf{Definizione (Matrice a gradini / Ridotta per righe)}
+
+Una matrice si dice a gradini se le righe nulle eventualmente presenti
+sono in fondo alla matriche e, in quelle non nulle, i pivot si spostano
+sempre più a destra con l'incrementare dell'indice di riga.
+
+Se inoltre abbiamo che i pivot sono tutti uguali a 1 e sopra i pivot
+troviamo tutti zeri, la matrice si dice \textbf{completamente ridotta}.
+
+\textbf{$\,$}
+
+\textbf{Definizione (Prodotto fra matrici)}
+
+Siano $A\in M_{m\times p}(K)$ e $B\in M_{p\times n}(K)$ allora il
+prodotto tra matrici può essere fatto e genera una matrice $C\in M_{m\times n}(K)$
+tale che $c_{i\,j}=\stackrel[r=1]{p}{\sum}a_{i\,r}\cdot b_{r\,j}$
+
+\textbf{$\,$}
+
+\textbf{Proposizione} $(M_{m\times n}(K),+)$ è un gruppo commutativo.
+
+\textbf{Proposizione} $(M_{m\times n}(K),+,\cdot)$ è un anello con
+unità (non commutativo).
+
+\textbf{$\,$}
+
+\textbf{Proprietà}
+
+-$\alpha(A+B)=\alpha A+\alpha B\;\forall\alpha\in K,\;\forall A,B\in M_{m\times n}(K)$ 
+
+-$(\alpha+\beta)A=\alpha A+\beta A\;\forall\alpha,\beta\in K,\;\forall A\in M_{m\times n}(K)$ 
+
+-$(\alpha\beta)A=\alpha(\beta A)\;\forall\alpha,\beta\in K,\;\forall A\in M_{m\times n}(K)$ 
+
+-$1A=A$ 
+
+\textbf{Proprietà}
+
+-$(A+B)C=AC+BC\;\forall A,B,C\in M_{m\times n}(K)$ , $A(B+C)=AB+AC\;\forall A,B,C\in M_{m\times n}(K)$
+
+-$(AB)C=A(BC)\;\forall A,B,C\in M_{m\times n}(K)$
+
+-$\alpha(AB)=(\alpha A)B=A(\alpha B)\;\forall\alpha\in K,\;\forall A,B\in M_{m\times n}(K)$
+
+-$A0=0_{A}$ , $B0=0_{B}\;\forall A,B\in M_{m\times n}(K)$
+
+-$AB$$\neq BA$ in generale $\forall A,B\in M_{m\times n}(K)$
+
+\textbf{Proprietà}
+
+-$(A+B)^{2}=A^{2}+AB+BA+B^{2}$
+
+-$(A+B)(A-B)=A^{2}-AB+BA-B^{2}$
+
+-$A^{n}=A\cdots A$ con $n>1$
+
+-$A^{1}=A$
+
+-$A^{0}=I$ se $A\neq0$
+
+\pagebreak{}
+
+\textbf{Definizione (Matrice quadrata)}
+
+Si definiscono matrici quadrate le matrici appartenenti a $M_{n\times n}(K)$.
+
+\textbf{Definizione (Traccia di una matrice quadrata)}
+
+Sia $A\in M_{n\times n}(K)$, si dice traccia di $A$ la somma degli
+elementi sulla sua diagonale principale 
+
+\textbf{Definizione (Matrice triangolare)$\qquad$SOTTOSPAZIO VETTORIALE}
+
+-Si definiscono matrici triangolari alte le matrici quadrate tali
+che $\forall a_{i\,j}\neq0$ si ha che $j>i$
+
+-Si definiscono matrici triangolari basse le matrici quadrate tali
+che $\forall a_{i\,j}\neq0$ si ha che $j<i$
+
+\textbf{Definizione (Matrice diagonale)$\qquad$SOTTOSPAZIO VETTORIALE}
+
+Si definiscono matrici diagonali le matrici contemporaneamente triangolari
+alte e triangolari basse.
+
+\textbf{Definizione (Matrice trasposta)}
+
+Sia $A=(a_{i\,j})$ una matrice. Si definisce \textbf{matrice trasposta}
+la matrice $^{t}A=(b_{i\,j})$, dove $b_{i\,j}=a_{j\,i}$.
+
+\textbf{Proprietà }Siano $A\in M_{m\times p}(K)$ e $B\in M_{p\times n}(K)$
+allora $^{t}(AB)=^{t}B$$^{t}A$ e $^{t}(A+B)=^{t}A+^{t}B$
+
+\textbf{Definizione (Matrice simmetrica)$\qquad$SOTTOSPAZIO VETTORIALE}
+
+Si definiscono matrici\textbf{ }simmetriche le matrici tali che $A=^{t}A$.
+
+\textbf{Definizione (Matrice antisimmetrica)}
+
+Si definiscono matrici antisimmetriche le matrici tali che $A=-^{t}A$.
+
+\textbf{Definizione (Matrice identica)}
+
+Si definiscono marici identiche le matrici quadrate digonali che hanno
+sulla diagonale principale tutti 1.
+
+Sono generate dal delta di Kronecker ($\delta_{i\,j}=\begin{cases}
+1 & se\:i=j\\
+0 & se\:i\neq j
+\end{cases}$)
+
+\textbf{Osservazione }La matrice identica è l'elemento neutro rispetto
+al prodotto tra matrici quadrate.
+
+\textbf{Definizione (Matrice inversa)}
+
+Siano $A,B\in M_{n\times n}(K)$, diciamo che B è inversa di A (e
+viceversa) se $AB=BA=I_{n}$.
+
+Le matrici che ammettono inversa si dicono \textbf{invertibili / non
+singolari}.
+
+\textbf{Proposizione }Le potenze di una matrice invertibile sono ancora
+matrici invertibili
+
+\textbf{Teorema} Se una matrice è un divisore dello 0 (cioè moltiplicata
+per un'altra matrice restituisce la matrice nulla) allora non è invertibile.
+
+\textbf{Teorema }Sia $A\in M_{n\times n}(K)$, $A$ ammette inversa
+se il suo determinante è diverso da 0 
+
+\textbf{Teorema }Siano $A,B\in M_{n\times n}(K)$ due matrici invertibili,
+allora anche $AB$ è invertibile e $(AB)^{-1}=B^{-1}A^{-1}$.
+
+\textbf{Definizione (Matrice ortogonale)}
+
+Si definiscono matrici ortogonali le matrici invertibili la cui trasposta
+coincide con la loro inversa.
+
+\textbf{Osservazione }Il determinante di una matrice ortogonale è
+sempre pari a $1$ o a $-1$.
+
+\textbf{Dimostrazione }$det(I)=det(A\cdot^{t}A)$ poichè $A$ è una
+matrice ortogonale e dunque $^{t}A=A^{-1}$ e dunque $det(A)\cdot det(^{t}A)=[det(A)]^{2}\Longrightarrow det(A)=\pm1$
+
+\textbf{Definizione (Spazio delle righe)}
+
+Lo spazio delle righe di una matrice $m\times n$ è il sottospazio
+vettoriale di $\mathbb{R}^{n}$ generato dalle righe della matrice.
+
+\textbf{Definizione (Spazio delle colonne)}
+
+Lo spazio delle colonne di una matrice $m\times n$ è il sottospazio
+vettoriale di $\mathbb{R}^{m}$ generato dalle colonne della matrice.
+
+\textbf{Teorema} La dimensione dello spazio delle righe coincide con
+la dimensione dello spazio delle colonne e coincide con il rango della
+matrice
+
+\textbf{Definizione} \textbf{(Rango)}
+
+Si dice rango di una matrice $A\in M_{m\times n}(K)$:
+
+-Il numero di pivot di una sua qualsiasi forma ridotta
+
+-La dimensione dello spazio delle righe 
+
+-La dimensione dello spazzio delle colonne 
+
+\textbf{Proposizione} $\text{r}(A)=\text{r}(^{t}A)$
+
+\textbf{Definizione (Determinante matrice 2x2)}
+
+Sia $A\in M_{2\times2}(\mathbb{K})$ della forma $A=\begin{bmatrix}a & b\\
+c & d
+\end{bmatrix}$ allora $ad-bc$ si chiama determinante di una matrice $2\times2$
+e si indica con $\text{det(}A)$.
+
+\textbf{Osservazione} Sia $A\in M_{2\times2}(K)$ della forma $A=\begin{bmatrix}a & b\\
+c & d
+\end{bmatrix}$
+
+L'inversa di $A$ è: $A^{-1}=\frac{1}{\text{det}A}\begin{bmatrix}d & -b\\
+-c & a
+\end{bmatrix}=\begin{bmatrix}\frac{d}{\text{det}A} & \frac{-b}{\text{det}A}\\
+\frac{-c}{\text{det}A} & \frac{a}{\text{det}A}
+\end{bmatrix}$
+
+\pagebreak{}
+
+\section{Sistemi lineari}
+
+\textbf{Definizione (Sistema lineare)}
+
+Collezione di equazioni di primo grado.
+
+\textbf{Proposizione} Sia dato un sistema lineare di 2 equazioni in
+2 incognite $AX=B$. Se $\text{det}(A)=ad-bc\neq0$, allora l'unica
+soluzione del sistema è $X=A^{-1}B$
+
+$\,$
+
+\textbf{Definizione (Matrice completa)}
+
+Chiamiamo matrice completa del sistema lineare la matrice ottenuta
+accostando alla matrice incompleta $A$, il vettore dei termini noti
+
+$\,$
+
+$\,$
+
+\textbf{Metodo di risoluzione di Gauss}
+
+L'algoritmo di Gauss per la risoluzione dei sistemi lineari consiste
+nel ridurre completamente la matrice completa del sistema.
+
+$\,$
+
+\textbf{Osservazione} Se nella matrice completa completamente ridotta
+compare un pivot nell'ultima colonna, allora il sistema è irrisolubile.
+
+\textbf{Teorema} \textbf{(di Rouché-Capelli)} 
+
+Un sistema lineare $AX=B$ ammette soluzioni se e solo se $\text{r}(A)=\text{r}(A\mid B)$
+(matrice completa).
+
+$\,$
+
+\textbf{Teorema} \textbf{(Dimensione delle soluzioni di un sistema
+lineare)}
+
+Sia $AX=B$ un sistema lineare. Si dice dimensione delle soluzioni
+il numero di variabili libere del sistema ed è data da $n-\text{r}(A)$,
+dove $n$ è il numero di incognite.
+
+\textbf{Proposizione} Un sistema lineare può avere solo $0$ o $1$
+o $\infty^{n}$ soluzioni.
+
+$\,$
+
+\textbf{Definizione (Sistema lineare omogeneo)}
+
+Si dice sistema lineare omogeneo un sistema che ha tutti i termini
+noti pari a 0 e si può scrivere $AX=0$.
+
+\textbf{Proposizione }Le soluzioni di un sistema lineare omogeneo
+in n incognite costituiscono sempre un sottospazio vettoriale di $\mathbb{R}^{n}$.
+
+\section{Matrici e applicazioni lineari}
+
+\textbf{Definizione (Trasformazione Lineare)}
+
+\textbf{$f\::\:V\rightarrow W$ }si dice trasformazione lineare se
+$f\:(\alpha v_{1}+\beta v_{2})=\alpha f(v_{1})+\beta f$($v_{2})\:\forall v_{1},v_{2}\in V,\:\forall\alpha,\beta\in K$
+e inoltre $f(0_{v})=0_{w}$.
+
+\textbf{Proposizione} Sia $T\::\:V\rightarrow W$ una trasformazione
+lineare e siano $V,W$ spazi vettoriali di dimensioni finite $\text{dim}V=n$
+e $\text{dim}W=m$. Date due basi qualunque $B_{V}=\{v_{1},...,v_{n}\}$
+e $B_{W}=\{w_{1},...,w_{m}\}$ rispettivamente di $V$ e $W$, se
+$\forall j=1,...,n$ si ha $f(v_{j})=a_{i\,j}w_{1}+...+a_{m\,j}w_{m}$,
+allora la matrice associata a $T$ rispetto alle basi $B_{V}$ e $B_{W}$,
+$M_{B_{V}B_{W}}(T)=(a_{i\,j})\in M_{m\times n}(\mathbb{R})$ è tale
+che, $\forall v\in V$, il vettore $f(v)\in W$ ha coordinate rispetto
+a $B_{W}$
+
+\[
+\begin{bmatrix}y_{1}\\
+...\\
+y_{m}
+\end{bmatrix}=M_{B_{V}B_{W}}(T)\begin{bmatrix}x_{1}\\
+...\\
+x_{n}
+\end{bmatrix}
+\]
+
+dove $x_{1},...,x_{n}$ sono le coordinate di $v$ rispetto a $B_{V}$.
+
+$\,$
+
+\textbf{Definizione (Nucleo / Kernel)}
+
+Definiamo nucleo di una trasformazione lineare \textbf{$f\::\:V\rightarrow W$}
+l'insieme dei vettori di $V$ che vengono portati mediante $f$ in
+$0_{w}$. $ker(f)=\left\{ v\in V\right\} \::\:f(v)=0_{w}$
+
+\textbf{Definizione (Immagine)}
+
+Definiamo immagine di una trasformazione lineare \textbf{$f\::\:V\rightarrow W$
+}l'insieme dei vettori di $W$ raggiunti mediante la trasformazione
+lineare $f$ dai vettori di $V$. $im(f)=\left\{ w\in W\::\:\exists v\in V,\:f(v)=w\right\} $
+
+\textbf{Proposizione }Sia $ker(f)$ che $im(f)$ sono sottospazi vettoriali.
+
+\textbf{Proposizione $f\::\:V\rightarrow W$ }è iniettiva se e solo
+se $ker(f)=\{0_{v}\}$
+
+\textbf{Proposizione }Sia\textbf{ $f\::\:V\rightarrow W$ }una trasformazione
+lineare. Se $\{v_{1},\ldots,v_{k}\}$ è un sistema di generatori per
+$V$, allora $\{f(v_{1}),\ldots,f(v_{k})\}$ è un sistema di generatori
+per $im(f)$.
+
+\pagebreak{}
+
+\textbf{Teorema (Equazione dimensionale)}
+
+Sia $f\::\:V^{n}\rightarrow W^{m}$ allora $n=dim(V)=dim(ker(f))+dim(im(f))$.
+
+\textbf{Dimostrazione }Prendiamo una base $(v_{1},\ldots,v_{r})$
+per il $ker(f)$ (essa esiste perchè il nucleo è sempre uno spazio
+vettoriale finitamente generato). Completiamo la base del $ker$ ad
+una base di $V$ $(v_{1},\ldots,v_{r},v_{r+1},\ldots,v_{n})$.
+
+Posso affermare che $\{f(v_{r+1}),\ldots,f(v_{n})\}$ è un sistema
+di generatori per $im(f)$. Supponiamo che $\{f(v_{r+1}),\ldots,f(v_{n})\}$
+sia addirittura una base per $im(f)$ , allora in tal caso $\alpha_{r+1}f(v_{r+1})+\ldots+\alpha_{n}f(v_{n})=0_{w}$
+e ciò significherebbe che $f(\alpha_{r+1}v_{r+1}+\ldots+\alpha_{n}v_{n})=0_{w}$
+e che quindi tali vettori fanno ancora parte del $ker(f)$. Siccome
+$(v_{1},\ldots,v_{r})$ è una base per il $ker(f)$ avremo dunque
+che $\alpha_{r+1}v_{r+1}+\ldots+\alpha_{n}v_{n}=\alpha_{1}v_{1}+\ldots+\alpha_{r}v_{r}$
+cioè
+
+$\alpha_{r+1}v_{r+1}+\ldots+\alpha_{n}v_{n}-\alpha_{1}v_{1}-\ldots-\alpha_{r}v_{r}=0_{v}$
+perchè $(v_{1},\ldots,v_{n})$ è una base per $V$. 
+
+In conclusione:
+
+-$(v_{r+1},\ldots,v_{n})$ è una base per $im(f)$.
+
+-$dim(ker(f))=r$
+
+-$dim(im(f))=n-r$
+
+-$dim(V)=r+(n-r)=n$
+
+\textbf{Teorema}
+
+Sia $f\::\:V\rightarrow W$ , se $dim(V)=dim(W)$ allora $f$ è iniettiva
+$\Longleftrightarrow$ $f$ è suriettiva
+
+\textbf{Proposizione }Sia $f\::\:V^{n}\rightarrow W^{m}$ , allora:
+
+- Se $n>m$ allora $f$ non può essere iniettiva
+
+- Se $m>n$ allora $f$ non può essere suriettiva
+
+\textbf{Dimostrazione}
+
+- Dimostriamo la contronominale. $f$ suriettiva implica $dim(im(f))=m$.
+Sappiamo inoltre che $dim(ker(f))\geq0$. Usando l'equazione dimensionale,
+necessariamente $n\geq m$. 
+
+- Dimostriamo la contronominale. $f$ iniettiva implica $dim(ker(f))=0$.
+Usando l'equazione dimensionale abbiamo $dim(im(f))=n$. Sappiamo
+inoltre che $m\geq dim(im(f))=n$. 
+
+\textbf{Teorema}
+
+Sia $f\::\:V\rightarrow W$ un isomorfismo (e quindi biunivoca), allora
+$f^{-1}\::\:W\rightarrow V$ è anch'essa lineare.
+
+\textbf{Proposizione} Sia $f\::\:V\rightarrow W$ trasformazione lineare
+e $dim(V)=n$. Sia $A=M_{B_{V}\times B_{W}}(f)$ la matrice associata
+a $f$ rispetto alle basi $B_{V}$ e $B_{W}$. Allora:
+
+-$dim(im(f))=\text{r}(A)$ 
+
+-$dim(ker(f))=n-\text{r}(A)$ 
+
+\textbf{Osservazione} Prendiamo il seguente caso:$\underset{baseB}{V^{n}}\overset{f}{\longrightarrow}\underset{baseC}{W^{m}}\overset{g}{\longrightarrow}\underset{baseD}{U^{k}}$
+
+Vogliamo adesso trovare la matrice associata a $g\circ f$ rispetto
+alle basi $B$ e $D$ : $\underset{baseB}{V^{n}}\overset{g\circ f}{\longrightarrow}\underset{baseD}{U^{k}}$
+
+Sappiamo che: $x=\begin{bmatrix}x_{1}\\
+...\\
+x_{n}
+\end{bmatrix}\qquad y=\begin{bmatrix}y_{1}\\
+...\\
+y_{m}
+\end{bmatrix}\qquad z=\begin{bmatrix}z_{1}\\
+...\\
+z_{k}
+\end{bmatrix}$
+
+sono i vettori delle coordinate rispettivamente di $v$, $f(v)$ e
+$g(f(v))$. Sappiamo inoltre
+
+- $y=M_{BC}(f)\cdot x$
+
+- $z=M_{CD}(g)\cdot y=M_{CD}(g)\cdot M_{BC}(f)\cdot x$
+
+Quindi la matrice associata a $g\circ f$ rispetto alle basi $B$
+e $D$ è: $M_{BD}(g\circ f)=M_{CD}(g)\cdot M_{BC}(f)$
+
+\textbf{Definizione (Matrice del cambiamento di base)}
+
+Sia $f:\underset{baseB}{V}\overset{id_{V}}{\longrightarrow}\underset{baseB'}{V}$chiameremo
+$M_{B_{V}B'_{V}}(id_{V})$ la matrice del cambiamento di base da $B_{V}$
+a $B'_{V}$.
+
+\textbf{Osservazione} In alcuni casi potrebbe essere più facile calcolare
+le coordinate della matrice del cambiamento di base passando per la
+base canonica $\underset{baseB_{V}}{V}\overset{id_{V}}{\longrightarrow}\underset{base\xi_{V}}{E}\overset{id_{V}}{\longrightarrow}\underset{baseB'_{V}}{V}$.
+
+Infatti $M_{B_{V}B'_{V}}(id_{V})=M_{\xi_{V}B'_{V}}(id_{V})\cdot M_{B_{V}\xi_{V}}(id_{V})$
+(considerando $\xi_{V}$la base canonica di $V$).
+
+\textbf{Osservazione} Vale la formula $M_{B'_{V}B'_{V}}(id_{V}\circ f\circ id_{V})=M_{B_{V}B'_{V}}(id_{V})\cdot M_{B_{V}B_{V}}(f)\cdot M_{B'_{V}B_{V}}(id_{V})$
+
+\textbf{Definizione (Matrice simile)}
+
+Siano $A,B\in M_{n\times n}(K)$, se esiste una matrice $E\in M_{n\times n}(K)\,:\,B=EAE^{-1}$
+allora diremo che $A$ e $B$ sono tra loro simili.
+
+\textbf{Osservazione }Fai attenzione alle operazioni tra matrici:
+
+- Se $AE=EB$, allora $A=EBE^{-1}$ è le due matrici sono simili.
+
+- Se $AE=BE$ oppure $EA=EB$, allora $A=B$ e le due matrici sono
+uguali.
+
+\textbf{Proposizione }Matrici simili hanno stesso determinante e stessa
+traccia (polinomio caratteristico invariante per similitudine).
+
+\textbf{Teorema fondamentale delle trasformazioni lineari}
+
+Siano $V$ e $W$ due spazi vettoriali finitamente generati. Siano
+$B_{V}=(v_{1},...,v_{n})$ una base di $V$ e $\{w_{1},...,w_{n}\}$
+una n-upla di $W$.
+
+Esiste una e una sola trasformazione lineare $f\,:\,V\rightarrow W$
+tale che $f(v_{1})=w_{1},...,f(v_{n})=w_{n}$.
+
+\pagebreak{}
+
+\section{Applicazioni lineari}
+
+\textbf{Definizione (Sottomatrice)}
+
+Sia $A\in M_{m\times n}(K)$, la sottomatrice $B_{i\,j}$ di $A$
+è la matrice che si ottiene da $A$ cancellando la i-esima riga e
+la j-esima colonna.
+
+\textbf{Definizione (Minore di una matrice / Sottomatrice quadrata)}
+
+Sia $A\in M_{m\times n}(K)$, le sottomatrici quadrate ottenute cancellando
+un dato numero di righe e/o colonne si dicono minori di $A$.
+
+Sia $A\in M_{n\times n}(K)$, il minore $B_{i\,j}$di $A$ è la matrice
+quadrata che si ottiene da $A$ cancellando la i-esima riga e la j-esima
+colonna.
+
+\textbf{Osservazione }Tutti i minori di una matrice di rango $k$
+hanno rango $\leq k$ 
+
+$\,$
+
+\textbf{Definizione (Orlato di un minore)}
+
+Sia $B$ un minore di $A\in M_{m\times n}(K)$. Definiamo orlato di
+$B$ il minore che si ottiene calcellando una riga e una colonna in
+meno rispetto a quelle cancellate per ottenere $B$.
+
+\textbf{Proprietà:}
+
+Sia $A\in M_{m\times n}(K)$, sia $B\in M_{p\times q}(K)$ una sottomatrice
+di $A$, allora il numero di orlati di $B$ è $(m-p)\cdot(n-q)$.
+
+$\,$
+
+\textbf{Teorema (di Kronecker)}
+
+Sia $A\in M_{n\times n}(K)$ non nulla, allora se $B$ è un minore
+di $A$ con $det(B)\neq0$ e ogni su orlato ha determinante nullo,
+il rango di $A$ è dato dall'ordine di $B$.
+
+\textbf{Osservazione }Solitamente occorre trovare il minore più grande
+con $det(B)\neq0$.
+
+$\,$
+
+\textbf{Definizione (Complemento algebrico)}
+
+Detto $B_{i\,j}$ il minore di una matrice $A$ ottenuto cancellando
+la i-esima riga e la j-esima colonna, chiamiamo il valore $(-1)^{i+j}\cdot det(B_{i\,j})$
+il complemento algebrico dell'elemento $a_{i\,j}$ di $A$.
+
+\pagebreak{}
+
+\textbf{Definizione (Determinante)}
+
+Sia $A\in M_{n\times n}(K)$ , chiamiamo determinante della matrice
+$A$:
+
+1) $\underset{}{det(A)=\underset{p\in S_{n}}{\sum}sgn(p)\cdot a_{1\,p(1)}\cdot\ldots\cdot a_{n\,p(n)}}$
+
+Esempio $A=\left(\begin{array}{ccc}
+a_{1\,1} & a_{1\,2} & a_{1\,3}\\
+a_{2\,1} & a_{2\,2} & a_{2\,3}\\
+a_{3\,1} & a_{3\,2} & a_{3\,3}
+\end{array}\right)$ ,
+
+$S_{n}=\left\{ \left(\begin{array}{ccc}
+1 & 2 & 3\\
+1 & 2 & 3
+\end{array}\right),\left(\begin{array}{ccc}
+1 & 2 & 3\\
+1 & 3 & 2
+\end{array}\right),\left(\begin{array}{ccc}
+1 & 2 & 3\\
+2 & 1 & 3
+\end{array}\right),\left(\begin{array}{ccc}
+1 & 2 & 3\\
+2 & 3 & 1
+\end{array}\right),\left(\begin{array}{ccc}
+1 & 2 & 3\\
+3 & 1 & 2
+\end{array}\right),\left(\begin{array}{ccc}
+1 & 2 & 3\\
+3 & 2 & 1
+\end{array}\right)\right\} $$\begin{gathered}\longleftarrow\:n\;\\
+\longleftarrow p(n)
+\end{gathered}
+$
+
+le permutazioni possibili di $n$ elementi (in generale $\#S_{n}=n!$)
+
+Con $sgn(p)$ intendiamo $(-1)^{k}$ dove k è il numero di scambi
+effettuati alla permutazione $p$ (per esempio nella prima sono 0,
+nella seconda 1, nella terza 2 ecc.)
+
+Quindi in questo caso $det(A)=(1)\cdot a_{1\,1}\cdot a_{2\,2}\cdot a_{3\,3}+(-1)\cdot a_{1\,1}\cdot a_{2\,3}\cdot a_{3\,2}+(1)\cdot a_{1\,2}\cdot a_{2\,1}\cdot a_{3\,3}+(-1)\cdot a_{1\,2}\cdot a_{2\,3}\cdot a_{3\,1}+(1)\cdot a_{1\,3}\cdot a_{2\,1}\cdot a_{3\,2}+(-1)\cdot a_{1\,3}\cdot a_{2\,2}\cdot a_{3\,1}$
+
+2) \textbf{(Teorema di Laplace)} $det(A)=\stackrel[i=1]{n}{\sum}a_{k\,i}\cdot(-1)^{k+i}\cdot det(A_{k\,i})$
+oppure $det(A)=\stackrel[i=1]{n}{\sum}a_{i\,k}\cdot(-1)^{i+k}\cdot det(A_{i\,k})$
+con $k\in\{1,\ldots,n\}$ e dove $A_{x\,y}$ è la sottomatrice quadrata
+ottenuta cancellando la $x-esima$ riga e la $y-esima$ colonna.
+
+3) Volume (con segno) del parallelepipedo definito dalle righe/colonne
+di $A$.
+
+4) E' l'unica funzione da $M_{n\times n}(K)$ in $K$ che è multilineare,
+alternante, normalizzata.
+
+$\,$
+
+\textbf{Proprietà (Multinineare nelle righe)}
+
+$A'=\left(\begin{array}{ccc}
+a'_{1\,1} & \cdots & a'_{1\,n}\\
+a_{2\,1} & \cdots & a_{2\,n}\\
+\vdots & \ddots & \vdots\\
+a_{n\,1} & \cdots & a_{n\,n}
+\end{array}\right)\qquad A''=\left(\begin{array}{ccc}
+a''_{1\,1} & \cdots & a''_{1\,n}\\
+a_{2\,1} & \cdots & a_{2\,n}\\
+\vdots & \ddots & \vdots\\
+a_{n\,1} & \cdots & a_{n\,n}
+\end{array}\right)\qquad B=\left(\begin{array}{ccc}
+\alpha\cdot a'_{1\,1}+\beta\cdot a''_{1\,1} & \cdots & \alpha\cdot a'_{1\,n}+\beta\cdot a''_{1\,n}\\
+a_{2\,1} & \cdots & a_{2\,n}\\
+\vdots & \ddots & \vdots\\
+a_{n\,1} & \cdots & a_{n\,n}
+\end{array}\right)$
+
+$det(B)=\alpha det(A')+\beta det(A'')$
+
+$\,$
+
+\textbf{Proprietà (Alternante)}
+
+$A=\left(\begin{array}{ccc}
+a_{1\,1} & \cdots & a_{1\,n}\\
+a_{2\,1} & \cdots & a_{2\,n}\\
+\vdots & \ddots & \vdots\\
+a_{n\,1} & \cdots & a_{n\,n}
+\end{array}\right)\qquad B=\left(\begin{array}{ccc}
+a_{2\,1} & \cdots & a_{2\,n}\\
+a_{1\,1} & \cdots & a_{1\,n}\\
+\vdots & \ddots & \vdots\\
+a_{n\,1} & \cdots & a_{n\,n}
+\end{array}\right)$
+
+$det(B)=(-1)^{k}det(A)$ dove $k$ è il numero di scambi di rige effettuati
+nella matrice $B$ partendo da $A$.
+
+$\,$
+
+\textbf{Proprietà (Normalizzata)}
+
+$I=\left(\begin{array}{cccc}
+1 & 0 & \cdots & 0\\
+0 & 1 & \cdots & 0\\
+\vdots & \vdots & \ddots & \vdots\\
+0 & 0 & \cdots & 1
+\end{array}\right)$
+
+$det(I)=1$
+
+$\,$
+
+\textbf{Proprietà:}
+
+- Se $A\in M_{n\times n}(K)$ ha una riga nulla allora $det(A)=0$
+
+- Se $A\in M_{n\times n}(K)$ contiene due righe linearmente dipendenti
+allora $det(A)=0$
+
+- Se $B$ si ottiene da $A\in M_{n\times n}(K)$ aggiungendo la $i$-esima
+riga alla $j$-esima riga (per $i,\,j$ qualunque ma diversi tra loro)
+allora $det(B)=det(A)$
+
+- Se $A\in M_{n\times n}(K)$ è triangolare allora $det(A)$ è il
+prodotto degli elementi sulla diagonale principale
+
+- Se $A\in M_{n\times n}(K)$ allora $det(A)=det(^{t}A)$
+
+\textbf{Proposizione }Se\textbf{ $A$} è una matrice invertibile,
+allora $det(A^{-1})=[det(A)]^{-1}$
+
+\pagebreak{}
+
+\textbf{Teorema (di Binet)}
+
+$det(AB)=det(A)\cdot det(B)$
+
+\textbf{Dimostrazione}
+
+La proprietà è facilmente verificabile per matrici triangolari alte
+o basse.
+
+Prendiamo $A$ e $B$ e riduciamole a matrici triangolari alte o basse
+mediante operazioni riga (manipolazione con matrici identiche)
+
+$E_{h}\cdot\ldots\cdot E_{1}\cdot A=C'\;\equiv A$
+
+$B\cdot E_{1}\cdot\ldots\cdot E_{h}=C''\;\equiv B$
+
+Allora $C'$ e $C''$ sono matrici triangolari basse e
+
+$det(AB)=det(E_{h}^{-1}\cdot\ldots\cdot E_{1}^{-1}\cdot C'\,\cdot\,C''\cdot E_{1}^{-1}\cdot\ldots\cdot E_{h}^{-1}=det(C'C'')\;\Longrightarrow\;det(C')\cdot det(C'')$
+perchè sono triangolari basse e quindi si ha che $det(AB)=det(A)\cdot det(B)$
+
+$\,$
+
+$\,$
+
+\paragraph{Calcolo dell'inversa di una matrice quadrata invertibile mediante
+matrice dei cofattori}
+
+$\,$
+
+Sia $A\in M_{n\times n}(K)$ non nulla e con $det(A)\neq0$.
+
+Consideriamo la \textbf{matrice dei cofattori}:
+
+$A_{\#}=\left(\begin{array}{ccc}
+A_{1\,1} & \cdots & A_{1\,n}\\
+\vdots & \ddots & \vdots\\
+A_{n\,1} & \cdots & A_{n\,n}
+\end{array}\right)$ dove $A_{i\,j}=(-1)^{i+j}\cdot det(M_{i\,j})$ e $M_{i\,j}$è un
+minore di $A$.
+
+L'inversa di $A$:
+
+$A^{-1}=\frac{^{t}A_{\#}}{det(A)}$
+
+\paragraph{Calcolo dell'inversa di una matrice quadrata invertibile con il metodo
+delle matrici affiancate}
+
+$\,$
+
+Sia $A\in M_{n\times n}(K)$ non nulla.
+
+Consideriamo la matrice $(A\:|\:I)$
+
+$(A\:|\:I)=\left(\begin{array}{ccccccc}
+a_{1\,1} & \cdots & a_{1\,n} & \brokenvert & 1 & \cdots & 0\\
+\vdots & \ddots & \vdots & \brokenvert & \vdots & \ddots & \vdots\\
+a_{n\,1} & \cdots & a_{n\,n} & \brokenvert & 0 & \cdots & 1
+\end{array}\right)$
+
+Eseguo operazioni riga sulla matrice $(A\:|\:I)$ fino ad ottenere
+la matrice identica a destra.
+
+Allora avremo $(I\:|\:A^{-1})$.
+
+$\,$
+
+\paragraph{Calcolo della potenza di una matrice}
+
+$\,$
+
+Sia $A\in M_{n\times n}(K)$ non nulla, ricaviamo mediante operazioni
+riga la matrice diagonale simile $D=E^{-1}AE$. Allora $A=EDE^{-1}$
+e $A^{n}=ED^{n}E^{-1}$.
+
+La potenza di una matrice diagonale è semplicemente la potenza dei
+valori sulla diagonale principale.
+
+\pagebreak{}
+
+\section{Autovalori e Autovettori}
+
+Sia $f\::\:V\rightarrow V$ un endomorfismo, poniamo $\lambda\in\mathbb{R}$,
+$U_{\lambda}=\{v\in V\,:\,f(v)=\lambda v\}$. Se $U_{\lambda}\neq\{0_{v}\}$
+allora diciamo che $\lambda$ è un \textbf{autovalore} di $f$.
+
+In tal caso i vettori di $U_{\lambda}$vengono detti \textbf{autovettori}
+associati all'autovalore $\lambda$. Lo spazio generato $U_{\lambda}$
+è detto \textbf{autospazio} di $f$ .
+
+$\,$
+
+\textbf{Proprietà }$U_{\lambda}$è un sottospazio vettoriale di $V$
+.
+
+\textbf{Proprietà }$f(v)=\lambda v\:\equiv\:AX=\lambda X\Longleftrightarrow(A-\lambda I)X=0$
+
+Es: $A=\left(\begin{array}{ccc}
+a_{1\,1} & \cdots & a_{1\,n}\\
+\vdots & \ddots & \vdots\\
+a_{n\,1} & \cdots & a_{n\,n}
+\end{array}\right)$ , $(A-\lambda I)=\left(\begin{array}{ccc}
+a_{1\,1}-\lambda & \cdots & a_{1\,n}\\
+\vdots & \ddots-\lambda & \vdots\\
+a_{n\,1} & \cdots & a_{n\,n}-\lambda
+\end{array}\right)$
+
+\textbf{Proposizione} Per la ricerca di autovalori e autovettori mi
+interessa cercare quei valori di $\lambda$ tali che $(A-\lambda I)X=0$
+ammette altre soluzioni oltre a quella nulla. Occorre dunque che $det(A-\lambda I)=0$.
+
+\textbf{Proprietà }$\lambda=0$ è un autovalore quando $ker(f)\neq\{0_{v}\}$
+cioè quando $r(A)$ non è massimo.
+
+\textbf{Proprietà }Sia $A\in M_{n\times n}(K)$ con $n$ dispari,
+allora il polinomio caratteristico $P(\lambda)$ ammette almeno una
+soluzione reale.
+
+\textbf{Proprietà }Se $\lambda$ è un autovalore di $f\::\:V\rightarrow V$,
+allora $\lambda^{k}$ è un autovalore di $f^{k}\::\:V\rightarrow V$
+.
+
+\textbf{Proprietà }Se $f$ è invertibile e $\lambda$ è un autovalore
+di $f\::\:V\rightarrow V$ allora $\lambda^{-1}$ è un autovalore
+di $f^{-1}\::\:V\rightarrow V$ .
+
+\textbf{Proposizione }Il polinomio caratteristico è invariante per
+similitudine (sia il determinante che la traccia)
+
+\[
+f\::\:V\rightarrow V
+\]
+
+\[
+B\rightarrow det(A-\lambda I)=0\qquad B'\rightarrow det(A'-\lambda I)=0
+\]
+
+\textbf{Dimostrazione}
+
+$A'=E^{-1}AE$
+
+$det(A'-\lambda I)=det(E^{-1}AE-\lambda E^{-1}IE)=det(E^{-1}(A-\lambda I)E)=det(E^{-1})\cdot det(A-\lambda I)\cdot det(E)=det(A-\lambda I)$
+
+\textbf{Proprietà }Se $f\::\:V\rightarrow V$ e $dim(V)$ è $n$ allora
+il grado del polinomio caratteristico è $n$.
+
+\textbf{Proprietà }Se $f\::\:V\rightarrow V$ e $dim(V)$ è dispari
+allora esiste sempre almeno un autovalore perchè anche il grado del
+polinomio caratteristico è dispari.
+
+$\,$
+
+\textbf{Teorema}
+
+Sia $f\::\:V\rightarrow V$ un endomorfismo, siano $v_{1},\ldots v_{k}$
+autovettori non nulli di $f$ associati ad autovalori $\lambda_{1},\ldots,\lambda_{k}$
+distinti. Allora $v_{1},\ldots v_{k}$ sono linearmente indipendenti.
+
+\textbf{Teorema}
+
+Sia $f\::\:V\rightarrow V$ un endomorfismo. Siano $U_{\lambda1},\ldots,U_{\lambda k}$
+gli autospazi di $f$ e siano $B_{\lambda1},\ldots,B_{\lambda k}$
+le loro basi. Allora $B_{\lambda1}\cup\ldots\cup B_{\lambda k}$ è
+un insieme linearmente indipendente.
+
+Se la sua cardinalità è $dim(V)$ allora tale insieme è una base per
+$V$ .
+
+\textbf{Teorema}
+
+Sia $f\::\:V\rightarrow V$ un endomorfismo. Siano $U_{\lambda1},\ldots,U_{\lambda k}$
+gli autospazi di $f$. Se $\stackrel[i=1]{n}{\sum}dim(U_{\lambda i})=dim(V)$.
+Allora esiste una base spettrale.
+
+$dim(U_{\lambda i})$ è detta \textbf{molteplicità geometrica} degli
+autovalori $mg(\lambda_{i})$.
+
+\textbf{Osservazione} $\lambda_{i}$ possono coincedere fra loro
+
+$A=\left(\begin{array}{cccc}
+\lambda_{1} & 0 & \cdots & 0\\
+0 & \lambda_{2} & \cdots & 0\\
+\vdots & \vdots & \ddots & \vdots\\
+0 & 0 & \cdots & \lambda_{n}
+\end{array}\right)$ Es: $A=\left(\begin{array}{cccccc}
+3 & 0 & 0 & 0 & 0 & 0\\
+0 & 3 & 0 & 0 & 0 & 0\\
+0 & 0 & 3 & 0 & 0 & 0\\
+0 & 0 & 0 & -1 & 0 & 0\\
+0 & 0 & 0 & 0 & 2 & 0\\
+0 & 0 & 0 & 0 & 0 & 2
+\end{array}\right)$
+
+\textbf{Teorema}
+
+Sia $f\::\:V\rightarrow V$ un endomorfismo con $dim(V)=n$. Allora
+$f$ ammette una base spettrale se e solo se la somma $\stackrel[i=1]{n}{\sum}mg(\lambda_{i})$
+delle molteplicità geometrice degli autovalori di $f$ fa $n$
+
+$\,$
+
+$\,$
+
+$\,$
+
+$\,$
+
+\textbf{Osservazione }Cosa succede se mancano degli autovalori?
+
+Supponiamo di avere $v_{1},\ldots,v_{k}$con $k<n$. Allora avremo:
+
+$A=\left(\begin{array}{cccccccc}
+\lambda_{1} & 0 & 0 & 0 & \brokenvert & 0 & \cdots & 0\\
+0 & \lambda_{2} & 0 & 0 & \brokenvert & 0 & \cdots & 0\\
+0 & 0 & \ddots & 0 & \brokenvert & 0 & \cdots & 0\\
+0 & 0 & 0 & \lambda_{k} & \brokenvert & 0 & \cdots & 0\\
+0 & 0 & 0 & 0 & \text{\ensuremath{\brokenvert}} & 0 & \cdots & 0\\
+0 & 0 & 0 & 0 & \brokenvert & \lambda_{k+1} & \cdots & 0\\
+\vdots & \vdots & \vdots & \vdots & \brokenvert & \vdots & \ddots & \vdots\\
+0 & 0 & 0 & 0 & \brokenvert & 0 & \cdots & \lambda_{n}
+\end{array}\right)$ $\longrightarrow P_{A}(\lambda)=(\lambda_{1}-t)\cdot(\lambda_{2}-t)\cdot\ldots\cdot(\lambda_{k}-t)\cdot q(t)$
+dove $q(t)=(\lambda_{k+1}-t)\cdot\ldots\cdot(\lambda_{n}-t)$
+
+In questo caso se alcuni $\lambda_{i}$ coincidono, la loro molteplicità
+viene detta \textbf{Molteplicità algebrica }e si indica con $ma(\lambda_{i})$.
+
+\textbf{Osservazione }$1\leq mg(\lambda_{i})\leq ma(\lambda_{i})$
+
+\textbf{Definizione (Endomorfismo semplice)}
+
+Un endomorfismo che ammetta una base spettrale si dice semplice.
+
+\textbf{Proposizione }$f\::\:V\rightarrow V$ è semplice se si può
+descrivere con una matrice diagonale.
+
+$\,$
+
+\textbf{Teorema (Spettrale)}
+
+Ogni matrice quadrata $A\in M_{n\times n}(K)$ è diagonalizzabile,
+cioè descrive un endomorfismo semplice $f\::\:V\rightarrow V$ in
+$\mathbb{R}$ , cioè ammette una base spettrale, cioè $\stackrel[i=1]{n}{\sum}mg(\lambda_{i})=dim(V)$
+, se è simmetrica.
+
+$\,$
+
+\textbf{Proposizione} Se $A\in M_{n\times n}(K)$ è una matrice ortogonale
+con $n$ dispari e $det(A)>0$ allora $A$ ammette $1$ come autovalore. 
+
+\textbf{Dimostrazione}
+
+Dimostriamo che $det(A-1\cdot I\,)=0$ cioè che $1$ è un autovalore
+per $A\in M_{n\times n}(K)$ se la matrice è ortogonale con $n$ dispari
+e $det(A)>0$.
+
+Partiamo dimostrando che il determinante di una matrice ortogonale
+è sempre pari a $1$ o a $-1$ :
+
+$det(I)=det(A\cdot^{t}A)$ poichè $A$ è una matrice ortogonale e
+dunque $^{t}A=A^{-1}$ e dunque $det(A)\cdot det(^{t}A)=[det(A)]^{2}\Longrightarrow det(A)=\pm1$
+
+Dunque se $det(A)>0$ per ipotesi allora deve essere per forza $1$
+e poichè $det(A)=det(^{t}A)$ avremo che:
+
+$det(A-I)=det(A-I)\cdot det(^{t}A)$
+
+Possiamo dunque affermare che:
+
+$det(A-I)=det(A-I)\cdot det(^{t}A)=det((A-I)\cdot^{t}A)=det(I-^{t}A)=det(^{t}(^{t}I-A))=det(^{t}I-A)=det(I-A)$
+
+Consideriamo la matrice $I-A$ con un numero dispari $n$ di righe,
+se cambiassimo di segno tutte le righe della matrice essa diventerebbe
+$A-I$ e $det(I-A)=-det(A-I)$
+
+Dunque se $n$ è dispari allora:
+
+$det(A-I)=det(I-A)=-det(A-I)\;\Longrightarrow det(A-I)=0$ cioè ammette
+1 come autovalore.
+
+$\,$
+
+\textbf{Proprosizione }Se un endomorfismo di $\mathbb{R}^{n}$ non
+è iniettivo allora ammette $0$ come autovalore.
+
+\pagebreak{}
+
+\section{Prodotto scalare}
+
+\textbf{Definizione (Prodotto scalare standard)}
+
+Il prodotto scalare standard su uno spazio vettoriale $V$ è quella
+funzione $f\::\:V\times V\rightarrow\mathbb{R}$ tale che $u\bullet v=\left\Vert u\right\Vert \cdot\left\Vert v\right\Vert \cdot cos(\hat{uv})$
+e:
+
+- $f$ è bilineare ( lineare sulle sue 2 componenti: $f(\alpha\cdot v_{1}+\beta\cdot v_{2},\,u)=\alpha\cdot f(v_{1},u)+\beta\cdot f(v_{2},u)$
+, viceversa per il secondo el.)
+
+- $f$ è simmetrica ($f(u,v)=f(v,u)$ )
+
+- $f$ è definita positiva ( $f(v,v)>0\:\forall v\neq0\in V$ )
+
+\textbf{Proposizione }$<(x_{1},y_{1}),\,(x_{2},y_{2})>\equiv(x_{1},y_{1})\bullet(x_{2},y_{2})\equiv x_{1}x_{2}+y_{1}y_{2}$
+
+\textbf{Proposizione }Ogni prodotto scalare produce una norma: $\left\Vert v\right\Vert =\sqrt{v\bullet v}$
+
+\textbf{Proprietà:}
+
+- $\left\Vert \alpha\cdot v\right\Vert =\left|\alpha\right|\cdot\left\Vert v\right\Vert $
+
+- $\left\Vert u+v\right\Vert ^{2}=\left\Vert u\right\Vert ^{2}+2(u\cdot v)+\left\Vert v\right\Vert ^{2}$
+
+- $\left\Vert u\cdot v\right\Vert \leq\left\Vert u\right\Vert \cdot\left\Vert v\right\Vert $
+
+- $\left\Vert u+v\right\Vert \leq\left\Vert u\right\Vert +\left\Vert v\right\Vert $
+
+\textbf{Proposizione }I prodotti scalari su $\mathbb{R}^{n}$sono
+tutte le funzioni $f\::\:\mathbb{R}^{n}\times\mathbb{R}^{n}\rightarrow\mathbb{R}$
+che si possono scrivere come:
+
+$f((x_{1},\ldots,x_{n}),\,(y_{1},\ldots,y_{n}))=(x_{1},\ldots,x_{n})\cdot A\cdot\left(\begin{array}{c}
+y_{1}\\
+\vdots\\
+y_{n}
+\end{array}\right)$ con $A$ simmetrica e tutti i suoi autovalori positivi.
+
+\textbf{Definizione (Spazio vettoriale euclideo)}
+
+Uno spazio si dice spazio vettoriale euclideo se è dotato di un prodotto
+scalare.
+
+\textbf{Teorema (Ortogonalità fra vettori)}
+
+Due vettori si dicono ortogonali rispetto al prodotto scalare se il
+risultato di tale prodotto è nullo.
+
+Nel caso del prodotto scalare standard $u\bullet v=\left\Vert u\right\Vert \cdot\left\Vert v\right\Vert \cdot cos(\hat{uv})=0$.
+Es. se $\hat{uv}=\frac{\pi}{2}$ o la norma di uno dei due vettori
+è $0$.
+
+\textbf{Teorema}
+
+Se $v_{1},\ldots,v_{k}$ sono vettori a due a due ortogonali non nulli,
+allora sono linearmente indipendenti.
+
+\textbf{Dimostrazione}
+
+$\alpha_{1}v_{1}+\ldots+\alpha_{k}v_{k}=0\Longrightarrow(\alpha_{1}v_{1}+\ldots+\alpha_{k}v_{k})\cdot v_{1}=0\cdot v_{1}$$\equiv$$\alpha_{1}\left\Vert v_{1}\right\Vert ^{2}\Longrightarrow\alpha_{1}=0$
+Operazione ripetibile per ogni vettore.
+
+\textbf{Teorema (Complemento ortogonale)}
+
+Sia $W$ un sottospazio vettoriale di $V$ , $W^{\bot}=\left\{ v\in V\,:\,v\bullet w=0\:\forall w\in W\right\} $
+si dice complemento ortogonale di $W$ e avremo che $dim(W^{\bot})=n-dim(W)$
+
+\textbf{Proprietà}
+
+$(w^{\bot})^{\bot}=w$
+
+\textbf{Definizione (Base ortogonale)}
+
+Siano $v_{1},\ldots,v_{k}$ vettori a due a due ortogonali non nulli,
+se essi costituiscono una base, allora si definisce base ortogonale.
+
+\textbf{Definizione (Base ortonormale)}
+
+Siano $v_{1},\ldots,v_{k}$ vettori appartenenti ad una base ortogonale,
+se hanno tutti norma 1, allora prendono il nome di base ortonormale.
+
+\textbf{Proposizione }Ogni spazio vettoriale reale di dimensione positiva
+ammette infinite basi ortonormali
+
+\textbf{Procedimento di ortogonalizzazione di Gram-Shmidt}
+
+Siano $<v_{1},\ldots,v_{s}>$ vettori linearmente indipendenti di
+un sottospazio vettoriale di $V$, allora esistono $<w_{1},\ldots,w_{s}>\in V$
+che formano una base ortogonale per $<v_{1},\ldots,v_{s}>$.
+
+$v_{1}\longrightarrow w_{1}$ 
+
+$v_{2}-\frac{(v_{2}\bullet w_{1})}{(w_{1}\bullet w_{1})}\cdot w_{1}\longrightarrow w_{2}$
+
+$v_{3}-\frac{(v_{3}\bullet w_{1})}{(w_{1}\bullet w_{1})}\cdot w_{1}-\frac{(v_{3}\bullet w_{2})}{(w_{2}\bullet w_{2})}\cdot w_{2}\longrightarrow w_{3}$
+
+$\vdots$
+
+$v_{k}-\frac{(v_{k}\bullet w_{1})}{(w_{1}\bullet w_{1})}\cdot w_{1}-\frac{(v_{k}\bullet w_{2})}{(w_{2}\bullet w_{2})}\cdot w_{2}-\ldots-\frac{(v_{k}\bullet w_{k-1})}{(w_{k-1}\bullet w_{k-1})}\cdot w_{k-1}\longrightarrow w_{k}$
+
+Si può ottenere una base ortonormale dividento ogni vettore della
+base ortogonale per la propria norma.
+
+\textbf{Definizione (Isometria lineare di $\boldsymbol{\mathbb{R}^{n}}$)}
+
+E' un endomorfismo di $\mathbb{R}^{n}$ che conserva il prodotto scalare,
+cioè $f(v_{1})\bullet f(v_{2})=v_{1}\bullet v_{2}\Longleftrightarrow\left\Vert f(v_{1})\right\Vert \cdot\left\Vert f(v_{2})\right\Vert \cdot cos(\hat{f(v_{1})f(v_{2})})=\left\Vert v_{1}\right\Vert \cdot\left\Vert v_{2}\right\Vert \cdot cos(\hat{v_{1}v_{2}})$.
+
+\textbf{Osservazione }Si conservano le lunghezze dei vettori e gli
+angoli compresi
+
+\textbf{Osservazione }Nel caso della rappresentazione matriciale avremo:
+
+$v_{1}=(x_{1},\ldots,x_{n})=X$ e $v_{2}=(y_{1},\ldots,y_{n})=Y$
+
+$f(v_{1})=^{t}(A(^{t}X))$ e $f(v_{2})=A(^{t}Y)$
+
+$A$ è isometria se $X\cdot(^{t}Y)=X(^{t}A)\cdot A(^{t}Y)$
+
+\textbf{Osservazione }Se $A$ è una matrice ortogonale le sue righe
+(o colonne) costituiscono una base ortonormale di $\mathbb{R}^{n}$.
+
+\pagebreak{}
+
+\section{Prodotto vettoriale}
+
+\textbf{Definizione (Prodotto vettoriale)}
+
+Il prodotto vettoriale è una funzione $f\::\:V_{O}^{3}\times V_{O}^{3}\rightarrow V_{O}^{3}$
+e $\left|v\wedge w\right|=\left|v\right|\cdot\left|w\right|\cdot sin(\theta)$
+
+La direzione del vettore prodotto è perpendicolare al piano individuato
+da $v$ è $w$.
+
+Per individuare il verso del prodotto si dispone il pollice nel verso
+del primo vettore $v$ e l'indice nel verso del secondo vettore $w$;
+distendendo poi il dito medio si ottiene il verso in cui punta $v\land w$.
+
+\textbf{Proprietà:}
+
+- $v\wedge w=-w\wedge v$
+
+- $v_{1}\wedge(v_{2}+v_{3})=v_{1}\wedge v_{2}+v_{1}\wedge v_{3}$
+
+- $(\lambda v_{1})\wedge v_{2}=\lambda(v_{1}\wedge v_{2})=v_{1}\wedge(\lambda v_{2})$
+
+\textbf{Osservazione }Se i due vettori sono opposti allora $sin(\theta)=sin(\pi)=0$
+e dunque il prodotto vettoriale è il vettore nullo
+
+\pagebreak{}
+
+\section{Geometria}
+
+\textbf{PIANO}
+
+\textbf{Relazione tra due piani}
+
+Consideriamo i piani di equazioni $\pi:\,ax+by+cz+d=0$ e $\pi':\,a'x+b'y+c'z+d'=0$
+essi sono:
+\begin{itemize}
+\item Paralleli se $rk\left(\begin{array}{ccc}
+a & b & c\\
+a' & b' & c'
+\end{array}\right)=1$
+\begin{itemize}
+\item Paralleli disgiunti se $rk\left(\begin{array}{ccccc}
+a & b & c & \brokenvert & d\\
+a' & b' & c' & \brokenvert & d'
+\end{array}\right)=2$
+\item Paralleli coincidenti se $rk\left(\begin{array}{ccccc}
+a & b & c & \brokenvert & d\\
+a' & b' & c' & \brokenvert & d'
+\end{array}\right)=1$
+\end{itemize}
+\item Incidenti se $rk\left(\begin{array}{ccc}
+a & b & c\\
+a' & b' & c'
+\end{array}\right)=2$
+\item Perpendicolari se $a\cdot a'+b\cdot b'+c\cdot c'=0$
+\end{itemize}
+\textbf{Retta intersezione tra due piani}
+
+$r:\left\{ \begin{gathered}ax+by+cz+d=0\\
+a'x+b'y+c'z+d'=0
+\end{gathered}
+\right.$
+
+$\,$
+
+$\,$
+
+$\,$
+
+$\,$
+
+\textbf{RETTA}
+
+\textbf{Retta passante per due punti}
+
+Consideriamo due punti in $\mathbb{R}^{3}$;$P_{0}:\,\left(x_{0},y_{0},z_{0}\right)$
+e $P_{1}:\,\left(x_{1},y_{1},z_{1}\right)$
+
+- Il vettore $(l,m,n)$ associato alla retta è dato da $P_{0}-P_{1}$
+
+- L'equazione parametrica della retta è data da $\left\{ \begin{gathered}x=lt+x_{1}\\
+y=mt+y_{1}\\
+z=nt+z_{1}
+\end{gathered}
+\right.$
+
+\textbf{Da eq. parametrica a eq. cartesiana}
+
+Consideriamo l'eq. parametrica$\left\{ \begin{gathered}x=lt+x_{1}\\
+y=mt+y_{1}\\
+z=nt+z_{1}
+\end{gathered}
+\right.$ , ricaviamo $t$ da una delle equazioni come ad esempio $t=\frac{y-y_{1}}{m}$
+e la andiamo a sostituire nelle due restanti equazioni ottenendo $\left\{ \begin{gathered}x=l\left(\frac{y-y_{1}}{m}\right)+x_{1}\\
+z=n\left(\frac{y-y_{1}}{m}\right)+z_{1}
+\end{gathered}
+\right.$
+
+\textbf{Da eq. cartesiana a eq. parametrica}
+
+Consideriamo l'eq. cartesiana $\left\{ \begin{gathered}ax+by+cz+d=0\\
+a'x+b'y+c'z+d'=0
+\end{gathered}
+\right.$ , poniamo una delle incognite a $t$ come ad esempio $z=t$ e risolviamo
+il sistema $\left\{ \begin{gathered}ax+by+cz+d=0\\
+a'x+b'y+c'z+d'=0\\
+z=t
+\end{gathered}
+\right.$
+
+\textbf{Ricavare vettore direttore da eq. cartesiana}
+
+Consideriamo l'eq. cartesiana $\left\{ \begin{gathered}ax+by+cz+d=0\\
+a'x+b'y+c'z+d'=0
+\end{gathered}
+\right.$ , calcoliamo $det\left(\begin{array}{ccc}
+i & j & k\\
+a & b & c\\
+a' & b' & c'
+\end{array}\right)$ e 
+
+scriviamo $(l,m,n)$ i coefficienti di $i$, $j$ e $k$
+
+\textbf{Trovare un punto appartenente ad una retta}
+
+Consideriamo l'eq. parametrica$\left\{ \begin{gathered}x=lt+x_{1}\\
+y=mt+y_{1}\\
+z=nt+z_{1}
+\end{gathered}
+\right.$ , un punto appartenente a tale retta è sicuramente $(x_{1},y_{1},z_{1})$
+
+\textbf{Relazione tra due rette}
+
+Consideriamo due rette in $\mathbb{R}^{3}$; ricaviamo i vettori direttori
+$r\,:\left(l,m,n\right)$ e $r'\,:\left(l',m',n'\right)$ ed un punto
+ad esse appartenente $P_{r}:(x,y,z)$ e $P_{r'}:(x',y',z')$
+
+Calcoliamo $det\left(\begin{array}{ccc}
+x-x' & y-y' & z-z'\\
+l & m & n\\
+l' & m' & n'
+\end{array}\right)$ , tali rette sono:
+\begin{itemize}
+\item Sghembe se $det\neq0$
+\item Complanari se $det=0$ , 
+\begin{itemize}
+\item Incidenti se $det\left(\begin{array}{ccc}
+i & j & k\\
+l & m & n\\
+l' & m' & n'
+\end{array}\right)\neq(0,0,0)$
+\begin{itemize}
+\item Perpendicolari se $l\cdot l'+m\cdot m'+n\cdot n'=0$
+\end{itemize}
+\item Parallele se $rk\left(\begin{array}{ccc}
+l & m & n\\
+l' & m' & n'
+\end{array}\right)=1$
+\begin{itemize}
+\item Coincidenti se hanno infiniti punti in comune
+\end{itemize}
+\end{itemize}
+\end{itemize}
+\textbf{Punto di intersezione tra due rette}
+
+Consideriamo due rette definite in forma parametrica $r:\left\{ \begin{gathered}x=lt_{1}+x_{1}\\
+y=mt_{1}+y_{1}\\
+z=nt_{1}+z_{1}
+\end{gathered}
+\right.$e $r':\left\{ \begin{gathered}x=l't_{2}+x_{2}\\
+y=m't_{2}+y_{2}\\
+z=n't_{2}+z_{2}
+\end{gathered}
+\right.$
+
+Nel caso in cui le due rette fossero incidenti ricaviamo il punto
+di intersezione risolvendo il sistema $\left\{ \begin{gathered}lt_{1}+x_{1}=l't_{2}+x_{2}\\
+mt_{1}+y_{1}=m't_{2}+y_{2}\\
+nt_{1}+z_{1}=n't_{2}+z_{2}
+\end{gathered}
+\right.$e trovando i valori di $t_{1}$ e $t_{2}$. A questo punto sostituendo
+$t_{1}$in $r$ o $t_{2}$in $r'$ troviamo il punto di intersezione
+tra le due rette.
+
+$\,$
+
+$\,$
+
+$\,$
+
+$\,$
+
+\textbf{RETTA-PIANO}
+
+\textbf{Relazione tra una retta e un piano}
+
+Consideriamo la retta $r\,:\left\{ \begin{gathered}ax+by+cz+d=0\\
+a'x+b'y+c'z+d'=0
+\end{gathered}
+\right.$ e il piano $\pi:\,a''x+b''y+c''z+d''=0$ essi sono:
+\begin{itemize}
+\item Paralleli se $rk\left(\begin{array}{ccc}
+a & b & c\\
+a' & b' & c'\\
+a'' & b'' & c''
+\end{array}\right)=2$
+\begin{itemize}
+\item Paralleli e disgiunti se $rk\left(\begin{array}{ccccc}
+a & b & c & \brokenvert & d\\
+a' & b' & c' & \brokenvert & d'\\
+a'' & b'' & c'' & \brokenvert & d''
+\end{array}\right)=3$ (nessuna soluzione)
+\item Paralleli e complanari se $rk\left(\begin{array}{ccccc}
+a & b & c & \brokenvert & d\\
+a' & b' & c' & \brokenvert & d'\\
+a'' & b'' & c'' & \brokenvert & d''
+\end{array}\right)=2$ ($\infty$ soluzioni)
+\end{itemize}
+\item Incidenti se $rk\left(\begin{array}{ccc}
+a & b & c\\
+a' & b' & c'\\
+a'' & b'' & c''
+\end{array}\right)=3$ (una sola soluzione)
+\begin{itemize}
+\item Perpendicolari se il vettore direttore della retta $r$ e del piano
+$\pi$ sono uguali o linearmente dipendenti
+\end{itemize}
+\end{itemize}
+
+\end{document}

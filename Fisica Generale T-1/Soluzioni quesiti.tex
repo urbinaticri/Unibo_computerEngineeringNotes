@@ -1,0 +1,2280 @@
+%% LyX 2.2.3 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{luainputenc}
+\usepackage{geometry}
+\geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=1cm,rmargin=1cm,footskip=1cm}
+\pagestyle{empty}
+\setlength{\parindent}{0cm}
+\usepackage{babel}
+\usepackage{textcomp}
+\usepackage{mathrsfs}
+\usepackage{amsmath}
+\usepackage{cancel}
+\usepackage{stmaryrd}
+\usepackage{graphicx}
+\usepackage{esint}
+\usepackage[unicode=true]
+ {hyperref}
+\begin{document}
+
+\title{Fisica Generale T-1 (soluzioni quesiti d'esame)}
+
+\author{Urbinati Cristian}
+
+\date{16/07/2018}
+\maketitle
+\begin{center}
+\href{mailto:cristian.urbinati@studio.unibo.it}{e-mail: cristian.urbinati@studio.unibo.it}
+\par\end{center}
+
+\begin{center}
+\href{https://github.com/urbinaticri/Unibo_computerEngineeringNotes}{Altro : https://github.com/urbinaticri/Unibo\_{}{}{}computerEngineeringNotes}
+\par\end{center}
+
+\begin{center}
+Materiale distribuito con licenza \href{https://creativecommons.org/licenses/by-nc-sa/2.0/it/}{Creative Commons}
+\par\end{center}
+
+\begin{center}
+Attribuzione - Non commerciale - Condividi allo stesso modo 2.0 Italia
+(CC BY-NC-SA 2.0 IT) 
+\par\end{center}
+
+\begin{center}
+\includegraphics[scale=0.05]{CreativeCommonsLicense} 
+\par\end{center}
+
+\begin{center}
+$\,$
+\par\end{center}
+
+\begin{center}
+$\,$
+\par\end{center}
+
+\begin{center}
+$\,$
+\par\end{center}
+
+\begin{center}
+$\,$
+\par\end{center}
+
+\begin{center}
+\includegraphics[scale=0.8,bb = 0 0 200 100, draft, type=eps]{img/Copertina.png}
+\par\end{center}
+
+\pagebreak{}
+
+\section{Calcolo vettoriale}
+
+\subsubsection{v\_df\_01}
+\begin{center}
+\includegraphics[scale=0.5,bb = 0 0 200 100, draft, type=eps]{img/v_df_01.PNG}
+\par\end{center}
+
+(a) La somma di due vettori può essere definita equivalentemente mediante
+la regola del triangolo (fig.1), oppure mediate la regola del parallelogrammo
+(fig.2).
+
+(b) $\left\{ \begin{gathered}\vec{a}=a_{x}\hat{i}+a_{y}\hat{j}+a_{z}\hat{k}\\
+\vec{b}=b_{x}\hat{i}+b_{y}\hat{j}+b_{z}\hat{k}
+\end{gathered}
+\right.\Rightarrow\vec{a}+\vec{b}=\left(a_{x}+b_{x}\right)\hat{i}+\left(a_{y}+b_{y}\right)\hat{j}+\left(a_{z}+b_{z}\right)\hat{k}$
+
+\subsubsection{v\_df\_02}
+
+\includegraphics[scale=0.3,bb = 0 0 200 100, draft, type=eps]{img/v_df_02.PNG}
+
+(a) La differenza di due vettori è definita mediante la regola del
+triangolo (fig. 1).
+
+(b) $\left\{ \begin{gathered}\vec{a}=a_{x}\hat{i}+a_{y}\hat{j}+a_{z}\hat{k}\\
+\vec{b}=b_{x}\hat{i}+b_{y}\hat{j}+b_{z}\hat{k}
+\end{gathered}
+\right.\Rightarrow\vec{a}-\vec{b}=\left(a_{x}-b_{x}\right)\hat{i}+\left(a_{y}-b_{y}\right)\hat{j}+\left(a_{z}-b_{z}\right)\hat{k}$
+
+\subsubsection{v\_df\_03}
+
+(a) Si definisce prodotto scalare di due vettori $\vec{a}$ e $\vec{b}$
+il prodotto dei rispettivi moduli per il coseno dell'angolo compreso
+tra i due vettori posti con l'origine coincidente: $\vec{a}\cdot\vec{b}=\left\Vert \vec{a}\right\Vert \left\Vert \vec{b}\right\Vert \cos\theta$
+
+(b) $\left\{ \begin{gathered}\vec{a}=a_{x}\hat{i}+a_{y}\hat{j}+a_{z}\hat{k}\\
+\vec{b}=b_{x}\hat{i}+b_{y}\hat{j}+b_{z}\hat{k}
+\end{gathered}
+\right.\Rightarrow\vec{a}\cdot\vec{b}=a_{x}b_{x}+a_{y}b_{y}+a_{z}b_{z}$
+
+\subsubsection{v\_df\_04}
+
+(a) Si definisce prodotto vettoriale di due vettori $\vec{a}$ e $\vec{b}$
+il vettore che ha modulo pari all'area del parallelogramma formato
+dai due vettori, direzione perpendicolare a entrambi i vettori e verso
+determinato dalla regola della mano destra: $\vec{a}\wedge\vec{b}=\left\Vert \vec{a}\right\Vert \left\Vert \vec{b}\right\Vert \left|\sin\theta\right|$
+
+(b) $\left\{ \begin{gathered}\vec{a}=a_{x}\hat{i}+a_{y}\hat{j}+a_{z}\hat{k}\\
+\vec{b}=b_{x}\hat{i}+b_{y}\hat{j}+b_{z}\hat{k}
+\end{gathered}
+\right.\Rightarrow\vec{a}\wedge\vec{b}=\det\left\Vert \begin{array}{ccc}
+\hat{i} & \hat{j} & \hat{k}\\
+a_{x} & a_{y} & a_{z}\\
+b_{x} & b_{y} & b_{z}
+\end{array}\right\Vert =\left(a_{y}b_{z}-a_{z}b_{y}\right)\hat{i}-\left(a_{x}b_{z}-a_{z}b_{x}\right)\hat{j}+\left(a_{x}b_{y}-a_{y}b_{x}\right)\hat{k}$
+
+\subsubsection{v\_df\_05}
+
+(a) Si definisce moltiplicazione scalare di un vettore $\vec{a}$
+per un numero reale $\alpha$: $\vec{c}=\alpha\vec{a}=\left|\alpha\right|\left\Vert \vec{a}\right\Vert ,\begin{cases}
+\vec{c}\nnearrow\nnearrow\vec{a}, & \text{se }\alpha\geq0\\
+\vec{c}\nnearrow\sswarrow\vec{a}, & \text{se }\alpha<0
+\end{cases}$
+
+(b) $\vec{a}=a_{x}\hat{i}+a_{y}\hat{j}+a_{z}\hat{k}\Rightarrow\alpha\vec{a}=\left(\alpha a_{x}\right)\hat{i}+\left(\alpha a_{y}\right)\hat{j}+\left(\alpha a_{z}\right)\hat{k}$
+
+\subsubsection{v\_df\_06}
+
+Assegnati i versori della base intrinseca $\left\{ \hat{t},\hat{n},\hat{b}\right\} $
+come funzioni della coordinata intrinseca $s$ definiamo la curvatura
+di una traiettoria $\gamma$ come: $\kappa=\left\Vert \frac{\text{d}\hat{t}}{\text{d}s}\right\Vert $.
+La torsione di una traiettoria $\gamma$ è definita come: $\tau(s)=-\hat{n}(s)\cdot\frac{\text{d}\hat{b}(s)}{\text{d}s}$.
+
+\pagebreak{}
+
+\subsubsection{v\_op\_01}
+
+Dati i moduli fissati $a=13$ e $b=25$ di due vettori $\vec{a}$
+e $\vec{b}$, dalla disuguaglianza triangolare si ha che 
+\[
+\left|\left\Vert \vec{a}\right\Vert -\left\Vert \vec{b}\right\Vert \right|\leq\left\Vert \vec{a}+\vec{b}\right\Vert \leq\left\Vert \vec{a}\right\Vert +\left\Vert \vec{b}\right\Vert 
+\]
+e dunque:
+\begin{itemize}
+\item Il valore minimo del modulo $\left\Vert \vec{a}+\vec{b}\right\Vert $
+è 12
+\item Il valore massimo del modulo $\left\Vert \vec{a}+\vec{b}\right\Vert $
+è 38
+\end{itemize}
+
+\subsubsection{v\_op\_02}
+
+Dati i moduli fissati $a=15$ e $b=27$ di due vettori $\vec{a}$
+e $\vec{b}$, dalla disuguaglianza triangolare si ha che 
+\[
+\left|\left\Vert \vec{a}\right\Vert -\left\Vert \vec{b}\right\Vert \right|\leq\left\Vert \vec{a}-\vec{b}\right\Vert \leq\left\Vert \vec{a}\right\Vert +\left\Vert \vec{b}\right\Vert 
+\]
+e dunque:
+\begin{itemize}
+\item Il valore minimo del modulo $\left\Vert \vec{a}-\vec{b}\right\Vert $
+è 12
+\item Il valore massimo del modulo $\left\Vert \vec{a}-\vec{b}\right\Vert $
+è 42
+\end{itemize}
+
+\subsubsection{v\_op\_03}
+
+Dati i moduli fissati $a=15$ e $b=27$ di due vettori $\vec{a}$
+e $\vec{b}$, essendo che 
+\[
+\vec{a}\cdot\vec{b}=\left\Vert \vec{a}\right\Vert \left\Vert \vec{b}\right\Vert \cos\theta\quad\theta\in\left[0,\pi\right]
+\]
+allora
+\begin{itemize}
+\item Il valore minimo del prodotto si avrà con $\theta=\pi$ e il valore
+sarà -405
+\item Il valore massimo del prodotto si avrà con $\theta=0$ e il valore
+sarà 405
+\end{itemize}
+
+\subsubsection{v\_op\_04}
+
+Dati i moduli fissati $a=13$ e $b=25$ di due vettori $\vec{a}$
+e $\vec{b}$, essendo che 
+\[
+\vec{a}\wedge\vec{b}=\left\Vert \vec{a}\right\Vert \left\Vert \vec{b}\right\Vert \left|\sin\theta\right|\quad\theta\in\left[-\frac{\pi}{2},\frac{\pi}{2}\right]
+\]
+allora
+\begin{itemize}
+\item Il valore minimo del prodotto si avrà con $\theta=0$ e il valore
+sarà 0
+\item Il valore massimo del prodotto si avrà con $\theta=\frac{\pi}{2}$
+e il valore sarà 325
+\end{itemize}
+
+\subsubsection{v\_op\_05}
+
+(a) Dato un vettore $\vec{v}$ indichiamo il modulo $\left\Vert \vec{v}\right\Vert $
+come la distanza tra l'origine e il vertice del vettore. Ricaviamo
+il versore associato dalla formula $\hat{v}=\frac{\vec{v}}{\left\Vert \vec{v}\right\Vert }$.
+
+(b) Sia dato $\vec{v}=v_{x}\hat{i}+v_{y}\hat{j}+v_{z}\hat{k}$ un
+generico vettore espresso in base cartesiana. Esprimiamo il modulo
+di tale vettore $\left\Vert \vec{v}\right\Vert =\sqrt{v_{x}^{2}+v_{y}^{2}+v_{z}^{2}}$
+e il versore associato come $\hat{v}=\frac{v_{x}\hat{i}+v_{y}\hat{j}+v_{z}\hat{k}}{\sqrt{v_{x}^{2}+v_{y}^{2}+v_{z}^{2}}}$.
+
+\subsubsection{v\_op\_06}
+
+Dato un vettore $\vec{v}$ e una direzione orientata $\hat{u}$ esprimiamo
+la componente $v_{u}$ del vettore $\vec{v}$ rispetto alla direzione
+$\hat{u}$ come $v_{u}=\vec{v}\cdot\hat{u}$. Esprimiamo invece il
+vettore componenete $\vec{v}_{u}=(\vec{v}\cdot\hat{u})\hat{u}$.
+
+\pagebreak{}
+
+\subsubsection{v\_rp\_01}
+
+Gli intervalli di variabilità delle coordinate cartesiane sono:
+
+$x\in\left]-\infty,+\infty\right[\quad y\in\left]-\infty,+\infty\right[\quad z\in\left]-\infty,+\infty\right[$
+
+Gli intervalli di variabilità delle coordinate cilindriche sono:
+
+$r\in\left]0,+\infty\right[\quad\varphi\in\left]0,2\pi\right[\quad z\in\left]-\infty,+\infty\right[$
+
+Gli intervalli di variabilità delle coordinate sferiche sono:
+
+$p\in\left]0,+\infty\right[\quad\theta\in\left]0,\pi\right[\quad\varphi\in\left]0,2\pi\right[$
+
+L'intervallo di variabilità della coordinata instrinseca è:
+
+$s\in\left]-\infty,+\infty\right[$
+
+\subsubsection{v\_rp\_02}
+
+\[
+\left\{ \begin{gathered}r=\sqrt{x^{2}+y^{2}}\\
+\varphi=\arctan_{2}(y,x)\\
+z=z
+\end{gathered}
+\right.\text{ dove }\arctan_{2}\left(y,x\right)=\begin{cases}
+\arctan\frac{y}{x} & \text{se }x>0,y\geq0\\
+\arctan\frac{y}{x}+\pi & \text{se }x<0\\
+\arctan\frac{y}{x}+2\pi & \text{se }x>0,y<0\\
+\frac{1}{2}\pi & \text{se }x=0,y>0\\
+\frac{3}{2}\pi & \text{se }x=0,y<0\\
+0 & \text{se }x=0,y=0
+\end{cases}\qquad\left\{ \begin{gathered}x=r\cos\varphi\\
+y=r\sin\varphi\\
+z=z
+\end{gathered}
+\right.
+\]
+
+\subsubsection{v\_rp\_03}
+
+\[
+\left\{ \begin{gathered}\rho=\sqrt{x^{2}+y^{2}+z^{2}}\\
+\theta=\arctan_{2}(\sqrt{x^{2}+y^{2}},z)\\
+\varphi=\arctan_{2}(y,x)
+\end{gathered}
+\right.\text{ dove }\arctan_{2}\left(y,x\right)=\begin{cases}
+\arctan\frac{y}{x} & \text{se }x>0,y\geq0\\
+\arctan\frac{y}{x}+\pi & \text{se }x<0\\
+\arctan\frac{y}{x}+2\pi & \text{se }x>0,y<0\\
+\frac{1}{2}\pi & \text{se }x=0,y>0\\
+\frac{3}{2}\pi & \text{se }x=0,y<0\\
+0 & \text{se }x=0,y=0
+\end{cases}\qquad\left\{ \begin{gathered}x=\rho\sin\theta\cos\varphi\\
+y=\rho\sin\theta\sin\varphi\\
+z=\rho\cos\theta
+\end{gathered}
+\right.
+\]
+
+\subsubsection{v\_rp\_04}
+
+Considerata la terna ortogonale di riferimento $Oxyz$:
+
+\includegraphics[scale=0.5,bb = 0 0 200 100, draft, type=eps]{img/Base_cartesiana.PNG}
+
+\[
+\left\{ \begin{gathered}\hat{i}\nnearrow\nnearrow x\\
+\hat{j}\nnearrow\nnearrow y\\
+\hat{k}\nnearrow\nnearrow z
+\end{gathered}
+\right.
+\]
+
+\pagebreak{}
+
+\subsubsection{v\_rp\_05}
+
+Considerata la terna ortogonale di riferimento $Oxyz$:
+
+\includegraphics[scale=0.5,bb = 0 0 200 100, draft, type=eps]{img/Base_cilindrica.PNG}
+
+\[
+\left\{ \begin{gathered}\hat{i}_{r}=\text{vers}\left(\vec{r}_{OP'}\right)=\frac{\vec{r}_{OP'}}{\left\Vert \vec{r}_{OP'}\right\Vert }\\
+\hat{i}_{\varphi}=\text{vers}\left(\hat{k}\wedge\hat{i}_{r}\right)=\hat{k}\wedge\hat{i}_{r}\\
+\hat{k}\nnearrow\nnearrow z
+\end{gathered}
+\right.
+\]
+
+\subsubsection{v\_rp\_06}
+
+Considerata la terna ortogonale di riferimento $Oxyz$ e $\hat{k}\nnearrow\nnearrow z$:
+
+\includegraphics[scale=0.5,bb = 0 0 200 100, draft, type=eps]{img/Base_sferica.PNG}
+
+\[
+\left\{ \begin{gathered}\hat{i}_{\rho}=\text{vers}\left(\vec{r}_{OP}\right)=\frac{\vec{r}_{OP}}{\left\Vert \vec{r}_{OP}\right\Vert }\\
+\hat{i}_{\theta}=\text{vers}\left(\hat{i}_{\varphi}\wedge\hat{i}_{\rho}\right)=\hat{i}_{\varphi}\wedge\hat{i}_{\rho}\\
+\hat{i}_{\varphi}=\text{vers}\left(\hat{k}\wedge\hat{i}_{\rho}\right)=\frac{\hat{k}\wedge\hat{i}_{\rho}}{\sin\theta}
+\end{gathered}
+\right.
+\]
+
+\pagebreak{}
+
+\subsubsection{v\_rp\_07}
+
+(a) Considerata la traiettoria $\gamma$
+
+\includegraphics[scale=0.5,bb = 0 0 200 100, draft, type=eps]{img/Base_intrinseca.PNG}
+\begin{itemize}
+\item Il versone $\hat{t}$ è tangente alla traiettoria $\gamma$ nel punto
+$P(s)$
+\item Il versore $\hat{n}$ giace sul piano osculatore alla traiettoria
+$\gamma$ nel punto $P(s)$, direzione del diametro e verso centripeto
+\item Il versore $\hat{b}$ è perpendicolare sia a $\hat{t}$ che a $\hat{n}$
+ed ha verso determinato dalla regola della mano destra
+\end{itemize}
+(b) 
+
+\[
+\left\{ \begin{gathered}\hat{t}=\frac{\text{d}\vec{r}}{\text{d}s}\\
+\hat{n}=\rho\frac{\text{d}\hat{t}}{\text{d}s}\\
+\hat{b}=\hat{t}\wedge\hat{n}
+\end{gathered}
+\right.
+\]
+
+\subsubsection{v\_rp\_08}
+
+\[
+\left\{ \begin{gathered}\hat{i}_{r}(\varphi)=(\cos\varphi)\hat{i}+(\sin\varphi)\hat{j}\\
+\hat{i}_{\varphi}(\varphi)=-(\sin\varphi)\hat{i}+(\cos\varphi)\hat{j}\\
+\hat{k}=\hat{k}
+\end{gathered}
+\right.
+\]
+
+\subsubsection{v\_rp\_09}
+
+\[
+\left\{ \begin{gathered}\hat{i}=(\cos\varphi)\hat{i}_{r}(\varphi)-(\sin\varphi)\hat{i}_{\varphi}(\varphi)\\
+\hat{j}=(\sin\varphi)\hat{i}_{r}(\varphi)+(\cos\varphi)\hat{i}_{\varphi}(\varphi)\\
+\hat{k}=\hat{k}
+\end{gathered}
+\right.
+\]
+
+\subsubsection{v\_rp\_10}
+
+(a) $\vec{v}=v_{x}\hat{i}+v_{y}\hat{j}+v_{z}\hat{k}$
+
+(b) $\vec{r}_{OP}=x\hat{i}+y\hat{j}+z\hat{k}$
+
+\subsubsection{v\_rp\_11}
+
+(a) $\vec{v}=v_{r}\hat{i}_{r}(\varphi)+v_{\varphi}\hat{i}_{\varphi}(\varphi)+v_{z}\hat{k}$
+
+(b) $\vec{r}_{OP}=r\hat{i}_{r}(\varphi)+z\hat{k}$
+
+\subsubsection{v\_rp\_12}
+
+(a) $\vec{v}=v_{\rho}\hat{i}_{\rho}(\theta,\varphi)+v_{\theta}\hat{i}_{\theta}(\theta,\varphi)+v_{\varphi}\hat{i}_{\varphi}(\theta,\varphi)$
+
+(b) $\vec{r}_{OP}=\rho\hat{i}_{\rho}(\theta,\varphi)$
+
+\subsubsection{v\_rp\_13}
+
+Poichè i versori non dipendono dalle coordinate, essendo la base cartesiana
+una base globale:
+
+\[
+\begin{array}{ccc}
+\frac{\partial\hat{i}}{\partial x}=\vec{0}, & \frac{\partial\hat{i}}{\partial y}=\vec{0}, & \frac{\partial\hat{i}}{\partial z}=\vec{0}\\
+\frac{\partial\hat{j}}{\partial x}=\vec{0}, & \frac{\partial\hat{j}}{\partial y}=\vec{0}, & \frac{\partial\hat{j}}{\partial z}=\vec{0}\\
+\frac{\partial\hat{k}}{\partial x}=\vec{0}, & \frac{\partial\hat{k}}{\partial y}=\vec{0}, & \frac{\partial\hat{k}}{\partial z}=\vec{0}
+\end{array}
+\]
+
+\subsubsection{v\_rp\_14}
+
+Essendo:
+
+\[
+\left\{ \begin{gathered}\hat{i}_{r}(\varphi)=(\cos\varphi)\hat{i}+(\sin\varphi)\hat{j}\\
+\hat{i}_{\varphi}(\varphi)=-(\sin\varphi)\hat{i}+(\cos\varphi)\hat{j}
+\end{gathered}
+\right.
+\]
+
+allora $\frac{\partial\hat{i}_{r}(\varphi)}{\partial\varphi}=-(\sin\varphi)\hat{i}+(\cos\varphi)\hat{j}=\hat{i}_{\varphi}$
+e $\frac{\partial\hat{i}_{\varphi}(\varphi)}{\partial\varphi}=-(\cos\varphi)\hat{i}-(\sin\varphi)\hat{j}=-\hat{i}_{r}$
+e dunque:
+
+\[
+\begin{array}{ccc}
+\frac{\partial\hat{i}_{r}(\varphi)}{\partial r}=\vec{0}, & \frac{\partial\hat{i}_{r}(\varphi)}{\partial\varphi}=\hat{i}_{\varphi}, & \frac{\partial\hat{i}_{r}(\varphi)}{\partial z}=\vec{0}\\
+\frac{\partial\hat{i}_{\varphi}(\varphi)}{\partial r}=\vec{0}, & \frac{\partial\hat{i}_{\varphi}(\varphi)}{\partial\varphi}=-\hat{i}_{r}, & \frac{\partial\hat{i}_{\varphi}(\varphi)}{\partial z}=\vec{0}\\
+\frac{\partial\hat{k}}{\partial r}=\vec{0}, & \frac{\partial\hat{k}}{\partial\varphi}=\vec{0}, & \frac{\partial\hat{k}}{\partial z}=\vec{0}
+\end{array}
+\]
+
+\subsubsection{v\_rp\_15}
+
+\[
+\begin{gathered}\frac{\text{d}\hat{t}(s)}{\text{d}s}=\kappa\hat{n}\\
+\frac{\text{d}\hat{n}(s)}{\text{d}s}=-\kappa\hat{t}+\tau\hat{b}\\
+\frac{\text{d}\hat{b}(s)}{\text{d}s}=-\tau\hat{n}
+\end{gathered}
+\]
+
+Ricaviamo la I dall'equazione $\hat{n}=\rho\frac{\text{d}\hat{t}}{\text{d}s}\Rightarrow\frac{\text{d}\hat{t}}{\text{d}s}=\underset{\kappa}{\underbrace{\frac{1}{\rho}}}\hat{n}$
+
+Ricaviamo la III dalla scomposizione del vettore $\frac{\text{d}\hat{b}}{\text{d}s}=\left(\frac{\text{d}\hat{b}}{\text{d}s}\cdot\hat{t}\right)\hat{t}+\left(\frac{\text{d}\hat{b}}{\text{d}s}\cdot\hat{n}\right)\hat{n}+\left(\frac{\text{d}\hat{b}}{\text{d}s}\cdot\hat{b}\right)\hat{b}$
+:
+\begin{enumerate}
+\item $\frac{\text{d}\hat{b}}{\text{d}s}\cdot\hat{t}=\left[\frac{\text{d}}{\text{d}s}\left(\hat{t}\wedge\hat{n}\right)\right]\cdot\hat{t}=\left[\frac{\text{d}\hat{t}}{\text{d}s}\wedge\hat{n}+\hat{t}\wedge\frac{\text{d}\hat{n}}{\text{d}s}\right]\cdot\hat{t}=\left[\underset{0}{\underbrace{\left(\kappa\hat{n}\right)\wedge\hat{n}}}+\hat{t}\wedge\frac{\text{d}\hat{n}}{\text{d}s}\right]\cdot\hat{t}=\left(\hat{t}\wedge\hat{t}\right)\cdot\frac{\text{d}\hat{n}}{\text{d}s}=0$
+\item $\frac{\text{d}\hat{b}}{\text{d}s}\cdot\hat{n}=-\tau$
+\item $\frac{\text{d}\hat{b}}{\text{d}s}\cdot\hat{b}=\frac{\text{d}}{\text{d}s}(\underset{1}{\underbrace{\hat{b}\cdot\hat{b}}})=0$
+\end{enumerate}
+dunque $\frac{\text{d}\hat{b}}{\text{d}s}=0\hat{t}-\tau\hat{n}+0\hat{b}=-\tau\hat{n}$
+
+Ricaviamo infine la II da $\frac{\text{d}\hat{n}}{\text{d}s}=\frac{\text{d}}{\text{d}s}\left(\hat{b}\wedge\hat{t}\right)=\frac{\text{d}\hat{b}}{\text{d}s}\wedge\hat{t}+\hat{b}\wedge\frac{\text{d}\hat{t}}{\text{d}s}=\left(-\tau\hat{n}\right)\wedge\hat{t}+\hat{b}\wedge\left(\kappa\hat{n}\right)=-\tau\left(\underset{-\hat{b}}{\underbrace{\hat{n}\wedge\hat{t}}}\right)+\kappa\left(\underset{-\hat{t}}{\underbrace{\hat{b}\wedge\hat{n}}}\right)=\tau\hat{b}-\kappa\hat{t}$
+
+\subsubsection{v\_rp\_16}
+
+\[
+\begin{gathered}\text{d}\vec{r}=\text{d}x\hat{i}+\text{d}y\hat{j}+\text{d}z\hat{k}\\
+\left\Vert \text{d}\vec{r}\right\Vert =\sqrt{\left(\text{d}x\right)^{2}+\left(\text{d}y\right)^{2}+\left(\text{d}z\right)^{2}}
+\end{gathered}
+\]
+
+\subsubsection{v\_rp\_17}
+
+\[
+\begin{gathered}\text{d}\vec{r}=\text{d}r\hat{i}_{r}+r\text{d}\varphi\hat{i}_{\varphi}+\text{d}z\hat{k}\\
+\left\Vert \text{d}\vec{r}\right\Vert =\sqrt{\left(\text{d}r\right)^{2}+r^{2}\left(\text{d}\varphi\right)^{2}+\left(\text{d}z\right)^{2}}
+\end{gathered}
+\]
+
+\subsubsection{v\_rp\_18}
+
+\[
+\begin{gathered}\text{d}\vec{r}=\text{d}\rho\hat{i}_{\rho}+\rho\text{d}\theta\hat{i}_{\theta}+\rho\left(\sin\theta\right)\text{d}\varphi\hat{i}_{\varphi}\\
+\left\Vert \text{d}\vec{r}\right\Vert =\sqrt{\left(\text{d}\rho\right)^{2}+\rho^{2}\left(\text{d}\theta\right)^{2}+\rho^{2}\left(\sin^{2}\theta\right)\left(\text{d}\varphi\right)^{2}}
+\end{gathered}
+\]
+
+\subsubsection{v\_rp\_19}
+
+\[
+\begin{gathered}\text{d}\vec{r}=\text{d}s\hat{t}\\
+\left\Vert \text{d}\vec{r}\right\Vert =\left|\text{d}s\right|
+\end{gathered}
+\]
+
+\subsubsection{v\_or\_01}
+
+\[
+\begin{array}{ccc}
+\hat{i}\cdot\hat{i}=1, & \hat{j}\cdot\hat{j}=1, & \hat{k}\cdot\hat{k}=1\\
+\hat{i}\cdot\hat{j}=0, & \hat{j}\cdot\hat{k}=0, & \hat{k}\cdot\hat{i}=0
+\end{array}
+\]
+
+\[
+\begin{array}{ccc}
+\hat{i}\wedge\hat{i}=\vec{0}, & \hat{j}\wedge\hat{j}=\vec{0}, & \hat{k}\wedge\hat{k}=\vec{0}\\
+\hat{i}\wedge\hat{j}=\hat{k}, & \hat{j}\wedge\hat{k}=\hat{i}, & \hat{k}\wedge\hat{i}=\hat{j}
+\end{array}
+\]
+
+\subsubsection{v\_or\_02}
+
+\[
+\begin{array}{ccc}
+\hat{i}_{r}\cdot\hat{i}_{r}=1, & \hat{i}_{\varphi}\cdot\hat{i}_{\varphi}=1, & \hat{k}\cdot\hat{k}=1\\
+\hat{i}_{r}\cdot\hat{i}_{\varphi}=0, & \hat{i}_{\varphi}\cdot\hat{k}=0, & \hat{k}\cdot\hat{i}_{r}=0
+\end{array}
+\]
+
+\[
+\begin{array}{ccc}
+\hat{i}_{r}\wedge\hat{i}_{r}=\vec{0}, & \hat{i}_{\varphi}\wedge\hat{i}_{\varphi}=\vec{0}, & \hat{k}\wedge\hat{k}=\vec{0}\\
+\hat{i}_{r}\wedge\hat{i}_{\varphi}=\hat{k}, & \hat{i}_{\varphi}\wedge\hat{k}=\hat{i}_{r}, & \hat{k}\wedge\hat{i}_{r}=\hat{i}_{\varphi}
+\end{array}
+\]
+
+\subsubsection{v\_or\_03}
+
+\[
+\begin{array}{ccc}
+\hat{i}_{\rho}\cdot\hat{i}_{\rho}=1, & \hat{i}_{\theta}\cdot\hat{i}_{\theta}=1, & \hat{i}_{\varphi}\cdot\hat{i}_{\varphi}=1\\
+\hat{i}_{\rho}\cdot\hat{i}_{\theta}=0, & \hat{i}_{\theta}\cdot\hat{i}_{\varphi}=0, & \hat{i}_{\varphi}\cdot\hat{i}_{\rho}=0
+\end{array}
+\]
+
+\[
+\begin{array}{ccc}
+\hat{i}_{\rho}\wedge\hat{i}_{\rho}=\vec{0}, & \hat{i}_{\theta}\wedge\hat{i}_{\theta}=\vec{0}, & \hat{i}_{\varphi}\wedge\hat{i}_{\varphi}=\vec{0}\\
+\hat{i}_{\rho}\wedge\hat{i}_{\theta}=\hat{i}_{\varphi}, & \hat{i}_{\theta}\wedge\hat{i}_{\varphi}=\hat{i}_{\rho}, & \hat{i}_{\varphi}\wedge\hat{i}_{\rho}=\hat{i}_{\theta}
+\end{array}
+\]
+
+\subsubsection{v\_or\_04}
+
+\[
+\begin{array}{ccc}
+\hat{t}\cdot\hat{t}=1, & \hat{n}\cdot\hat{n}=1, & \hat{b}\cdot\hat{b}=1\\
+\hat{t}\cdot\hat{n}=0, & \hat{n}\cdot\hat{b}=0, & \hat{b}\cdot\hat{t}=0
+\end{array}
+\]
+
+\[
+\begin{array}{ccc}
+\hat{t}\wedge\hat{t}=\vec{0}, & \hat{n}\wedge\hat{n}=\vec{0}, & \hat{b}\wedge\hat{b}=\vec{0}\\
+\hat{t}\wedge\hat{n}=\hat{b}, & \hat{n}\wedge\hat{b}=\hat{t}, & \hat{b}\wedge\hat{t}=\hat{n}
+\end{array}
+\]
+
+\subsubsection{v\_di\_01}
+
+\[
+\vec{a}\cdot\vec{b}=\left(a_{x}\hat{i}+a_{y}\hat{j}+a_{z}\hat{k}\right)\cdot\left(b_{x}\hat{i}+b_{y}\hat{j}+b_{z}\hat{k}\right)=
+\]
+
+\[
+\begin{gathered}\left(a_{x}b_{x}\right)\cdot\left(\underset{1}{\underbrace{\hat{i}\cdot\hat{i}}}\right)+\left(a_{x}b_{y}\right)\cdot\left(\underset{0}{\underbrace{\hat{i}\cdot\hat{j}}}\right)+\left(a_{x}b_{z}\right)\cdot\left(\underset{0}{\underbrace{\hat{i}\cdot\hat{k}}}\right)\\
+\left(a_{y}b_{x}\right)\cdot\left(\underset{0}{\underbrace{\hat{j}\cdot\hat{i}}}\right)+\left(a_{y}b_{y}\right)\cdot\left(\underset{1}{\underbrace{\hat{j}\cdot\hat{j}}}\right)+\left(a_{y}b_{z}\right)\cdot\left(\underset{0}{\underbrace{\hat{j}\cdot\hat{k}}}\right)\\
+\left(a_{z}b_{x}\right)\cdot\left(\underset{0}{\underbrace{\hat{k}\cdot\hat{i}}}\right)+\left(a_{z}b_{y}\right)\cdot\left(\underset{0}{\underbrace{\hat{k}\cdot\hat{j}}}\right)+\left(a_{z}b_{z}\right)\cdot\left(\underset{1}{\underbrace{\hat{k}\cdot\hat{k}}}\right)
+\end{gathered}
+\]
+
+\[
+=a_{x}b_{x}+a_{y}b_{y}+a_{z}b_{z}
+\]
+
+\subsubsection{v\_di\_02}
+
+\[
+\vec{a}\wedge\vec{b}=\left(a_{x}\hat{i}+a_{y}\hat{j}+a_{z}\hat{k}\right)\wedge\left(b_{x}\hat{i}+b_{y}\hat{j}+b_{z}\hat{k}\right)=
+\]
+
+\[
+\begin{gathered}\left(a_{x}b_{x}\right)\wedge\left(\underset{\vec{0}}{\underbrace{\hat{i}\wedge\hat{i}}}\right)+\left(a_{x}b_{y}\right)\wedge\left(\underset{\hat{k}}{\underbrace{\hat{i}\wedge\hat{j}}}\right)+\left(a_{x}b_{z}\right)\wedge\left(\underset{-\hat{j}}{\underbrace{\hat{i}\wedge\hat{k}}}\right)\\
+\left(a_{y}b_{x}\right)\wedge\left(\underset{-\hat{k}}{\underbrace{\hat{j}\wedge\hat{i}}}\right)+\left(a_{y}b_{y}\right)\wedge\left(\underset{\vec{0}}{\underbrace{\hat{j}\wedge\hat{j}}}\right)+\left(a_{y}b_{z}\right)\wedge\left(\underset{\hat{i}}{\underbrace{\hat{j}\wedge\hat{k}}}\right)\\
+\left(a_{z}b_{x}\right)\wedge\left(\underset{\hat{j}}{\underbrace{\hat{k}\wedge\hat{i}}}\right)+\left(a_{z}b_{y}\right)\wedge\left(\underset{-\hat{i}}{\underbrace{\hat{k}\wedge\hat{j}}}\right)+\left(a_{z}b_{z}\right)\wedge\left(\underset{\vec{0}}{\underbrace{\hat{k}\wedge\hat{k}}}\right)
+\end{gathered}
+\]
+
+\[
+=\left(a_{y}b_{z}-a_{z}b_{y}\right)\hat{i}+\left(a_{z}b_{x}-a_{x}b_{z}\right)\hat{j}+\left(a_{x}b_{y}-a_{y}b_{x}\right)\hat{k}
+\]
+
+\subsubsection{v\_di\_03}
+
+Presi due diversi centri di riduzione, $O$ e $O'$, detti $\vec{\mathscr{M}}^{\left(O\right)}$
+e $\vec{\mathscr{M}}^{\left(O'\right)}$ i momenti risultanti rispetto
+a tali centri e osservando che $\vec{r}_{O'P_{i}}=\vec{r}_{O'O}+\vec{r}_{OP_{i}}\Rightarrow\vec{r}_{O'O}=\vec{r}_{O'P_{i}}-\vec{r}_{OP_{i}}$
+si ha che:
+
+\[
+\vec{\mathscr{M}}^{\left(O'\right)}-\vec{\mathscr{M}}^{\left(O\right)}=\sum_{i=1}^{n}\vec{r}_{O'P_{i}}\wedge\vec{F}_{i}-\sum_{i=1}^{n}\vec{r}_{OP_{i}}\wedge\vec{F}_{i}=\sum_{i=1}^{n}\left[\vec{r}_{O'P_{i}}-\vec{r}_{OP_{i}}\right]\wedge\vec{F}_{i}=\sum_{i=1}^{n}\left[\vec{r}_{O'P_{i}}-\vec{r}_{OP_{i}}\right]\wedge\vec{F}_{i}=\vec{r}_{O'O}\wedge\vec{\mathscr{R}}
+\]
+
+Da qui si eveince facilmente che se $\vec{\mathscr{R}}=\vec{0}$ allora
+si annulla il prodotto vettoriale e risulta $\vec{\mathscr{M}}^{\left(O'\right)}=\vec{\mathscr{M}}^{\left(O\right)}$.
+
+\subsubsection{v\_di\_04}
+
+Sia $\vec{r}=\vec{r}(s)$, allora il versore tangente si esprimerà
+come $\frac{\text{d}\vec{r}(s)}{\text{d}s}=\underset{\Delta s\rightarrow0}{\lim}\frac{\vec{r}(s+\Delta s)-\vec{r}(s)}{\Delta s}$.
+Il numeratore ha direzione della secante della traiettoria $\gamma$
+nei punti $\vec{r}(s+\Delta s)$ e $\vec{r}(s)$; tuttavia nel limite
+in cui $\Delta s\rightarrow0$ la secante diviene la tangente e la
+sua lunghezza diviene pari alla lunghezza dell'arco cioè $\Delta\vec{r}=\vec{r}(s+\Delta s)-\vec{r}(s)=\left\Vert \Delta\vec{r}\right\Vert \text{vers}\left(\Delta\vec{r}\right)\sim\Delta s\hat{t}$. 
+
+Sostituendo nel limite avremo dunque che $\frac{\text{d}\vec{r}(s)}{\text{d}s}=\underset{\Delta s\rightarrow0}{\lim}\frac{\cancel{\Delta s}\hat{t}}{\cancel{\Delta s}}=\hat{t}(s)$.
+
+\pagebreak{}
+
+\subsubsection{v\_di\_05}
+
+Sia $\hat{t}(s)$ il versore tangente a una traiettoria $\gamma$
+e $\rho(s)$ il raggio di curvatura, allora il versore normale si
+esprimerà come $\frac{\text{d}\hat{t}(s)}{\text{d}s}=\underset{\Delta s\rightarrow0}{\lim}\frac{\hat{t}(s+\Delta s)-\hat{t}(s)}{\Delta s}$.
+
+\includegraphics[scale=0.5,bb = 0 0 200 100, draft, type=eps]{img/Dim_versoreNormale.PNG}
+
+Ora, da come possiamo osservare in figura, $\hat{APB}=\hat{PCP'}$
+in quanto $AP\bot CP$ e $BP\bot CP'$.
+
+Tuttavia nel limite in cui $\Delta s\rightarrow0$ l'angolo $\hat{APB}$
+tenderà a $0$ mentre gli angoli alla base tenderanno a $\frac{\pi}{2}$,
+dunque $\left[\hat{t}(s+\Delta s)-\hat{t}(s)\right]\bot\hat{t}(s),\quad\Delta s\rightarrow0$
+e allora $\text{vers}\left(\hat{t}(s+\Delta s)-\hat{t}(s)\right)\sim\hat{n}(s),\quad\Delta s\rightarrow0$.
+
+Inoltre possiamo dire con certezza che sia $\overset{\triangle}{PAB}$
+che $\overset{\triangle}{PCP'}$ sono isosceli e tra loro simili in
+quanto hanno due lati uguali (nel caso di $\overset{\triangle}{PAB}$
+perchè sono due versori e nel caso di $\overset{\triangle}{PCP'}$
+perchè sono il raggio della circonferenza osculatrice), dunque angoli
+alla base uguali, e l'angolo al vertice in alto uguale.
+
+Essendo simili allorahanno i lati proporzionali: $\frac{\overline{AB}}{\overline{PP'}}=\frac{\overline{PA}}{\overline{CP}}$
+e allora $\overline{AB}=\frac{\overline{PA}}{\overline{CP}}\overline{PP'}$.
+
+Otteniamo quindi che $\Delta\hat{t}=\hat{t}(s+\Delta s)-\hat{t}(s)=\left\Vert \Delta\hat{t}\right\Vert \text{vers}\left(\Delta\hat{t}\right)=\frac{1}{\rho}\overline{PP'}\hat{n}\sim\frac{1}{\rho}\Delta s\hat{n},\quad\Delta s\rightarrow0$
+
+Sostituendo nel limite avremo dunque che $\frac{\text{d}\hat{t}(s)}{\text{d}s}=\underset{\Delta s\rightarrow0}{\lim}\frac{\frac{1}{\rho}\cancel{\Delta s}\hat{n}}{\cancel{\Delta s}}=\frac{1}{\rho}\hat{n}$ 
+
+\pagebreak{}
+
+\section{Cinematica}
+
+\subsubsection{k\_df\_01}
+
+(a) Il giorno solare è l'intervallo di tempo tra due successivi passaggi
+del Sole dal meridiano locale.
+
+(b) Il giorno sidereo è l'intervallo di tempo tra due successivi passaggi
+di una stella fissa dal meridiano locale.
+
+(c) In un anno solare, a causa del moto di rivoluzione della Terra
+attorno al Sole, c'è un giorno in meno rispetto ad un anno sidereo.
+Infatti mentre $\tau_{sol}=24\text{h}$, $\tau_{sid}\sim23\text{h }56\text{m}$.
+Dunque $\tau_{sol}-\tau_{sid}\sim4\text{m}$.
+
+\subsubsection{k\_df\_02}
+
+\includegraphics[scale=0.4,bb = 0 0 200 100, draft, type=eps]{img/k_df_02.PNG}
+
+(a) Definiamo veloctià areolare istantanea di un punto materiale $P$
+rispetto ad un centro di riduzione $O$ l'area spazzata dal vettore
+posizionale $\vec{r}_{OP}$ nell'unità di tempo, calcolata sulla base
+di un intervallo di tempo infinitesimo.
+
+(b) L'espressione della velocità areolare in funzione del vettore
+posizonale e della velocità è: $\vec{A}=\frac{1}{2}\vec{r}_{OP}\wedge\vec{v}_{P}$.
+
+(c) L'espressione della velocità areolare nella base cilindrica è:
+$\vec{A}=\frac{1}{2}r^{2}\dot{\varphi}\hat{k}$.
+
+\subsubsection{k\_df\_03}
+
+A partire dall'anno 1967 il secondo è definito come multiplo del periodo
+di oscillazione della radiazione elettromagnetica emessa dagli atomi
+di Cesio 133 nella transizione tra due livelli iperfini dello stato
+fondamentale dell'atomo.
+
+\subsubsection{k\_df\_04}
+
+A partire dall'anno 1983 il metro è definito come la distanza percorsa
+dalla luce nel vuoto in $\approx\frac{1}{300\dot{}000\dot{}000}$
+di secondo.
+
+\subsubsection{k\_rp\_01}
+
+Legge vettoriale del moto:
+
+(a) in forma vettoriale: $\vec{r}=\vec{r}(t)$
+
+(b) nella base cartesiana: $\vec{r}(t)=x(t)\hat{i}+y(t)\hat{j}+z(t)\hat{k}$
+
+(c) nella base cilindrica: $\vec{r}(t)=r(t)\hat{i}_{r}(\varphi(t))+z(t)\hat{k}$
+
+(d) nella base sferica: $\vec{r}(t)=\rho(t)\hat{i}_{\rho}(\theta(t),\varphi(t))$
+
+(e) nella base intrinseca: $\vec{r}(t)=\vec{r}(s(t))$
+
+\subsubsection{k\_rp\_02}
+
+Espressione della velocità vettoriale:
+
+(a) nella base cartesiana: $\vec{v}=\dot{x}\hat{i}+\dot{y}\hat{j}+\dot{z}\hat{k}$
+
+(b) nella base cilindrica: $\vec{v}=\dot{r}\hat{i}_{r}+r\dot{\varphi}\hat{i}_{\varphi}+\dot{z}\hat{k}$
+
+(c) nella base intrinseca: $\vec{v}=\dot{s}\hat{t}$
+
+\subsubsection{k\_rp\_03}
+
+Espressione dell'accelerazione vettoriale:
+
+(a) nella base cartesiana: $\vec{a}=\ddot{x}\hat{i}+\ddot{y}\hat{j}+\ddot{z}\hat{k}$
+
+(b) nella base cilindrica: $\vec{a}=(\ddot{r}-r\dot{\varphi}^{2})\hat{i}_{r}+(2\dot{r}\dot{\varphi}+r\ddot{\varphi})\hat{i}_{\varphi}+\ddot{z}\hat{k}$
+
+(c) nella base intrinseca: $\vec{a}=\ddot{s}\hat{t}+\frac{\dot{s}^{2}}{\rho}\hat{n}$
+
+\subsubsection{k\_in\_01}
+
+(a) L'accelerazione è tangente alla traiettoria se il moto è rettilineo
+$(\rho\rightarrow\infty)$
+
+(b) L'accelerazione è normale alla traiettoria se il moto è curvilineo
+uniforme $(\dot{s}\equiv cost.$)
+
+\subsubsection{k\_in\_02}
+
+In un moto rettilineo non uniforme di un punto materiale le componenti
+nulle sono la normale e la binormale poichè per $\rho\rightarrow+\infty$
+la componente normale si annulla e non compare alcuna componente binormale
+nell'espressione intrinseca dell'accelerazione $\vec{a}=\ddot{s}\hat{t}+\frac{\dot{s}^{2}}{\rho}\hat{n}$.
+
+\subsubsection{k\_in\_03}
+
+In un moto curvilineo uniforme di un punto materiale le componenti
+dell'accelerazione nulle sono la tangente e la binormale poichè, essendo
+uniforme, la velocità è costante e dunque $\ddot{s}=0$ e non compare
+alcuna componente binormale nell'espressione intrinseca dell'accelerazione
+$\vec{a}=\ddot{s}\hat{t}+\frac{\dot{s}^{2}}{\rho}\hat{n}$.
+
+\subsubsection{k\_in\_04}
+
+(a) Sì, la velocità di un punto materiale è sempre tangente alla sua
+traiettoria, come si può osservare derivando rispetto alla base intrinseca
+in cui emerge soltanto la componente tangente.
+
+(b) No, L'accelerazione di un punto materiale non è sempre tangente
+alla sua traiettoria, un controesempio può essere il moto circolare
+uniforme in cui l'accelerazine ha solo componente normale alla traiettoria
+(accelerazione centripeta).
+
+\subsubsection{k\_in\_05}
+
+L'espressione della velocità nella base intrinseca è: $\vec{v}=\dot{s}\hat{t}$,
+quella dell'accelerazione invece è: $\vec{a}=\ddot{s}\hat{t}+\frac{\dot{s}^{2}}{\rho}\hat{n}$.
+Possiamo osservare come dal'epressione della velocità si evidenzia
+il fatto che la velocità è sempre tangente alla traiettoria mentre
+nel caso dell'accelerazione sono presenti sia la componente tangente
+che quella normale.
+
+\subsubsection{k\_in\_06}
+
+(a) La relazione $v=\left\Vert \vec{v}\right\Vert =\frac{ds}{dt}$
+è corretta poichè $v=\left\Vert \vec{v}\right\Vert =\sqrt{v_{t}^{2}}=\sqrt{\dot{s}^{2}}=\dot{s}$.
+
+(b) La relazione $a=\left\Vert \vec{a}\right\Vert =\frac{d^{2}s}{dt^{2}}$
+è errata poichè in generale $a=\left\Vert \vec{a}\right\Vert =\sqrt{a_{t}^{2}+a_{n}^{2}}=\sqrt{\ddot{s}^{2}+\frac{\dot{s}^{4}}{\rho^{2}}}$.
+La relazione corretta pertanto è $a\geq\frac{d^{2}s}{dt^{2}}$ e il
+segno di uguaglianza vale soltanto in caso di quiete ($\dot{s}=0$)
+o di moto rettilineo ($\rho\rightarrow+\infty$).
+
+\subsubsection{k\_cr\_01}
+
+Si chiamo numero dei gradi di libertà di un sistema meccanico il minimo
+numero di parametri necessari per individuare una sua generica configurazione.
+
+\subsubsection{k\_cr\_02}
+
+Un sistema di 2 punti materiali vincolati a mantenere distanza inalterata
+ha 5GdL: 3 coordinate per descrivere la posizione del primo punto
++ 2 per determinare raggio e coordinata intrinseca rispetto alla circonferenza
+con centro nel primo punto.
+
+Un sistema di 3 punti materiali vincolati a mantenere distanza inalterata
+ha 6GdL: per descrivere il terzo punto basta la cordinata intrinseca
+sulla cirfonferenza di centro sul segmento che congiunge i primi due
+punti e giacente sul piano perpendicolare a tale segmento.
+
+Un sistema di 4 o 5 punti materiali vincolati a mantenere distanza
+inalterata ha distanza 6GdL: fissati i primi tre punti tutti gli altri
+sono vincolati a questi dalla distanza.
+
+\subsubsection{k\_cr\_03}
+
+La formula fondamentale della cinematica dei corpi rigidi è: $\vec{v}_{Q}=\vec{v}_{P}+\vec{\omega}\wedge\vec{r}_{PQ}$.
+
+In cui:
+\begin{itemize}
+\item $\vec{v}_{Q}$ è la velocità del punto $Q$ nel SdR esterno al corpo.
+\item $\vec{v}_{P}$ è la velocità del punto $P$ nel SdR esterno al corpo.
+\item $\vec{\omega}$ è la velocità angolare del corpo rigido nel SdR esterno
+ad esso.
+\item $\vec{r}_{PQ}$ è il vettore posizionale che congiunge il punto $P$
+e $Q$.
+\end{itemize}
+
+\subsubsection{k\_cr\_04}
+
+Il moto di un corpo rigido si dice:
+
+(a) translatorio quando le velocità di tutti i punti del corpo sono
+uguali , ossia la velocità angolare è nulla.
+
+(b) rotatorio quando esiste almeno un punto $O$ del corpo che rimane
+in quiete durante il moto.
+
+(c) roto-translatorio quando nessuna delle due precedenti condizioni
+è soddisfatta.
+
+\subsubsection{k\_cr\_05}
+
+(a) Il numero dei gradi di libertà di un punto materiale libero è
+3 (coord. cartesiane, cilindriche o sferiche).
+
+(b) Il numero dei gradi di libertà di un punto materiale vincolato
+a giacere su una circonferenza è 1 (coordinata intrinseca sulla circonferenza).
+
+(c) Il numero dei gradi di libertà di un punto materiale vincolato
+a giacere su una superficie sferica è 2 (raggio da un centro $O$
+e coordinata intrinseca sulla circonferenza).
+
+\subsubsection{k\_cr\_06}
+
+(a) Il numero dei gradi di libertà di un sistema costituito di 2 punti
+materiali liberi è 6 (3 coord. per ognuno).
+
+(b) Il numero dei gradi di libertà di un sistema costituito di 2 punti
+materiali vincolati a giacere su una circonferenza è 2 (coordinata
+intrinseca sulla circonferenza per ognuno dei punti).
+
+(c) Il numero dei gradi di libertà di un sistema costituito di 2 punti
+materiali vincolati a giacere su una superficie sferica è 4 (un raggio
+da un centro $O$ e rispettiva coordinata intrinseca sulla circonferenza
+per ognuno).
+
+\subsubsection{k\_cr\_07}
+
+a) Il numero dei gradi di libertà di un sistema costituito di 5 punti
+materiali liberi è 15 (3 coord. per ognuno).
+
+(b) Il numero dei gradi di libertà di un sistema costituito di 5 punti
+materiali vincolati a giacere su una circonferenza è 5 (coordinata
+intrinseca sulla circonferenza per ognuno dei punti).
+
+(c) Il numero dei gradi di libertà di un sistema costituito di 5 punti
+materiali vincolati a giacere su una superficie sferica è 10 (un raggio
+da un centro $O$ e rispettiva coordinata intrinseca sulla circonferenza
+per ognuno).
+
+\subsubsection{k\_mr\_01}
+
+(a) L' accelerazione di trascinamento è definita dalla somma $\vec{a}_{T}=\vec{a}_{O}+\dot{\omega}\wedge\vec{r}+\vec{\omega}\wedge\left(\vec{\omega}\wedge\vec{r}\right)$,
+in cui:
+\begin{itemize}
+\item $\vec{a}_{O}$ è l'accelerazione del punto materiale $O$ rispetto
+al riferimento $O'_{x'y'z'}$ fisso.
+\item $\vec{\omega}$ è la velocità angolare del riferimento $O_{xyz}$
+in movimento rispetto al riferimento $O'_{x'y'z'}$ fisso.
+\item $\vec{r}$ è il vettore posizionale di un punto materiale $P$ nel
+riferimento $O_{xyz}$ in movimento.
+\end{itemize}
+(b) L'accelerazione di Coriolis è definita dall'espressione $\vec{a}_{C}=2\vec{\omega}\wedge\vec{v}$,
+in cui:
+\begin{itemize}
+\item $\vec{\omega}$ è la velocità angolare del riferimento $O_{xyz}$
+in movimento rispetto al riferimento $O'_{x'y'z'}$ fisso.
+\item $\vec{v}$ è la velocità del punto materiale $P$ nel riferimento
+$O_{xyz}$ in movimento.
+\end{itemize}
+
+\subsubsection{k\_mr\_02}
+
+La relazione che lega le espressioni della velocità di uno stesso
+punto materiale $P$ in due diversi sistemi di riferimento è:
+
+\[
+\left\{ \begin{gathered}\vec{v}'=\vec{v}+\vec{v}_{T}\\
+\vec{v}_{T}=\vec{v}_{O}+\vec{\omega}\wedge\vec{r}
+\end{gathered}
+\right.
+\]
+
+in cui:
+\begin{itemize}
+\item $\vec{v}'$ è la velocità del punto materiale $P$ rispetto al riferimento
+$O'_{x'y'z'}$ fisso.
+\item $\vec{v}$ è la velocità del punto materiale $P$ rispetto al riferimento
+$O_{xyz}$ in movimento.
+\item $\vec{v}_{O}$ è la velocità del punto $O$ rispetto al riferimento
+$O'_{x'y'z'}$ fisso.
+\item $\vec{\omega}$ è la velocità angolare del riferimento $O_{xyz}$
+in movimento rispetto a $O'_{x'y'z'}$ fisso.
+\item $\vec{r}$ è il vettore posizionale di un punto materiale $P$ nel
+riferimento $O_{xyz}$ in movimento.
+\end{itemize}
+
+\subsubsection{k\_mr\_03}
+
+La relazione che lega le espressioni dell'accelerazione di uno stesso
+punto materiale $P$ in due diversi sistemi di riferimento è:
+
+\[
+\left\{ \begin{gathered}\vec{a}'=\vec{a}+\vec{a}_{T}+\vec{a}_{C}\\
+\vec{a}_{T}=\vec{a}_{O}+\dot{\vec{\omega}}\wedge\vec{r}+\vec{\omega}\wedge\left(\vec{\omega}\wedge\vec{r}\right)\\
+\vec{a}_{C}=2\vec{\omega}\wedge\vec{v}
+\end{gathered}
+\right.
+\]
+
+in cui:
+\begin{itemize}
+\item $\vec{a}'$ è l'accelerazione del punto materiale $P$ rispetto al
+riferimento $O'_{x'y'z'}$ fisso.
+\item $\vec{a}$ è l'accelerazione del punto materiale $P$ rispetto al
+riferimento $O_{xyz}$ in movimento.
+\item $\vec{a}_{O}$ è l'accelerazione del punto $O$ rispetto al riferimento
+$O'_{x'y'z'}$ fisso.
+\item $\dot{\vec{\omega}}$ è l'accelerazione angolare del riferimento $O_{xyz}$
+in movimento rispetto al riferimento $O'_{x'y'z'}$ fisso.
+\item $\vec{r}$ è il vettore posizionale del punto materiale $P$ rispetto
+al riferimento $O_{xyz}$ in movimento.
+\item $\vec{\omega}$ è la velocità angolare del riferimento $O_{xyz}$
+rispetto al riferimento $O'_{x'y'z'}$ fisso.
+\item $\vec{v}$ è la velocità del punto materiale $P$ nel riferimento
+$O_{xyz}$ in movimento.
+\end{itemize}
+
+\subsubsection{k\_di\_01}
+
+(a) Definiamo velocità areolare istantanea di un punto materiale $P$
+rispetto ad un centro di riduzione $O$ l'area spazzata dal vettore
+posizionale $\vec{r}_{OP}$ nell'unità di tempo, calcolata sulla base
+di un intervallo di tempo infinitesimo.
+
+(b) 
+\[
+\Delta S\sim\frac{1}{2}\underset{\textrm{base}}{\underbrace{\left\Vert \vec{r}_{OP}(t)\right\Vert }}\underset{\textrm{altezza}}{\underbrace{\left\Vert \vec{r}_{OP}(t+\Delta t)-\vec{r}_{OP}(t)\right\Vert \left|\sin\alpha\right|}}
+\]
+
+\[
+A=\underset{\Delta t\rightarrow0}{\lim}\frac{\Delta S}{\Delta t}=\left[\frac{1}{2}\left\Vert \vec{r}_{OP}(t)\right\Vert \left\Vert \underset{\Delta t\rightarrow0}{\lim}\frac{\vec{r}_{OP}(t+\Delta t)-\vec{r}_{OP}(t)}{\Delta t}\right\Vert \left|\sin\alpha\right|\right]=\frac{1}{2}\left\Vert \vec{r}_{OP}\right\Vert \left\Vert \vec{v}_{P}\right\Vert \left|\sin\left(\pi-\alpha\right)\right|=\frac{1}{2}\left\Vert \vec{r}_{OP}\wedge\vec{v}_{P}\right\Vert 
+\]
+
+\[
+\vec{A}=\frac{1}{2}\vec{r}_{OP}\wedge\vec{v}_{P}
+\]
+
+\subsubsection{k\_di\_02}
+
+\[
+\vec{v}(t)=\dot{s}(t)\hat{t}(t)\qquad\frac{\text{d}\hat{t}}{\text{d}t}=\frac{\text{d}\hat{t}}{\text{d}s}\frac{ds}{dt}=\frac{\text{d}\hat{t}}{\text{d}s}\dot{s}\qquad\frac{\text{d}\hat{t}(s)}{\text{d}s}=\frac{1}{\rho}\hat{n}
+\]
+
+\[
+\vec{a}=\frac{\text{d}\vec{v}}{\text{d}t}=\ddot{s}\hat{t}+\dot{s}^{2}\frac{\text{d}\hat{t}}{\text{d}s}=\ddot{s}\hat{t}+\frac{\dot{s}^{2}}{\rho}\hat{n}
+\]
+
+\subsubsection{k\_di\_06}
+
+\[
+\vec{A}=\frac{1}{2}\vec{r}_{OP}\wedge\vec{v}_{P}=\frac{1}{2}(r\hat{i}_{r})\wedge(\dot{r}\hat{i}_{r}+r\dot{\varphi}\hat{i}_{\varphi})=\frac{1}{2}\left[r\dot{r}\underset{\vec{0}}{\underbrace{(\hat{i}_{r}\wedge\hat{i}_{r})}}+r^{2}\dot{\varphi}\underset{\hat{k}}{\underbrace{(\hat{i}_{r}\wedge\hat{i}_{\varphi})}}\right]=\frac{1}{2}r^{2}\dot{\varphi}\hat{k}
+\]
+
+\subsubsection{k\_di\_07}
+\begin{center}
+\includegraphics[scale=0.4,bb = 0 0 200 100, draft, type=eps]{img/k_di_07.PNG}
+\par\end{center}
+
+\[
+\left\Vert \left.\frac{\text{d}\hat{i}}{\text{d}t}\right|_{O'}\right\Vert =\left\Vert \hat{i}\right\Vert \sin\theta\frac{\text{d}\varphi}{\text{d}t}=\sin\theta\dot{\varphi}\quad\text{e}\quad\text{vers}\left(\left.\frac{\text{d}\hat{i}}{\text{d}t}\right|\right)=\frac{\hat{n}\wedge\hat{i}}{\left\Vert \hat{n}\wedge\hat{i}\right\Vert }=\frac{\hat{n}\wedge\hat{i}}{\left\Vert \hat{n}\right\Vert \left\Vert \hat{i}\right\Vert \left|\sin\theta\right|}=\frac{\hat{n}\wedge\hat{i}}{\left|\sin\theta\right|}\text{ poichè perpendicolare al piano \ensuremath{POC}}
+\]
+
+\[
+\textrm{Dunque}\quad\left.\frac{\text{d}\hat{i}}{\text{d}t}\right|_{O'}=\left\Vert \left.\frac{\text{d}\hat{i}}{\text{d}t}\right|_{O'}\right\Vert \text{vers}\left(\left.\frac{\text{d}\hat{i}}{\text{d}t}\right|\right)=\dot{\varphi}\left(\hat{n}\wedge\hat{i}\right)\quad\text{ed essendo}\quad\vec{\omega}=\dot{\varphi}\hat{n}\quad\text{allora}
+\]
+
+\[
+\textrm{Formula di Poisson:}\left.\frac{\text{d}\hat{i}}{\text{d}t}\right|_{O'}=\vec{\omega}\wedge\hat{i}
+\]
+
+\subsubsection{k\_di\_08}
+
+\[
+\textrm{Essendo:}\left.\frac{\text{d}\hat{i}}{\text{d}t}\right|_{O'}=\vec{\omega}\wedge\hat{i}\Longrightarrow\left.\frac{\text{d}\hat{j}}{\text{d}t}\right|_{O'}=\vec{\omega}\wedge\hat{j}\textrm{ , }\left.\frac{\text{d}\hat{k}}{\text{d}t}\right|_{O'}=\vec{\omega}\wedge\hat{k}
+\]
+
+\[
+\left.\frac{\text{d}\vec{a}}{\text{d}t}\right|_{O'}=\left.\frac{\text{d}\vec{a}}{\text{d}t}\right|_{O}+\left[a_{x}\frac{\text{d}\hat{i}}{\text{d}t}+a_{y}\frac{\text{d}\hat{j}}{\text{d}t}+a_{z}\frac{\text{d}\hat{k}}{\text{d}t}\right]=\left.\frac{\text{d}\vec{a}}{\text{d}t}\right|_{O}+\left[a_{x}\vec{\omega}\wedge\hat{i}+a_{y}\vec{\omega}\wedge\hat{j}+a_{z}\vec{\omega}\wedge\hat{k}\right]=\left.\frac{\text{d}\vec{a}}{\text{d}t}\right|_{O}+\vec{\omega}\wedge\left[\underset{\vec{a}}{\underbrace{a_{x}\hat{i}+a_{y}\hat{j}+a_{z}\hat{k}}}\right]
+\]
+
+\[
+\textrm{Relazione di Poisson:}\left.\frac{\text{d}\vec{a}}{\text{d}t}\right|_{O'}=\left.\frac{\text{d}\vec{a}}{\text{d}t}\right|_{O}+\vec{\omega}\wedge\vec{a}
+\]
+
+\subsubsection{k\_di\_09}
+
+\[
+\textrm{Essendo: }\vec{r}'=\vec{r}+\vec{r}_{O}\textrm{ dalla legge di trasformazione del vettore posizionale}
+\]
+
+\[
+\textrm{Legge di trasformazione della velocità: }\vec{v}'=\left.\frac{\text{d}\vec{r}}{\text{d}t}\right|_{O'}=\left(\left.\frac{\text{d}\vec{r}}{\text{d}t}\right|_{O}+\vec{\omega}\wedge\vec{r}\right)+\left.\frac{\text{d}\vec{r}_{O}}{\text{d}t}\right|_{O'}=\vec{v}+\vec{\omega}\wedge\vec{r}+\vec{v}_{O}
+\]
+
+\subsubsection{k\_di\_10}
+
+\[
+\textrm{Essendo: }\vec{v}'=\vec{v}+\vec{\omega}\wedge\vec{r}+\vec{v}_{O}\textrm{ dalla legge di trasformazione della velocità}
+\]
+\begin{center}
+Legge di trasformazione dell'accelerazione:
+\par\end{center}
+
+\[
+\vec{a}'=\left.\frac{\text{d}\vec{v}'}{\text{d}t}\right|_{O'}=\left(\left.\frac{\text{d}\vec{v}}{\text{d}t}\right|_{O}+\vec{\omega}\wedge\vec{v}\right)+\left(\vec{\omega}\wedge\left(\underset{\vec{v}}{\underbrace{\left.\frac{\text{d}\vec{r}}{\text{d}t}\right|_{O}}}+\vec{\omega}\wedge\vec{r}\right)+\left.\frac{\text{d}\vec{\omega}}{\text{d}t}\right|_{O'}\wedge\vec{r}\right)+\left.\frac{\text{d}\vec{v}_{O}}{\text{d}t}\right|_{O'}=\vec{a}+2\left(\vec{\omega}\wedge\vec{v}\right)+\vec{\omega}\wedge(\vec{\omega}\wedge\vec{r})+\dot{\vec{\omega}}\wedge\vec{r}+\vec{a}_{O}
+\]
+
+\subsubsection{k\_di\_11}
+
+\[
+\textrm{Essendo: }\vec{v}_{P}'=\vec{v}_{P}+\vec{v}_{O}+\vec{\omega}\wedge\vec{r}_{OP}\textrm{ e }\vec{v}_{Q}'=\vec{v}_{Q}+\vec{v}_{O}+\vec{\omega}\wedge\vec{r}_{OQ}\textrm{ dalla legge di trasformazione della velocità}
+\]
+
+\[
+\text{Poichè }\vec{v}_{P}=\vec{v}_{Q}=\vec{0}\text{ dato che sia }\vec{r}_{OP}\text{ che }\vec{r}_{OQ}\equiv\textrm{cost. allora sottraendo membro a membro si ottiene: }\vec{v}_{Q}'-\vec{v}_{P}'=\vec{\omega}\wedge\left(\underset{\vec{r}_{PQ}}{\underbrace{\vec{r}_{OQ}-\vec{r}_{OP}}}\right)
+\]
+
+\[
+\textrm{Non comparendo le velocità nel riferimento \ensuremath{O_{xyz}} non ci sono ambiguità ed è possibile eliminare gli apici: }\vec{v}_{Q}=\vec{v}_{P}+\vec{\omega}\wedge\vec{r}_{PQ}
+\]
+
+\subsubsection{k\_di\_12}
+
+\[
+\text{Essendo: }\vec{v}=\dot{x}\hat{i}+\dot{y}\hat{j}+\dot{z}\hat{k},\quad\frac{\text{d}\hat{i}}{\text{d}t}=\frac{\text{d}\hat{i}}{\text{d}x}\frac{\text{d}x}{\text{d}t}=\vec{0},\quad\frac{\text{d}\hat{j}}{\text{d}t}=\frac{\text{d}\hat{j}}{\text{d}y}\frac{\text{d}y}{\text{d}t}=\vec{0},\quad\frac{\text{d}\hat{k}}{\text{d}t}=\frac{\text{d}\hat{k}}{\text{d}z}\frac{\text{d}z}{\text{d}t}=\vec{0}
+\]
+
+\[
+\vec{a}=\ddot{x}\hat{i}+\dot{x}\underset{\vec{0}}{\underbrace{\frac{\text{d}\hat{i}}{\text{d}t}}}+\ddot{y}\hat{j}+\dot{y}\underset{\vec{0}}{\underbrace{\frac{\text{d}\hat{j}}{\text{d}t}}}+\ddot{z}\hat{k}+\dot{z}\underset{\vec{0}}{\underbrace{\frac{\text{d}\hat{k}}{\text{d}t}}}=\ddot{x}\hat{i}+\ddot{y}\hat{j}+\ddot{z}\hat{k}
+\]
+
+\subsubsection{k\_di\_13}
+
+\[
+\text{Essendo: }\vec{v}=\dot{r}\hat{i}_{r}+r\dot{\varphi}\hat{i}_{\varphi}+\dot{z}\hat{k},\quad\frac{\text{d}\hat{i}_{r}}{\text{d}t}=\frac{\text{d}\varphi}{\text{d}t}\frac{\text{d}\hat{i}_{r}}{\text{d}\varphi}=\dot{\varphi}\hat{i}_{\varphi},\quad\frac{\text{d}\hat{i}_{\varphi}}{\text{d}t}=\frac{\text{d}\varphi}{\text{d}t}\frac{\text{d}\hat{i}_{\varphi}\left(\varphi\right)}{\text{d}\varphi}=-\dot{\varphi}\hat{i}_{r}
+\]
+
+\[
+\vec{a}=\ddot{r}\hat{i}_{r}+\dot{r}\underset{\dot{\varphi}\hat{i}_{\varphi}}{\underbrace{\frac{\text{d}\hat{i}_{r}}{\text{d}t}}}+\dot{r}\dot{\varphi}\hat{i}_{\varphi}+r\ddot{\varphi}\hat{i}_{\varphi}+r\dot{\varphi}\underset{-\dot{\varphi}\hat{i}_{r}}{\underbrace{\frac{\text{d}\hat{i}_{\varphi}}{\text{d}t}}}+\ddot{z}\hat{k}=\left(\ddot{r}-r\dot{\varphi}^{2}\right)\hat{i}_{r}+\left(2\dot{r}\dot{\varphi}+r\ddot{\varphi}\right)\hat{i}_{\varphi}+\ddot{z}\hat{k}
+\]
+
+\subsubsection{k\_di\_14}
+
+\[
+\text{Essendo: }\vec{r}=x\hat{i}+y\hat{j}+z\hat{k},\quad\frac{\text{d}\hat{i}}{\text{d}t}=\frac{\text{d}\hat{i}}{\text{d}x}\frac{\text{d}x}{\text{d}t}=\vec{0},\quad\frac{\text{d}\hat{j}}{\text{d}t}=\frac{\text{d}\hat{j}}{\text{d}y}\frac{\text{d}y}{\text{d}t}=\vec{0},\quad\frac{\text{d}\hat{k}}{\text{d}t}=\frac{\text{d}\hat{k}}{\text{d}z}\frac{\text{d}z}{\text{d}t}=\vec{0}
+\]
+
+\[
+\vec{v}=\dot{x}\hat{i}+x\underset{\vec{0}}{\underbrace{\frac{\text{d}\hat{i}}{\text{d}t}}}+\dot{y}\hat{j}+y\underset{\vec{0}}{\underbrace{\frac{\text{d}\hat{j}}{\text{d}t}}}+\dot{z}\hat{k}+z\underset{\vec{0}}{\underbrace{\frac{\text{d}\hat{k}}{\text{d}t}}}=\dot{x}\hat{i}+\dot{y}\hat{j}+\dot{z}\hat{k}
+\]
+
+\subsubsection{k\_di\_15}
+
+\[
+\text{Essendo: }\vec{r}=r\hat{i}_{r}+z\hat{k},\quad\frac{\text{d}\hat{i}_{r}}{\text{d}t}=\frac{\text{d}\varphi}{\text{d}t}\frac{\text{d}\hat{i}_{r}}{\text{d}\varphi}=\dot{\varphi}\hat{i}_{\varphi},\quad\frac{\text{d}\hat{k}}{\text{d}t}=\frac{\text{d}\hat{k}}{\text{d}z}\frac{\text{d}z}{\text{d}t}=\vec{0}
+\]
+
+\[
+\vec{v}=\dot{r}\hat{i}_{r}+r\underset{\dot{\varphi}\hat{i}_{\varphi}}{\underbrace{\frac{\text{d}\hat{i}_{r}}{\text{d}t}}}+\dot{z}\hat{k}+z\underset{\vec{0}}{\underbrace{\frac{\text{d}\hat{k}}{\text{d}t}}}=\dot{r}\hat{i}_{r}+r\dot{\varphi}\hat{i}_{\varphi}+\dot{z}\hat{k}
+\]
+
+\subsubsection{k\_di\_16}
+
+\[
+\text{Essendo: }\vec{r}=\vec{r}(s)
+\]
+
+\[
+\vec{v}=\frac{\text{d}\vec{r}(s)}{\text{d}t}=\frac{\text{d}\vec{r}(s)}{\text{d}s}\frac{\text{d}s}{\text{d}t}=\dot{s}\hat{t}
+\]
+
+\pagebreak{}
+
+\subsubsection{k\_di\_17}
+\begin{center}
+\includegraphics[scale=0.2,bb = 0 0 200 100, draft, type=eps]{img/k_di_16.PNG}
+\par\end{center}
+
+\[
+\left|u\left(t\right)\right|=\underset{\text{lunghezza arco}}{\underbrace{\left|\frac{s\left(t+\Delta t\right)-s\left(t\right)}{\Delta t}\right|}}\sim\underset{\text{lunghezza corda}}{\underbrace{\left\Vert \frac{\vec{r}\left(t+\Delta t\right)-\vec{r}\left(t\right)}{\Delta t}\right\Vert }}=\left\Vert \vec{v}\left(t\right)\right\Vert \qquad\Delta t\rightarrow0
+\]
+
+\[
+\left|u\left(t\right)\right|=\underset{\text{lunghezza arco}}{\underbrace{\left|\frac{s\left(t+\Delta t\right)-s\left(t\right)}{\Delta t}\right|}}\geq\underset{\text{lunghezza corda}}{\underbrace{\left\Vert \frac{\vec{r}\left(t+\Delta t\right)-\vec{r}\left(t\right)}{\Delta t}\right\Vert }}=\left\Vert \vec{v}\left(t\right)\right\Vert 
+\]
+
+\pagebreak{}
+
+\section{Statica}
+
+\subsubsection{s\_ec\_01}
+
+No, per essere in equilibrio un corpo rigido deve avere sia la risultante
+delle forze che il momento risultante delle forze nulli poichè, ad
+esempio, potremmo avere forze di verso opposto (somma nulla) ma momento
+non nullo e quindi verrebbe improntato un moto rotatorio.
+
+\subsubsection{s\_ec\_02}
+
+La forza vincolare esercitata dal tavolo dal corpo di massa maggiore
+è maggiore rispetto a quella esercitata sul corpo di massa minore,
+infatti dalla prima equazione cardinale della statica:
+
+\[
+\left\{ \begin{gathered}\vec{R}_{\left(e\right)}^{(1)}=\vec{F}_{p}^{(1)}+\vec{R}_{n}^{(1)}=\vec{0}\\
+\vec{R}_{\left(e\right)}^{(2)}=\vec{F}_{p}^{(2)}+\vec{R}_{n}^{(2)}=\vec{0}\\
+m^{\left(1\right)}>m^{\left(2\right)}
+\end{gathered}
+\right.\Longrightarrow\left\{ \begin{gathered}\vec{R}_{n}^{(1)}=-\vec{F}_{p}^{(1)}=-m^{\left(1\right)}\vec{g}\\
+\vec{R}_{n}^{(2)}=-\vec{F}_{p}^{(2)}=-m^{\left(2\right)}\vec{g}\\
+\left\Vert \vec{F}_{p}^{(1)}\right\Vert >\left\Vert \vec{F}_{p}^{(2)}\right\Vert 
+\end{gathered}
+\right.\Longrightarrow\left\Vert \vec{R}_{n}^{(1)}\right\Vert >\left\Vert \vec{R}_{n}^{(2)}\right\Vert 
+\]
+
+\subsubsection{s\_ec\_03}
+
+L'intensità della reazione vincolare che il tavolo esercita sul corpo
+è pari a 10 N, infatti per la prima equazione cardinale della statica:
+
+\[
+\vec{R}_{\left(e\right)}=\vec{F}_{p}+\vec{R}_{n}=\vec{0}\Longrightarrow\vec{R}_{n}=-\vec{F}_{p}=-\left(-F_{p}\hat{k}\right)\text{ per }\hat{k}\nnearrow\nnearrow z\Longrightarrow R_{n}=F_{p}
+\]
+
+\subsubsection{s\_ec\_04}
+
+La condizione necessaria e sufficiente per l'equilibrio di un punto
+materiale è che la risultante delle forze ad esso applicate sia nulla.
+
+La condizione necessaria e sufficiente per l'equilibrio di un corpo
+rigido è che la risultante delle forze ad esso applicate e il momento
+risultante delle forze applicate siano nulli.
+
+\subsubsection{s\_rd\_01}
+
+Il momento risultante $\vec{\mathscr{M}}^{(O)}$ non dipende dalla
+scelta del centro di riduzione se la risultante $\vec{\mathscr{R}}$
+è nulla, infatti, essendo
+
+$\vec{\mathscr{M}}^{(O')}=\vec{\mathscr{M}}^{(O)}+\vec{r}_{O'O}\wedge\vec{\mathscr{R}}$
+se $\vec{\mathscr{R}}$ è nulla allora: $\vec{\mathscr{M}}^{(O')}=\vec{\mathscr{M}}^{(O)}$.
+
+\subsubsection{s\_rd\_02}
+
+Due insiemi di vettori applicati si dicono equivalenti se hanno la
+stessa risultante e lo stesso momento risultante.
+
+\subsubsection{s\_rd\_03}
+
+Il numero minimo di vettori applicati a cui si riesce a ridurre un
+generico sistema di vettori applicati è 3 (un vettore e una coppia),
+infatti scelto un punto $O$, si trasportano tutti i vettori in $O$
+aggiungendo le necessarie coppie, si compongono i vettori nella risultante
+$\vec{\mathscr{R}}$ applicata in $O$ e si compongono le coppie in
+un'unica coppia.
+
+\subsubsection{s\_rd\_04}
+
+Il numero minimo di vettori applicati a cui si riesce a ridurre un
+generico sistema di vettori applicati con risultante nulla è 2 (una
+coppia), infatti scelto un punto $O$, si trasportano tutti i vettori
+in $O$ aggiungendo le necessarie coppie, se la composizione dei vettori
+ha risultante $\vec{\mathscr{R}}$ nulla allora basta comporre le
+restanti coppie in un'unica coppia.
+
+\subsubsection{s\_rd\_05}
+
+Il numero minimo di vettori applicati a cui si riesce a ridurre un
+generico sistema di vettori applicati con momento risultante nullo
+rispetto ad un centro di riduzione assegnato $O$ è 1 , infatti scelto
+un punto $O'$, si trasportano tutti i vettori in $O'$ aggiungendo
+le necessarie coppie, se la composizione delle coppie ha momento risultante
+$\vec{\mathscr{M}}^{(O)}$ nullo, allora basta comporre i vettori
+applicati ad $O'$ nella risultante $\vec{\mathscr{R}}$.
+
+\subsubsection{s\_rd\_06}
+
+No, non è possibile poichè il numero minimo di vettori applicati a
+cui si riesce a ridurre un generico sistema di vettori applicati con
+risultante nulla è 2 (una coppia), inoltre:
+
+\[
+\text{per }\vec{\mathscr{R}}=\vec{0}\Longrightarrow\vec{\mathscr{M}}_{\left(\vec{\mathscr{R}},P\right)}^{(O)}=\vec{r}_{OP}\wedge\vec{\mathscr{R}}\neq\vec{0}\text{ risulta impossibile poichè il prodotto vettoriale si annulla sempre}
+\]
+
+\subsubsection{s\_rd\_07}
+
+(a) Il baricentro (o centro di gravità) è il punto di applicazione
+della risultante $\vec{\mathscr{R}}$ delle forze peso.
+
+(b) L'espressione matematica vettoriale che definisce la posizione
+del baricentro è:
+
+\[
+\vec{r}_{OG}=\frac{1}{\left\Vert \vec{\mathscr{R}}\right\Vert }\sum_{i=1}^{n}\left\Vert \vec{F}_{i}\right\Vert \vec{r}_{OP_{i}}\qquad\vec{\mathscr{R}}=\sum_{i=1}^{n}\vec{F}_{i}
+\]
+
+(c) L'espressione matematica delle tre coordinate cartesiane del baricentro
+é:
+
+\[
+x_{G}=\frac{1}{\left\Vert \vec{\mathscr{R}}\right\Vert }\sum_{i=1}^{n}\left\Vert \vec{F}_{i}\right\Vert x_{i}\quad y_{G}=\frac{1}{\left\Vert \vec{\mathscr{R}}\right\Vert }\sum_{i=1}^{n}\left\Vert \vec{F}_{i}\right\Vert y_{i}\quad z_{G}=\frac{1}{\left\Vert \vec{\mathscr{R}}\right\Vert }\sum_{i=1}^{n}\left\Vert \vec{F}_{i}\right\Vert z_{i}
+\]
+
+\subsubsection{s\_rd\_08}
+
+Dati $n$ vettori $\vec{F}_{1},\ldots,\vec{F}_{n}$ applicati nei
+punti $P_{1},\ldots,P_{n}$:
+
+\[
+\text{(a) }\vec{\mathscr{R}}_{\left\{ \left(\vec{F}_{1},P_{1}\right),\ldots,\left(\vec{F}_{n},P_{n}\right)\right\} }=\sum_{i=1}^{n}\vec{F}_{i}
+\]
+
+\[
+\text{(b) }\vec{\mathscr{M}^{(O)}}_{\left\{ \left(\vec{F}_{1},P_{1}\right),\ldots,\left(\vec{F}_{n},P_{n}\right)\right\} }=\sum_{i=1}^{n}\vec{r}_{OP_{i}}\wedge\vec{F}_{i}
+\]
+
+\[
+\text{(c) }\vec{\mathscr{M}^{(u)}}_{\left\{ \left(\vec{F}_{1},P_{1}\right),\ldots,\left(\vec{F}_{n},P_{n}\right)\right\} }=\sum_{i=1}^{n}\vec{r}_{OP_{i}}\wedge\vec{F}_{i}\cdot\hat{u}\qquad O\in u
+\]
+
+\subsubsection{s\_at\_01}
+
+$\vec{F}=10N$, $\vec{R}_{n}=100N$, $f=0.2$, $\mu=0.15$.
+
+Poichè $\left\Vert \vec{F}\right\Vert <f\left\Vert \vec{R}_{n}\right\Vert $
+allora siglifica che il corpo non si muove e dunque $\left\Vert \vec{R}_{t}\right\Vert =\left\Vert \vec{F}\right\Vert =10N$.
+
+\subsubsection{s\_at\_02}
+
+$\vec{F}=30N$, $\vec{R}_{n}=100N$, $f=0.2$, $\mu=0.15$.
+
+Poichè $\left\Vert \vec{F}\right\Vert >f\left\Vert \vec{R}_{n}\right\Vert $
+allora siglifica che il corpo inizia a muoversi e dunque $\left\Vert \vec{R}_{t}\right\Vert =\mu\left\Vert \vec{R}_{n}\right\Vert =15N$.
+
+\subsubsection{s\_at\_03}
+
+$\vec{F}=30N$, $\vec{R}_{n}=100N$, $f=0.4$, $\mu=0.2$.
+
+Poichè $\left\Vert \vec{F}\right\Vert <f\left\Vert \vec{R}_{n}\right\Vert $
+allora siglifica che il corpo non si muove e dunque $\left\Vert \vec{R}_{t}\right\Vert =\left\Vert \vec{F}\right\Vert =30N$.
+
+\subsubsection{s\_at\_04}
+
+$\vec{F}=50N$, $\vec{R}_{n}=100N$, $f=0.4$, $\mu=0.2$.
+
+Poichè $\left\Vert \vec{F}\right\Vert >f\left\Vert \vec{R}_{n}\right\Vert $
+allora siglifica che il corpo inizia a muoversi e dunque $\left\Vert \vec{R}_{t}\right\Vert =\mu\left\Vert \vec{R}_{n}\right\Vert =20N$.
+
+\subsubsection{s\_at\_05}
+
+$\vec{F}=50N$, $\vec{R}_{n}=200N$, $f=0.4$, $\mu=0.3$.
+
+Poichè $\left\Vert \vec{F}\right\Vert <f\left\Vert \vec{R}_{n}\right\Vert $
+allora siglifica che il corpo non si muove e dunque $\left\Vert \vec{R}_{t}\right\Vert =\left\Vert \vec{F}\right\Vert =50N$.
+
+\subsubsection{s\_at\_06}
+
+$\vec{F}=90N$, $\vec{R}_{n}=200N$, $f=0.4$, $\mu=0.3$.
+
+Poichè $\left\Vert \vec{F}\right\Vert >f\left\Vert \vec{R}_{n}\right\Vert $
+allora siglifica che il corpo inizia a muoversi e dunque $\left\Vert \vec{R}_{t}\right\Vert =\mu\left\Vert \vec{R}_{n}\right\Vert =60N$.
+
+\subsubsection{s\_at\_07}
+
+Se la ruota striscia sull'asfalto la forza di attrito diviene dinamica,
+in questo caso entra in gioco il dispositivo anti-patinamento che
+rilascia un po' il freno in modo da ripristinare le condizioni di
+attrito statico. Essendo infatti $\mu<f$ allora
+
+$\left\Vert \vec{R}^{\left(d\right)}\right\Vert =\mu\left\Vert \vec{R}_{n}\right\Vert <f\left\Vert \vec{R}_{n}\right\Vert =\max\left\{ \left\Vert \vec{R}^{\left(s\right)}\right\Vert \right\} $,
+cioè la massima forza di attrito si ha quando la forza attiva è prossima
+ma appena inferiore alla soglia di primo distacco. Aumentando l'efficacia
+della forza frenante si riduce di conseguenza lo spazio di frenata.
+
+\pagebreak{}
+
+\section{Dinamica}
+
+\subsubsection{d\_df\_01}
+
+Dal 1889 al 2017 il chilogrammo è stato definito come la massa di
+un manufatto, denominato International Prototype Kilogram, costituito
+di platino-iridio dopo un lavaggio eseguito con un procedimento ben
+definito, dovuto dal fatto che tale campione è soggetto all'inevitabile
+accumulazione di contaminanti che variano la sua massa di $1\mu g$
+all'anno. Dal 2018 l'unità di misura è stata ridefinita come:
+
+\[
+\sim1.47\times10^{40}\frac{h}{c^{2}T_{Cs}}
+\]
+
+dove $h$ è la costante di Planck, $c$ è la velocità della luce nel
+vuoto e $T_{Cs}$ è il periodo di oscillazione della radiazione elettromagnetica
+emessa dagli atomi di Cesio 133 in una particolare transizione
+
+\subsubsection{d\_df\_02}
+
+(a) L'espressione vettoriale che definisce la posizione del centro
+di massa di un insieme di punti materiali è:
+
+\[
+\vec{r}_{OG}=\frac{1}{M}\sum_{i=1}^{n}m_{i}\vec{r}_{OP_{i}},\qquad M=\sum_{i=1}^{n}m_{i}
+\]
+
+(b) L'espressione scomposta nelle componenti cartesiane è:
+
+\[
+x_{G}=\frac{1}{M}\sum_{i=1}^{n}m_{i}x_{i}\quad y_{G}=\frac{1}{M}\sum_{i=1}^{n}m_{i}y_{i}\quad z_{G}=\frac{1}{M}\sum_{i=1}^{n}m_{i}z_{i},\qquad M=\sum_{i=1}^{n}m_{i}
+\]
+
+\subsubsection{d\_df\_03}
+
+(a) L'espressione vettoriale che definisce la posizione del centro
+di massa di un corpo rigido $\mathscr{C}$ avente densità puntuale
+$\rho\left(\vec{r}\right)$ è:
+
+\[
+\vec{r}_{OG}=\frac{1}{M}\underset{\mathscr{C}}{\int\int\int}\vec{r}_{OP}\rho\left(\vec{r}_{OP}\right)dV,\qquad M=\underset{\mathscr{C}}{\int\int\int}\rho\left(\vec{r}_{OP}\right)dV
+\]
+
+(b) L'espressione scomposta nelle componenti cartesiane è:
+
+\[
+\left\{ \begin{gathered}x_{G}=\frac{1}{M}\underset{\mathscr{C}}{\int\int\int}x\rho\left(x,y,z\right)dxdydz\\
+y_{G}=\frac{1}{M}\underset{\mathscr{C}}{\int\int\int}y\rho\left(x,y,z\right)dxdydz\\
+z_{G}=\frac{1}{M}\underset{\mathscr{C}}{\int\int\int}z\rho\left(x,y,z\right)dxdydz
+\end{gathered}
+\right.,\qquad M=\underset{\mathscr{C}}{\int\int\int}\rho\left(x,y,z\right)dxdydz
+\]
+
+\subsubsection{d\_df\_04}
+
+(a) L'espressione del momento di inerzia di un insieme di punti materiali
+rispetto ad un asse $u$ è:
+
+\[
+I_{u}=\sum_{i=1}^{n}m_{i}r_{i}^{2},\qquad r_{i}=d\left(P_{i},u\right)
+\]
+
+(b) L'espressione del momento di inerzia di un corpo rigido $\mathscr{C}$
+avente densità puntuale $\rho\left(x,y,z\right)$ rispetto ad un asse
+$u$ è:
+
+\[
+I_{u}=\underset{\mathscr{C}}{\int\int\int}\rho\left(x,y,z\right)r^{2}dxdydz,\qquad r=d\left(P,u\right)
+\]
+
+\subsubsection{d\_1p\_01}
+
+Il primo principio della dinamica, nella formulazione classica, dice
+che ``Qualunque punto materiale, non soggetto ad alcuna forza, o
+rimane in quiete oppure si muove di moto rettilineo uniforme''. Tale
+formulazione pone l'enfasi sull'assenza di forze, in particolare quelle
+di attrito che per secoli hanno impedito una corretta comprensione
+dei principi della dinamica; il problema risiede nel fatto che anche
+eliminando tutte le forze agenti su un punto materiale, permangono
+delle forze apparenti dette Pseudo-forze che non dipendono da fattori
+esterni ma esistono in alcuni SdR e non in altri. Pertanto la formulazione
+moderna tiene conto anche di questo aspetto ed afferma che ``Esiste
+un insieme di SdR, detti inerziali, rispetto ai quali, un punto materiale
+P soggetto ad una risultante nulla delle forze agenti su di esso si
+trova in stato di quiete oppure in stato di moto rettilineo uniforme''.
+Ponendoci infatti in un SdR inerziale stiamo automaticamente, per
+definizione, lavorando in un sistema in cui non esistono Pseudo-forze.
+E' importante ricordare che, essendo questo un principio, nessuna
+dimostrazione teorica o sperimentale ci può assicurare l'esistenza
+di un insieme infinito di SdR inerziali; tale proprietà può essere
+ricavata soltanto mediante l'esperienza.
+
+\subsubsection{d\_1p\_02}
+
+Un sistema di riferimento è un sistema di coordinate rispetto al quale
+viene osservato o misurato un fenomeno o un oggetto fisico. In particolare
+un sistema di riferimento si dice inerziale quando le coordinate sono
+prese in un modo tale che, in assenza di forze, i punti materiali
+sono in uno stato di quiete o di moto rettilineo uniforme; non sono
+cioè individuate Pseudo-forze.
+
+\subsubsection{d\_1p\_03}
+
+Si può fare oscillare un pendolo di qualche metro di lunghezza per
+un intervallo di tempo di qualche ora. Se il piano di oscillazione
+del pendolo ruota nel tempo allora il SdR costituito dai corpi di
+questa stanza non è inerziale. (Esperimento del pendolo di Foucault).
+
+\subsubsection{d\_2p\_01}
+
+Il secondo principio della dinamica afferma che, in un sistema di
+riferimento inerziale, un punto materiale sottoposto a una o più forze
+si muove con accelerazione vettorialmente proporzionale alla risultante:
+
+\[
+\vec{\mathscr{R}}=m\vec{a}
+\]
+
+Dove $\vec{\mathscr{R}}$ è la risultante delle forze applicate al
+punto, $m$ è un coefficiente scalare, detto massa inerziale, sempre
+positivo e $\vec{a}$ è l'accelerazione con cui si muove il punto.
+
+\subsubsection{d\_2p\_02}
+
+La massa inerziale può essere definita come la resistenza che esercita
+il corpo nell'essere accelerato. La massa gravitazionale invece è
+la capacità di un corpo di attirare a se altri corpi o di essere attirato
+da essi. L'esperimento che ci porta a dire che se $m^{\left(g\right)}$
+ed $m^{\left(i\right)}$ sono misurate con le stesse unità di misura
+allora risulta $m^{\left(g\right)}=m^{\left(i\right)}$ è quello di
+osservare l'accelerazione con cui cade un corpo nel vuoto:
+
+\[
+a=\frac{F}{m^{\left(i\right)}}=\frac{1}{m^{\left(i\right)}}\gamma\frac{m_{T}^{\left(g\right)}m^{\left(g\right)}}{R_{T}^{2}}
+\]
+
+se non valesse la proporzionalità $m^{\left(g\right)}\propto m^{\left(i\right)}$
+si avrebbe che corpi di massa diversa cadrebbero, nello stesso luogo,
+con accelerazione diversa.
+
+\subsubsection{d\_2p\_03}
+
+L'unità di misura del peso nel Sistema Internazionale è il Newton
+(simbolo $N$).
+
+L'unità di misura della massa nel Sistema Internazionale è il il chilogrammo
+(simbolo $kg$).
+
+L'unità di misura del peso nel Sistema Tecnico è il chilogrammo-forza
+(simbolo $kgf$).
+
+\subsubsection{d\_2p\_04}
+
+Si definisce inpulso di una forza $\vec{F}$ nell'intervallo di tempo
+$\left[t_{1},t_{2}\right]$ la quantità $I\left(\vec{F},\left[t_{1},t_{2}\right]\right)=\int_{t_{1}}^{t_{2}}\vec{F}dt$.
+Essendo però $\vec{F}=\dot{\vec{Q}}$, dove $\vec{Q}$ è la quantità
+di moto allora il teorema dell'impulso afferma che $I\left(\vec{F},\left[t_{1},t_{2}\right]\right)=\vec{Q}\left(t_{2}\right)-\vec{Q}\left(t_{1}\right)$.
+
+\subsubsection{d\_2p\_05}
+
+Oscillatore smorzato: $\ddot{x}+\frac{\lambda}{m}\dot{x}+\frac{k}{m}x=0$
+con $x$ lo spostamento dalla posizione di equilibrio,$m$ la massa,
+$k$ la costante elastica e $\lambda$ la costante di smorzamento.
+\begin{center}
+(a)\includegraphics[scale=0.4,bb = 0 0 200 100, draft, type=eps]{img/OscillatoreSottosmorzato.PNG}
+(b)\includegraphics[scale=0.4,bb = 0 0 200 100, draft, type=eps]{img/OscillatoreCriticamenteSmorzato.PNG}
+(c)\includegraphics[scale=0.4,bb = 0 0 200 100, draft, type=eps]{img/OscillatoreSovrasmorzato.PNG}
+\par\end{center}
+
+\subsubsection{d\_mr\_01}
+
+(a) Le pseudoforze sono grandezze aventi dimensione fisica di una
+forza a cui si attribuisce formalmente l'accelerazione dei corpi non
+soggetti a forze nei SdR non inerziali. Le pseudoforze, al contrario
+alle forze di interazione:
+\begin{itemize}
+\item Sono sempre proporzionali alla massa dei corpi sulla quale agiscono
+\item Hanno intensità che dipende dal SdR scelto (nel caso inerziale $\vec{\Phi}=\vec{0}$)
+\item Non sono dovute all'interazione con altri corpi
+\item Non rispettano il III principio della dinamica
+\end{itemize}
+(b) Sia il SdR $O'_{x'y'z'}$ inerziale mentre il SdR $O_{xyz}$ no.
+Poichè $\vec{a}'=\vec{a}+\vec{a}_{T}+\vec{a}_{C}$ in generale $\neq\vec{a}$,
+allora perchè venga rispettato il II principio della dinamica per
+cui $\vec{F}=m\vec{a}'=m\vec{a}$ occorre che nel SdR non inerziale
+$O_{xyz}$ si abbia che $\vec{F}+\vec{\Phi}=m\vec{a}$ dove $\vec{\Phi}=-m\vec{a}_{T}-m\vec{a}_{C}$.
+Dunque sì, esse sono considerate forze a tutti gli effetti.
+
+\subsubsection{d\_mr\_02}
+
+\[
+\text{(a) }\vec{\Phi}_{T}=-m\left[\vec{a}_{O}+\dot{\vec{\omega}}\wedge\vec{r}_{OP}+\vec{\omega}\wedge\left(\vec{\omega}\wedge\vec{r}_{OP}\right)\right]
+\]
+
+\[
+\text{(b) }\vec{\Phi}_{C}=-m\left[2\vec{\omega}\wedge\vec{v}\right]
+\]
+
+\subsubsection{d\_mr\_03}
+
+La presenza della pseudo-forza centrifuga sulla superficie della terra
+si può osservare calcolando l'accelerazione gravitazionale $g$ al
+variare della latitudine. Risulterà infatti $g\neq9.81$, fatta esclusione
+ai poli, poichè la forza peso è la risultante dell'attrazione gravitazionale
+e della pseudo-forza centrifuga ($m\vec{g}=m\vec{g}'+\vec{\Phi}_{T}$).
+In particolare $g\left(\theta\right)\approx g'\left(\theta\right)-\omega^{2}R\cos^{2}\left(\theta\right)$
+dove $g'$ è l'accelerazione gravitazionale, $\omega$ è la velocità
+angolare terrestre, $R$ è il raggio terrestre e $\theta$ è la latitudine. 
+
+\subsubsection{d\_mr\_04}
+
+La presenza della pseudo-forza di Coriolis sulla suerficie della terra
+si può osservare utilizzando il pendolo di Focault che in ogni oscillazione
+risulterà deviato verso destra nell'emisfero nord e verso sinistra
+nell'emisfero sud. In particolare $\text{d}\alpha=\left(\sin\varphi\right)\text{d}\alpha'$
+dove $\text{d}\alpha$ è la rotazione del piano del pendolo, $\varphi$
+è la latitudine e $\text{d}\alpha'$ è la rotazione della terra.
+
+\pagebreak{}
+
+\subsubsection{d\_mr\_05}
+
+In entrambi gli emisferi, un corpo in caduta libera, viene deviato
+dalla pseudo-forza di Coriolis verso est se osservato nel SdR terrestre
+non inserziale. Questo perchè essendo $\vec{\omega}\wedge\vec{v}$
+diretto verso ovest, dato che $\vec{\Phi}_{C}=-2m\vec{\omega}\wedge\vec{v}$
+, allora $\vec{\Phi}_{C}$ è diretta verso est.
+\begin{center}
+\includegraphics[scale=0.4,bb = 0 0 200 100, draft, type=eps]{img/Direzione_PseudoforzaCoriolis.PNG}
+\par\end{center}
+
+\subsubsection{d\_mr\_06}
+
+Un corpo in moto sulla superficie terrestre viene deviato dalla pseudo-forza
+di Coriolis verso destra nell'emisfero nord e verso sinistra nell'emisfero
+sud. Questo perchè, per la regola della mano destra, nell'emisfero
+nord $\vec{\omega}\wedge\vec{v}$ è sempre diretto verso sinistra
+rispetto al moto del corpo e dato che $\vec{\Phi}_{C}=-2m\vec{\omega}\wedge\vec{v}$
+, allora $\vec{\Phi}_{C}$ è diretta verso destra. Risulta che nell'emisfero
+nord, per la regola della mano destra, $\vec{\Phi}_{C}$ è diretta
+verso destra, nell'emisfero sud invece $\vec{\Phi}_{C}$ è diretta
+verso sinistra.
+\begin{center}
+\includegraphics[scale=0.4,bb = 0 0 200 100, draft, type=eps]{img/Direzione_PseudoforzaCoriolis_Superficie.PNG}
+\par\end{center}
+
+\subsubsection{d\_mr\_07}
+
+A $30{^\circ}$ di latitudine nord, in un giorno sidereo, il piano
+del pendolo di Foucault ruota di un angolo pari a $\frac{1}{2}360\text{\textdegree}=180\text{\textdegree}$
+.
+
+Dalla formula $\text{d}\alpha=\left(\sin\varphi\right)\text{d}\alpha'$
+dove $\text{d}\alpha$ è la rotazione del piano del pendolo, $\text{d}\alpha'$
+la rotazione della Terra e $\varphi$ l'angolo rispetto al nord.
+
+\subsubsection{d\_mr\_08}
+
+A $45\text{\textdegree}$ di latitudine nord, in un giorno sidereo,
+il piano del pendolo di Foucault ruota di un angolo pari a $\frac{\sqrt{2}}{2}360\text{\textdegree}\approx254.6\text{\textdegree}$
+.
+
+Dalla formula $\text{d}\alpha=\left(\sin\varphi\right)\text{d}\alpha'$
+dove $\text{d}\alpha$ è la rotazione del piano del pendolo, $\text{d}\alpha'$
+la rotazione della Terra e $\varphi$ l'angolo rispetto al nord.
+
+\subsubsection{d\_mr\_09}
+
+A $60{^\circ}$ di latitudine nord, in un giorno sidereo, il piano
+del pendolo di Foucault ruota di un angolo pari a $\frac{\sqrt{3}}{2}360\text{\textdegree}\approx311.8\text{\textdegree}$
+.
+
+Dalla formula $\text{d}\alpha=\left(\sin\varphi\right)\text{d}\alpha'$
+dove $\text{d}\alpha$ è la rotazione del piano del pendolo, $\text{d}\alpha'$
+la rotazione della Terra e $\varphi$ l'angolo rispetto al nord.
+
+\subsubsection{d\_mr\_10}
+
+(1a) Dal punto di vista di un osservatore esterno l'unica forza agente
+sul pt. materiale è la tensione esercitata dalla cordicella $\vec{T}$.
+
+(1b) La risultante delle forze $\vec{F}=\vec{T}\neq\vec{0}$.
+
+(1c) $\vec{a}=\frac{\dot{s}^{2}}{r}\hat{n}$ e dato che $\dot{s}=r\omega$
+allora $\vec{a}=r\omega^{2}\hat{n}$.
+
+(2a) Dal punto di vista di un oservatore solidale al punto materiale
+in moto le forze agenti su esso sono la tensione esercitata dalla
+cordicella $\vec{T}$ equilibrata dalla forza centrifuga poichè il
+punto è in quiete.
+
+(2b) La risultante delle forze $\vec{F}=\vec{T}+\vec{\Phi}=\vec{0}$.
+
+(2c) $\vec{a}=\vec{0}$.
+
+\subsubsection{d\_cn\_01}
+
+La quantità di moto di un sistema meccanico si conserva se la risultante
+delle forze esterne è nulla.
+
+Dalla prima equazione cardinale della dinamica $\dot{\vec{Q}}=\vec{\mathscr{R}}_{(e)}$
+si ha:
+
+\[
+\text{Principio di conservazione della quantità di moto }\vec{\mathscr{R}}_{(e)}=\vec{0}\Rightarrow\vec{Q}\equiv\text{cost.}
+\]
+
+\subsubsection{d\_cn\_02}
+
+Il momento angolare di un sistema meccanico si conserva se il momento
+risultante delle forze esterne è nullo rispetto ad un centro di riduzione
+$O$ (fisso o in moto con $\vec{v}_{O}\parallel\vec{Q}$).
+
+Dalla seconda equazione cardinale della dinamica $\dot{\vec{K}}^{(O)}=\underset{0}{\underbrace{-\vec{v}_{O}\wedge\vec{Q}}}+\vec{\mathscr{M}}_{(e)}^{(O)}$
+(se $O$ è fisso o in moto con $\vec{v}_{O}\parallel\vec{Q}$) si
+ha:
+
+\[
+\text{Principio di conservazione del momento angolare }\vec{\mathscr{M}}_{(e)}^{(O)}=\vec{0}\Rightarrow\vec{K}^{(O)}\equiv\text{cost.}
+\]
+
+\subsubsection{d\_cn\_03}
+
+Affinchè l'energia meccanica di un sistema meccanico si conservi è
+necessario che le forze vincolari siano ideali e che le forze attive
+siano conservative.
+
+\subsubsection{d\_cn\_04}
+
+In un SdR inerziale, nel moto di un pianeta attorno al Sole, trascurando
+l'effetto della presenza degli altri pianeti:
+
+(a) La quantità di moto di un pianeta non si conserva poichè agisce
+la forza di gravità esercitata dal Sole sul pianeta (esterna) e quindi:
+
+$\dot{\vec{Q}}_{P}=\mathscr{\vec{R}}_{(e)}\neq0\Rightarrow\vec{Q}_{P}\cancel{\equiv}\overrightarrow{\text{cost.}}$
+
+(b) La quantità di moto di un pianeta e del Sole si conserva poichè
+non agiscono forze esterne e quindi:
+
+$\dot{\vec{Q}}_{P}+\dot{\vec{Q}}_{S}=\mathscr{\vec{R}}_{(e)}=0\Rightarrow\vec{Q}_{P}+\vec{Q}_{S}\equiv\overrightarrow{\text{cost.}}$
+
+\subsubsection{d\_cn\_05}
+
+In un SdR inerziale, nel moto di un pianeta attorno al Sole, trascurando
+l'effetto della presenza degli altri pianeti:
+
+(a) Il momento angolare di un pianeta rispetto al centro del Sole
+si conserva. Questo si ricava dal fatto che
+
+$\vec{Q}_{P}+\vec{Q}_{S}=\left(m_{P}+m_{S}\right)\underset{\vec{0}}{\underbrace{\vec{v}_{G}}}=\vec{0}$
+e dunque $\vec{Q}_{P}=-\vec{Q}_{S}=-m_{S}\vec{v}_{S}$ da cui si ricava
+che $\vec{v}_{S}\parallel\vec{Q}_{P}$ e quindi $-\vec{v}_{S}\wedge\vec{Q}_{P}=\vec{0}$.
+
+Inoltre essendo $\vec{r}_{SP}\parallel\vec{F}_{G}$ si ha che $\vec{\mathscr{M}}_{(e)}^{(S)}=\vec{r}_{SP}\wedge\vec{F}_{G}=\vec{0}$.
+Sostituendo nella seconda equazione cardinale si ha quindi
+
+$\dot{\vec{K}}_{P}^{(S)}=\underset{\vec{0}}{\underbrace{-\vec{v}_{S}\wedge\vec{Q}_{P}}}+\underset{\vec{0}}{\underbrace{\vec{\mathscr{M}}_{(e)}^{(S)}}}=\vec{0}\Rightarrow\vec{K}_{P}^{(S)}\equiv\overrightarrow{\text{cost.}}$
+
+(b) Il momento angolare di un pianeta rispetto ad un punto arbitrario
+non si conserva. Questo perchè in generale
+
+$\dot{\vec{K}}_{P}^{(O)}=-\vec{v}_{O}\wedge\vec{Q}_{P}+\vec{\mathscr{M}}_{(e)}^{(O)}\neq\vec{0}\Rightarrow\vec{K}_{P}^{(O)}\cancel{\equiv}\overrightarrow{\text{cost.}}$
+
+\subsubsection{d\_cn\_06}
+
+Nel moto di un pianeta attorno al sole il punto geometrico che rimane
+in quiete in un SdR inerziale (trascurando l'effetto di tutti gli
+altri pianeti) è il centro di massa $G$ del sistema pianeta-sole.
+Infatti se il sistema di riferimento è inerziale e l'effetto degli
+altri pianeti è trascurato, allora $\vec{\mathscr{R}}^{\left(e\right)}=\vec{0}$
+per il sistema pianeta sole e poichè $\vec{\mathscr{R}}^{\left(e\right)}=M\vec{a}_{G}$
+segue che $\vec{a}_{G}=\vec{0}\Rightarrow\vec{v}_{G}\equiv\text{cost.}$
+cioè si muove di moto rettilineo uniforme. Questo significa che in
+un opportuno SdR inerziale quest'ultimo è in quiete.
+
+\subsubsection{d\_cn\_07}
+
+(a) No, un sistema di punti materiali liberi non può avere $T=0$
+e $\vec{Q}\neq\vec{0}$. Infatti, se $T=0$ allora, per definizione
+dell'energia cinetica si ha $T=\frac{1}{2}{\displaystyle \sum_{k=0}^{+\infty}}m_{i}v_{i}^{2}=0$
+e poichè la massa è sempre positiva per definizione e $v_{i}^{2}\geq0$
+per far si che la somma si annulli $v_{i}^{2}=0$. Dunque anche i
+vettori sono nulli e $\vec{Q}={\displaystyle \sum_{k=0}^{+\infty}}m_{i}v_{i}=0$.
+
+(b) Sì, un sistema di punti materiali può avere $\vec{Q}=\vec{0}$
+e $T\neq0$ poichè, in generale nella sommatoria $\vec{Q}={\displaystyle \sum_{k=0}^{+\infty}}m_{i}v_{i}=0$
+potrebbero esserci vettori con modulo negativo che sommati a quelli
+di modulo positivo annullano il risultato. Siccome in $T=\frac{1}{2}{\displaystyle \sum_{k=0}^{+\infty}}m_{i}v_{i}^{2}$
+i moduli dei vettori sono tutti elevati al quadrato potrebbe valere
+un risultato non nullo.
+
+\subsubsection{d\_cn\_08}
+
+(a) No, un corpo rigido non può avere $T=0$ e $\vec{Q}\neq\vec{0}$.
+Infatti, se $T=0$ allora, per il teorema di König si ha $T=\frac{1}{2}Mv_{G}^{2}+\frac{1}{2}I_{g}\omega^{2}=0$.
+Poichè massa e momento di inerzia $I_{g}$ sono entrambi positivi,
+l'unica possibilità affinchè la somma sia nulla è che $v_{G}=0$,
+$\omega=0$. Dunque la quantità di moto $\vec{Q}=M\vec{v_{G}}=\vec{0}$.
+
+(b) Sì, un corpo rigido può avere $\vec{Q}=\vec{0}$ e $T\neq0$.
+Infatti anche se $\vec{Q}=M\vec{v_{G}}=\vec{0}$ e dunque $v_{G}=0$
+non è detto che la velocità angolare di rotazione $\omega^{2}$ sia
+anch'essa nulla, dunque in generale $T=\cancelto{0}{\frac{1}{2}Mv_{G}^{2}}+\frac{1}{2}I_{g}\omega^{2}\neq0$.
+
+\subsubsection{d\_cn\_09}
+
+Sì, poichè se le forze esterne agenti sono conservative, esse compiono
+un lavoro dato dalla variazione del potenziale e ciò significa, per
+il teorema di conservazione dell'energia meccanica, che l'energia
+meccanica totale si conserva. 
+
+\subsubsection{d\_cn\_10}
+
+No, poichè se le forze interne agenti non sono conservative, per violazione
+della condizione necessaria e sufficiente per la conservazione dell'energia
+meccanica quest'ultima non si conserva.
+
+\subsubsection{d\_cn\_11}
+
+Sì, la quantità di moto si conserva poichè dalla prima equazione cardinale
+della dinamica $\dot{\vec{Q}}=\vec{\mathscr{R}}^{\left(e\right)}$,
+perciò non è importante che le forze interne siano conservative o
+meno. Inoltre poichè il sistema è isolato, allora la risultate delle
+forze esterne $\vec{\mathscr{R}}^{\left(e\right)}=0$ e dunque $\dot{\vec{Q}}=0$
+e $\vec{Q}\equiv\text{cost.}$.
+
+\subsubsection{d\_cn\_12}
+
+No, la quantità di moto non si conserva poichè dalla prima equazione
+cardinale della dinamica $\dot{\vec{Q}}=\vec{\mathscr{R}}^{\left(e\right)}$,
+perciò non è importante che le forze esterne siano conservative o
+meno. Inoltre poichè la risultate delle forze esterne $\vec{\mathscr{R}}^{\left(e\right)}\neq0$
+e dunque $\dot{\vec{Q}}\neq0$ perciò in generale $\vec{Q}\cancel{\equiv}\text{cost.}$.
+
+\subsubsection{d\_cn\_13}
+
+Sì, il momento angolare si conserva poichè dalla seconda equazione
+cardinale della dinamica $\dot{\vec{K}}^{\left(O\right)}=-\vec{v}_{O}\wedge\vec{Q}+\vec{\mathscr{M}}_{\left(O\right)}^{\left(e\right)}$
+da cui, considerando $O$ un centro di riduzione fisso $\vec{v}_{O}=\vec{0}$
+e $\dot{\vec{K}}^{\left(O\right)}=\vec{\mathscr{M}}_{\left(O\right)}^{\left(e\right)}$
+. Inoltre poichè il sistema è isolato, allora $\vec{\mathscr{M}}_{\left(O\right)}^{\left(e\right)}=\vec{0}$
+e dunque $\dot{\vec{K}}^{\left(O\right)}=0$ e $\vec{K}^{\left(O\right)}\equiv\text{cost.}$.
+
+\subsubsection{d\_cn\_14}
+
+No, il momento angolare non si conserva poichè dalla seconda equazione
+cardinale della dinamica $\dot{\vec{K}}^{\left(O\right)}=-\vec{v}_{O}\wedge\vec{Q}+\vec{\mathscr{M}}_{\left(O\right)}^{\left(e\right)}$
+da cui, considerando $O$ un centro di riduzione fisso $\vec{v}_{O}=\vec{0}$
+e $\dot{\vec{K}}^{\left(O\right)}=\vec{\mathscr{M}}_{\left(O\right)}^{\left(e\right)}$
+. Inoltre poichè il momento angolare risultante$\vec{\mathscr{M}}_{\left(O\right)}^{\left(e\right)}\neq\vec{0}$
+e dunque $\dot{\vec{K}}^{\left(O\right)}\neq0$ perciò in generale
+$\vec{K}^{\left(O\right)}\cancel{\equiv}\text{cost.}$.
+
+\subsubsection{d\_cn\_15}
+
+La costanza della velocità areolare nel moto dei pianeti è spiegata
+dal principio di conservazione del momento angolare. Infatti, prendendo
+come centro di riduzione il centro del sole $S$ si ha:
+
+\[
+\left\{ \begin{gathered}\vec{A}_{P\left(S\right)}=\frac{1}{2}\vec{r}_{PS}\wedge\vec{v}\\
+\vec{K}_{P\left(S\right)}=\vec{r}_{PS}\wedge m\vec{v}
+\end{gathered}
+\right.\Longrightarrow\vec{A}_{P\left(S\right)}=\frac{1}{2m}\vec{K}_{P\left(S\right)}
+\]
+
+Dunque la velocità areolare si conserva se e solo se si conserva il
+momento angolare. Inoltre, come conseguenze delle equazioni cardinali
+della dinamica abbiamo che in un SdR inerziale e trascurando l'effetto
+della presenza di altri pianeti, il momento angolare di un pianeta
+$P$ rispetto al centro del Sole S si conserva: $\vec{K}_{P\left(S\right)}\equiv\text{cost.}$
+e di conseguenza anche la velocità areolare.
+
+\subsubsection{d\_cn\_16}
+
+Le orbite dei pianteti sono vincolate a giacere su di un piano dal
+principio di conservazione del momento angolare. Infatti prendendo
+come centro di riduzione il centro del Sole $S$, si ha $\vec{K}_{P\left(S\right)}=\vec{r}_{PS}\wedge m\vec{v}$.
+Se supponiamo il momento angolare rimanga costante allora:
+
+\[
+\left\{ \begin{gathered}\vec{v}\perp\vec{K}_{P\left(S\right)}\\
+\vec{r}_{PS}\perp\vec{K}_{P\left(S\right)}
+\end{gathered}
+\right.
+\]
+
+Poichè infine la forza gravitazionale è una forza centrale : $\vec{F}_{g}\parallel\vec{r}_{PS}$
+e per il secondo principio della dinamica $\vec{F}=m\vec{a}$, allora
+$\vec{a}\parallel\vec{F}_{g}\parallel\vec{r}_{PS}$.
+
+Cioè si ha che sia velocità che accelerazione stanno in un piano perpendicolare
+a $\vec{K}_{P\left(S\right)}$:
+
+\[
+\left\{ \begin{gathered}\vec{v}\perp\vec{K}_{P\left(S\right)}\\
+\vec{a}\perp\vec{K}_{P\left(S\right)}
+\end{gathered}
+\right.
+\]
+
+e dunque il moto può avvenire soltanto sul piano perpendiacolare a
+$\vec{K}_{P\left(S\right)}$.
+
+\pagebreak{}
+
+\subsubsection{d\_cn\_17}
+
+Poichè le due sferette sono lanciate verticalmente verso l'alto da
+due forze uguali, che agiscono nello stesso intervallo di tempo $\left[t_{0},t_{1}\right]$,
+esse subiranno lo stesso impulso che, per il teorema dell'impulso
+:
+
+\[
+\int_{t_{0}}^{t_{1}}\vec{F}\text{d}t=Q\left(t_{1}\right)-Q\left(t_{0}\right)
+\]
+
+poichè esse sono entrambe ferme all'istante $t_{0}$, al termine della
+spinta (istante $t_{1}$) esse possiederanno la stessa quantità di
+moto, cioè:
+
+\[
+mv_{1}=MV_{1}=Q\Rightarrow\left\{ \begin{gathered}v_{1}=\frac{Q}{m}\\
+V_{1}=\frac{Q}{M}
+\end{gathered}
+\right.
+\]
+
+Infine, poichè nell'istante in cui la sferetta raggiuge la quota più
+elevata, essa ha convertito tutta l'energia cinetica in energia potenziale
+gravitazionale si ha:
+
+\[
+\left\{ \begin{gathered}mgh=\frac{1}{2}mv_{1}^{2}\\
+MgH=\frac{1}{2}MV_{1}^{2}
+\end{gathered}
+\right.\Rightarrow\left\{ \begin{gathered}h=\frac{1}{2}\frac{Q^{2}}{gm^{2}}\\
+H=\frac{1}{2}\frac{Q^{2}}{gM^{2}}
+\end{gathered}
+\right.
+\]
+
+ed essendo $m<M$ si ha che $h>H$, dunque la sferetta più leggera
+raggiunge quota più elevata.
+
+\subsubsection{d\_di\_01 - d\_di\_10}
+
+TO-DO
+
+\subsubsection{d\_di\_11}
+\begin{center}
+\includegraphics[scale=0.45,bb = 0 0 200 100, draft, type=eps]{img/d_di_11.PNG}
+\par\end{center}
+
+Ricaviamo l'espressione dell'accelerazione gravitazionale $g$ di
+caduta dei corpi sulla terra in funzione della latitudine dall'espressione
+della forza peso $m\vec{g}=m\vec{g}'+\vec{\Phi}_{T}$. Separando le
+componenti parallela e perpendicolare a $\vec{r}_{OP}$ si ha:
+
+\[
+\left.\begin{gathered}\parallel\\
+\perp
+\end{gathered}
+\right\{ \begin{aligned}mg\cos\varphi= & mg'-\Phi_{T}\cos\theta\\
+mg\sin\varphi= & \Phi_{T}\sin\theta
+\end{aligned}
+\Rightarrow\left.\begin{gathered}\parallel\\
+\perp
+\end{gathered}
+\right\{ \begin{aligned}g\cos\varphi= & g'-\frac{\Phi_{T}}{m}\cos\theta\\
+g\sin\varphi= & \frac{\Phi_{T}}{m}\sin\theta
+\end{aligned}
+\]
+
+\[
+\text{Essendo }\vec{\Phi}_{T}=-m\left[\underset{\vec{0}}{\underbrace{\vec{a}_{O}}}+\underset{\vec{0}}{\underbrace{\dot{\vec{\omega}}}}\wedge\vec{r}_{OP}+\vec{\omega}\wedge\left(\vec{\omega}\wedge\vec{r}_{OP}\right)\right]\Rightarrow\left\Vert \vec{\Phi}_{T}\right\Vert =\left\Vert -m\left[\vec{\omega}\wedge\left(\vec{\omega}\wedge\vec{r}_{OP}\right)\right]\right\Vert =m\omega^{2}R\cos\theta\text{ allora:}
+\]
+
+\[
+\left.\begin{gathered}\parallel\\
+\perp
+\end{gathered}
+\right\{ \begin{aligned}g\cos\varphi= & g'-\omega^{2}R\cos^{2}\theta\\
+g\sin\varphi= & \omega^{2}R\cos\theta\sin\theta
+\end{aligned}
+\Rightarrow\text{poichè }\varphi\approx2\text{mrad, allora }\cos\varphi\gg\sin\varphi\text{ e }\cos\varphi\approx1\text{ allora dalla prima equazione:}
+\]
+
+\[
+g\left(\theta\right)\approx g'\left(\theta\right)-\omega^{2}R\cos^{2}\theta
+\]
+
+\subsubsection{d\_di\_12}
+
+Ricaviamo l'espressione della velocità di rotazione del piano di oscillazione
+del pendolo di Focault in funzione della velocità di rotazione della
+terra e della latitudine dal sistema
+\begin{center}
+\includegraphics[scale=0.35,bb = 0 0 200 100, draft, type=eps]{img/PendoloDiFoucault.PNG}
+\par\end{center}
+
+\[
+\left\{ \begin{aligned}ds= & rd\alpha'\\
+ds= & \frac{r}{\sin\varphi}d\alpha
+\end{aligned}
+\right.\text{ da cui }d\alpha=\frac{\sin\varphi}{r}ds=\sin\varphi d\alpha'
+\]
+
+\[
+d\alpha=\sin\varphi d\alpha'\Rightarrow\omega=\omega'\sin\varphi
+\]
+
+\subsubsection{d\_di\_13}
+
+\[
+\text{Essendo }\vec{Q}=\sum_{i=1}^{n}m_{i}\vec{v}_{i}\text{ l'espressione della quantità di moto}
+\]
+
+\[
+\dot{\vec{Q}}=\sum_{i=1}^{n}m_{i}\vec{a}_{i}=\sum_{i=1}^{n}\vec{F}_{i}=\vec{\mathscr{R}}\text{ per il II principio della dinamica}
+\]
+
+\[
+\text{Ora poichè per il III principio della dinamica si ha che }\vec{\mathscr{R}}_{\left(i\right)}=\vec{0}\text{ , allora }\dot{\vec{Q}}=\vec{\mathscr{R}}_{\left(e\right)}
+\]
+
+\subsubsection{d\_di\_14}
+
+\[
+\text{Essendo }\vec{K}^{\left(O\right)}=\sum_{i=1}^{n}\vec{r}_{OP_{i}}\wedge m_{i}\vec{v}_{i}\text{ l'espressione del momento angolare}
+\]
+
+\[
+\dot{\vec{K}}^{\left(O\right)}=\sum_{i=1}^{n}\left(\vec{v}_{i}-\vec{v}_{O}\right)\wedge m_{i}\vec{v}_{i}+\sum_{i=1}^{n}\vec{r}_{OP_{i}}\wedge\stackrel{\vec{F}_{i}}{\overbrace{m_{i}\vec{a}_{i}}}=\sum_{i=1}^{n}\underset{\vec{0}}{\underbrace{\vec{v}_{i}\wedge m_{i}\vec{v}_{i}}}-\vec{v}_{O}\wedge\underset{\vec{Q}}{\underbrace{\sum_{i=1}^{n}m_{i}\vec{v}_{i}}}+\underset{\vec{\mathscr{M}}^{\left(O\right)}}{\underbrace{\sum_{i=1}^{n}\vec{r}_{OP_{i}}\wedge\vec{F}_{i}}}=-\vec{v}_{O}\wedge\vec{Q}+\vec{\mathscr{M}}^{\left(O\right)}
+\]
+
+\[
+\text{Ora poichè per il III principio della dinamica si ha che }\vec{\mathscr{M}}_{\left(i\right)}^{\left(O\right)}=\vec{0}\;\forall O\text{ , allora }\dot{\vec{K}}^{\left(O\right)}=-\vec{v}_{O}\wedge\vec{Q}+\vec{\mathscr{M}}_{\left(e\right)}^{\left(O\right)}
+\]
+
+\subsubsection{d\_di\_15}
+
+Se il sistema non è troppo esteso, cioè $\vec{g}$ è uniforme su tutto
+il sistema, allora $\vec{F}_{i}=m_{i}\vec{g}$ e $\vec{\mathscr{R}}=M\vec{g}$
+quindi:
+
+\[
+\vec{r}_{OB}=\frac{1}{\left\Vert \vec{\mathscr{R}}\right\Vert }\sum_{i=1}^{n}\left\Vert \vec{F}_{i}\right\Vert \vec{r}_{OP_{i}}=\frac{1}{Mg}\sum_{i=1}^{n}m_{i}g\vec{r}_{OP_{i}}=\frac{1}{Mg}g\sum_{i=1}^{n}m_{i}\vec{r}_{OP_{i}}=\frac{1}{M}\sum_{i=1}^{n}m_{i}\vec{r}_{OP_{i}}=\vec{r}_{OG}
+\]
+
+cioè il centro di massa $G$ coincide con il centro di gravità (baricentro)
+$B$.
+
+\subsubsection{d\_di\_16}
+
+Essendo $\vec{r}_{OG}=\frac{1}{M}{\displaystyle \sum_{i=1}^{n}}m_{i}\vec{r}_{OP_{i}}$,
+derivando rispetto al tempo si ottiente $\vec{v}_{G}=\frac{1}{M}{\displaystyle \sum_{i=1}^{n}}m_{i}\vec{v}_{i}=\frac{\vec{Q}}{M}$
+quindi $\vec{Q}=M\vec{v}_{G}$.
+
+\subsubsection{d\_di\_17}
+
+Essendo $\vec{r}_{OG}=\frac{1}{M}{\displaystyle \sum_{i=1}^{n}}m_{i}\vec{r}_{OP_{i}}$,
+derivando rispetto al tempo si ottiente $\vec{v}_{G}=\frac{1}{M}{\displaystyle \sum_{i=1}^{n}}m_{i}\vec{v}_{i}=\frac{\vec{Q}}{M}$
+quindi $\vec{Q}=M\vec{v}_{G}$.
+
+Derivando rispetto al tempo si ottiene $\dot{\vec{Q}}=M\vec{a}_{G}$.
+Per la I equazione cardinale della dinamica si ha anche che $\dot{\vec{Q}}=\mathscr{\vec{R}}_{\left(e\right)}$.
+
+Pertanto il teorema del moto del centro di massa afferma che $\mathscr{\vec{R}}_{\left(e\right)}=M\vec{a}_{G}$,
+ovvero, il centro di massa di un sistema mecanico si muove come un
+punto materiale con la massa dell'intero sistema, sottoposto a tutte
+le forze esterne che agiscono su di esso.
+
+\subsubsection{d\_di\_18}
+
+Scegliendo il centro di riduzione $O$ sull'asse di rotazione $\hat{u}$
+si ha per la formula fondamentale della cinematica dei corpi rigidi
+$\vec{v}_{i}=\vec{v}_{O}+\vec{\omega}\wedge\vec{r}_{OP_{i}}=\vec{\omega}\wedge\vec{r}_{OP_{i}}$.
+Ponendo $\vec{\omega}=\omega\hat{u}$, il momento angolare del corpo
+rigido si scrive:
+
+\[
+\vec{K}^{\left(O\right)}=\sum_{i=1}^{n}\vec{r}_{OP_{i}}\wedge m_{i}\vec{v}_{i}=\sum_{i=1}^{n}\vec{r}_{OP_{i}}\wedge m_{i}\left(\vec{\omega}\wedge\vec{r}_{OP_{i}}\right)=\omega\sum_{i=1}^{n}m_{i}\vec{r}_{OP_{i}}\wedge\left(\hat{u}\wedge\vec{r}_{OP_{i}}\right)
+\]
+
+Il momento angolare assiale si ottiene facendo:
+
+\[
+K^{\left(u\right)}=\vec{K}^{\left(O\right)}\cdot\hat{u}=\omega\hat{u}\cdot\sum_{i=1}^{n}m_{i}\vec{r}_{OP_{i}}\wedge\left(\hat{u}\wedge\vec{r}_{OP_{i}}\right)=\omega\sum_{i=1}^{n}m_{i}\hat{u}\cdot\vec{r}_{OP_{i}}\wedge\left(\hat{u}\wedge\vec{r}_{OP_{i}}\right)=\omega\sum_{i=1}^{n}m_{i}\hat{u}\wedge\vec{r}_{OP_{i}}\cdot\left(\hat{u}\wedge\vec{r}_{OP_{i}}\right)=\omega\sum_{i=1}^{n}m_{i}\left(\hat{u}\wedge\vec{r}_{OP_{i}}\right)^{2}
+\]
+
+Definito il momento di inerzia $I_{u}$ rispetto all'asse $u$: $I_{u}={\displaystyle \sum_{i=1}^{n}}m_{i}\left(\hat{u}\wedge\vec{r}_{OP_{i}}\right)^{2}$
+si ottiene che $K^{\left(u\right)}=I_{u}\omega$.
+\begin{center}
+\includegraphics[scale=0.2,bb = 0 0 200 100, draft, type=eps]{img/MomentoAnglareAssiale.PNG}
+\par\end{center}
+
+\pagebreak{}
+
+\subsubsection{d\_di\_19}
+
+Il teorema di Huygens-Steiner afferma che per un corpo qualsiasi il
+momento di inerzia rispetto a una qualsiasi retta $r$ è uguale al
+momento di inerzia rispetto alla retta $g$ passante per il centro
+di massa $G$ e parallela a $r$ aumentato del prodotto tra la massa
+totale del corpo e il quadrato della distanza tra le due rette.
+
+Si dimostra fissando l'origine degli assi nel centro di massa $G$
+con l'asse $z$ nella direzione della retta $g$.
+
+Essendo $I_{g}={\displaystyle \sum_{i=1}^{n}}m_{i}\left(x_{i}^{2}+y_{i}^{2}\right)$
+e ricordando che $x_{G}=\frac{1}{M}{\displaystyle \sum_{i=1}^{n}}m_{i}x_{i}=0$
+perchè abbiam fissato l'origine in $G$, allora:
+\begin{center}
+$I_{r}={\displaystyle \sum_{i=1}^{n}}m_{i}\left[\left(x_{i}-d\right)^{2}+y_{i}^{2}\right]={\displaystyle \sum_{i=1}^{n}}m_{i}\left[x_{i}^{2}-2x_{i}d+d^{2}+y_{i}^{2}\right]={\displaystyle \sum_{i=1}^{n}}m_{i}\left(x_{i}^{2}+y_{i}^{2}\right)+d^{2}\underset{M}{\underbrace{{\displaystyle \sum_{i=1}^{n}}m_{i}}}-2d\underset{Mx_{G}=0}{\underbrace{{\displaystyle \sum_{i=1}^{n}}m_{i}x_{i}}}=I_{g}+Md^{2}$ 
+\par\end{center}
+
+\begin{center}
+\includegraphics[scale=0.3,bb = 0 0 200 100, draft, type=eps]{img/Teorema_Huygens-Steiner.PNG}
+\par\end{center}
+
+\subsubsection{d\_di\_20}
+
+La relazione cercata è: $\vec{\mathscr{M}}_{\left(u\right)}^{\left(e\right)}=I_{u}\dot{\omega}$.
+
+Essendo $K_{u}=I_{u}\omega$ dove $I_{u}$ è il momento di inerzia
+del corpo rigido che ruota attorno a un asse fisso $u$.
+
+Detto $\hat{u}$ un versore con la stessa direzione della retta $u$
+e $O\in u$ si ha che $K_{u}=\vec{K}_{\left(O\right)}\cdot\hat{u}$
+e dunque $\vec{K}_{\left(O\right)}\cdot\hat{u}=I_{u}\omega$. Derivando
+rispetto al tempo abbiamo $\dot{\vec{K}}_{\left(O\right)}\cdot\hat{u}=I_{u}\dot{\omega}$.
+
+Dalla seconda equazione della dinamica abbiamo che $\dot{\vec{K}}_{\left(O\right)}=-\vec{v}_{O}\wedge\vec{Q}+\vec{\mathscr{M}}_{\left(O\right)}^{\left(e\right)}$.
+
+Poichè il punto $O$ è fissato su $u$ si trova in quiete, allora
+$\vec{v}_{O}=\vec{0}$ e si ha $\dot{\vec{K}}_{\left(O\right)}=\vec{\mathscr{M}}_{\left(O\right)}^{\left(e\right)}\Rightarrow\vec{\mathscr{M}}_{\left(O\right)}^{\left(e\right)}\cdot\hat{u}=I_{u}\dot{\omega}\Rightarrow\quad\vec{\mathscr{M}}_{\left(u\right)}^{\left(e\right)}=I_{u}\dot{\omega}$.
+
+\subsubsection{d\_di\_21}
+
+Una forza di forza non conservativa è la forza di attrito radente
+dinamico $\vec{F}=-F_{a}\hat{t}$. Per dimostrare che non è conservativa
+verifichiamo che non sia nullo il lavoro compiuto quando un punto
+materiale si muove su una traiettoria circolare chiusa:
+
+\[
+\left\{ \begin{aligned}x= & r\sin\varphi\\
+y= & r\cos\varphi
+\end{aligned}
+\right.\Rightarrow\left\{ \begin{aligned}\text{d}x= & r\cos\varphi\text{d}\varphi\\
+\text{d}y= & -r\sin\varphi\text{d}\varphi
+\end{aligned}
+\right.\text{ Da cui si ricava che }\left\{ \begin{aligned}t_{x}= & \cos\varphi\\
+t_{y}= & -\sin\varphi
+\end{aligned}
+\right.\Rightarrow\left\{ \begin{aligned}F_{x}= & -F_{a}\cos\varphi\\
+F_{y}= & F_{a}\sin\varphi
+\end{aligned}
+\right.
+\]
+\begin{center}
+Essendo $\vec{F}=-F_{a}\left(\cos\varphi\hat{i}-\sin\varphi\hat{j}\right)$
+e $\text{d}P=\text{d}x\hat{i}+\text{d}y\hat{j}=r\left(\cos\varphi\hat{i}-\sin\varphi\hat{j}\right)\text{d}\varphi$
+allora il lavoro si scrive $\cancel{\text{d}}L=\vec{F}\cdot\text{d}P=-F_{a}r\text{d}\varphi$
+\par\end{center}
+
+Allora integrando sulla circonferenza si ha: $L_{C}=\ointop_{C\left(O,r\right)}\vec{F}\cdot\text{d}P=\int_{0}^{2\pi}-F_{a}r\text{d}\varphi=-F_{a}r\left[\varphi\right]_{0}^{2\pi}=-2\pi F_{a}r\neq0$.
+
+\subsubsection{d\_di\_22}
+
+Il teorema delle forze vive afferma che il lavoro compiuto da tutte
+le forze (sia conservative che dissipative) che agiscono su di un
+sistema meccanico nel passaggio da una configurazione iniziale $A$
+a una configurazione finale $B$ è uguale alla corrispondente variazione
+dell'energia cinetica di tale sistema. Infatti definita l'energia
+cinetica $T=\frac{1}{2}{\displaystyle \sum_{i=1}^{n}}m_{i}v_{i}^{2}$
+si ha che:
+
+\[
+\cancel{\text{d}}L=\sum_{i=1}^{n}\vec{F}_{i}\cdot\vec{\text{d}P}_{i}=\sum_{i=1}^{n}m_{i}\vec{a}_{i}\cdot\frac{\vec{\text{d}P}_{i}}{\text{d}t}\text{d}t=\sum_{i=1}^{n}m_{i}\frac{\text{d}\vec{v}_{i}}{\text{d}t}\cdot\vec{v}_{i}\text{d}t=\frac{1}{2}\sum_{i=1}^{n}m_{i}\frac{\text{d}\left(v_{i}^{2}\right)}{\text{d}t}\text{d}t=\frac{\text{d}}{\text{d}t}\left(\frac{1}{2}\sum_{i=1}^{n}m_{i}v_{i}^{2}\right)\text{d}t=\frac{\text{d}T}{\text{d}t}\text{d}t
+\]
+
+\[
+\text{Dunque integrando tra }A\text{ e }B\text{ : }L_{A,B}=\underset{\gamma\left(A,B\right)}{\int}\cancel{\text{d}}L=\underset{\gamma\left(A,B\right)}{\int}\frac{\text{d}T}{\text{d}t}\text{d}t=\left[T\left(t\right)\right]_{t_{A}}^{t_{B}}=T_{B}-T_{A}
+\]
+
+\pagebreak{}
+
+\subsubsection{d\_di\_23}
+
+Il teorema di König per un sistema di punti materiali afferma che
+l'energia cinetica è la somma dell'energia cinetica del centro di
+massa e dell'energia cinetica relativa al centro di massa.
+
+(a) Dimostrazione per un sistema meccanico generico:
+
+\[
+\text{Definita l'energia cinetica }T\left(\vec{v}_{1},\ldots,\vec{v}_{n}\right)=\frac{1}{2}\sum_{i=1}^{n}m_{i}\vec{v}_{i}^{2}\text{ e }\vec{w}_{i}=\vec{v}_{i}-\vec{v}_{G}\text{ la velocità del punto \ensuremath{P_{i}} relativa al centro di massa \ensuremath{G}, si ha:}
+\]
+
+\[
+T=\frac{1}{2}\sum_{i=1}^{n}m_{i}\vec{v}_{G}^{2}+\frac{1}{2}\sum_{i=1}^{n}m_{i}\vec{w}_{i}^{2}+\vec{v}_{G}\cdot\sum_{i=1}^{n}m_{i}\vec{w}_{i}
+\]
+
+Definito inoltre il centro di massa mediante la relazione $\vec{r}_{OG}=\frac{1}{M}{\displaystyle \sum_{i=1}^{n}}m_{i}\vec{r}_{OP_{i}}\Rightarrow{\displaystyle \sum_{i=1}^{n}}m_{i}\vec{r}_{OP_{i}}=M\vec{r}_{OG}$.
+Osserviamo che prendendo come centro di riduzione il centro di massa
+$\left(O\equiv G\right)$ si ha che $M\vec{r}_{OG}=M\underset{\vec{0}}{\underbrace{\vec{r}_{GG}}}=\vec{0}={\displaystyle \sum_{i=1}^{n}}m_{i}\vec{r}_{GP_{i}}$.
+Derivando membro a membro si ottiene ${\displaystyle \sum_{i=1}^{n}}m_{i}\frac{\text{d}\vec{r}_{GP_{i}}}{\text{d}t}={\displaystyle \sum_{i=1}^{n}}m_{i}\vec{w}_{i}=\vec{0}$.
+Dunque possiamo riscrivere:
+
+\[
+T=\frac{1}{2}Mv_{G}^{2}+\frac{1}{2}\sum_{i=1}^{n}m_{i}w_{i}^{2}
+\]
+
+(b) Dimostrazione per un corpo rigido che rototrasla:
+\begin{center}
+\includegraphics[scale=0.17,bb = 0 0 200 100, draft, type=eps]{img/CorpoRigido_Rototrasla.PNG}
+\par\end{center}
+
+\[
+\text{Definita l'energia cinetica }T\left(\vec{v}_{1},\ldots,\vec{v}_{n}\right)=\frac{1}{2}\sum_{i=1}^{n}m_{i}\vec{v}_{i}^{2}\text{, essendo }\vec{v}_{i}=\vec{v}_{G}+\vec{\omega}\wedge\vec{r}_{GP_{i}}\text{ e }\vec{w}_{i}=\vec{v}_{i}-\vec{v}_{G}=\vec{\omega}\wedge\vec{r}_{GP_{i}}\text{ si ha come sopra:}
+\]
+
+\[
+T=\frac{1}{2}\sum_{i=1}^{n}m_{i}\vec{v}_{G}^{2}+\frac{1}{2}\sum_{i=1}^{n}m_{i}\vec{w}_{i}^{2}+\underset{0}{\underbrace{\vec{v}_{G}\cdot\sum_{i=1}^{n}m_{i}\vec{w}_{i}}}
+\]
+
+\[
+\text{Ricaviamo che: }\frac{1}{2}\sum_{i=1}^{n}m_{i}\vec{w}_{i}^{2}=\sum_{i=1}^{n}m_{i}\left(\vec{\omega}\wedge\vec{r}_{GP_{i}}\right)^{2}=\omega^{2}\sum_{i=1}^{n}m_{i}\left(\hat{u}\wedge\vec{r}_{GP_{i}}\right)^{2}=\omega^{2}I_{g}\text{ dunque possiamo riscrivere:}
+\]
+
+\[
+T=\frac{1}{2}Mv_{G}^{2}+\frac{1}{2}I_{g}\omega^{2}
+\]
+
+\pagebreak{}
+
+\subsubsection{d\_di\_24}
+
+La condizione necessaria e sufficiente affichè la forza posizionale
+$\vec{F}\left(\vec{r}\right)$ sia conservativa è che esista un campo
+scalare $U\left(\vec{r}\right)$, detto potenziale, tale che $L_{\gamma\left(A,B\right)}=U\left(\vec{r}_{B}\right)-U\left(\vec{r}_{A}\right)$.
+Dim:
+\begin{itemize}
+\item La condizione è necessaria poichè, se la forza posizionale $\vec{F}\left(\vec{r}\right)$
+è conservativa, allora scelto ad arbitrio un punto di partenza fisso
+$O$ si ha che $U\left(\vec{r}_{P}\right)=\underset{\gamma\left(O,P\right)}{\int}\vec{F}\cdot\text{d}\vec{r}$.
+Dunque risulta:
+\[
+L_{\gamma\left(A,B\right)}=\underset{\gamma\left(A,B\right)}{\int}\vec{F}\cdot\text{d}\vec{r}=\underset{\gamma_{1}\left(A,O\right)}{\int}\vec{F}\cdot\text{d}\vec{r}+\underset{\gamma_{2}\left(O,B\right)}{\int}\vec{F}\cdot\text{d}\vec{r}=\underset{\gamma_{1}\left(O,A\right)}{-\int}\vec{F}\cdot\text{d}\vec{r}+\underset{\gamma_{2}\left(O,B\right)}{\int}\vec{F}\cdot\text{d}\vec{r}=-U\left(\vec{r}_{A}\right)+U\left(\vec{r}_{B}\right)
+\]
+\end{itemize}
+\begin{center}
+\includegraphics[scale=0.12,bb = 0 0 200 100, draft, type=eps]{img/II_Proprieta.PNG}
+\par\end{center}
+\begin{itemize}
+\item La condizione è sufficiente poichè, se $L_{\gamma\left(A,B\right)}=U\left(\vec{r}_{B}\right)-U\left(\vec{r}_{A}\right)$,
+è evidente che il lavoro dipende soltanto dagli estremi e dunque la
+forza è conservativa.
+\end{itemize}
+
+\subsubsection{d\_di\_25}
+
+La condizione necessaria e sufficiente affinchè la forza posizionale
+$\vec{F}\left(\vec{r}\right)$ sia conservativa è che esista un campo
+scalare $U\left(\vec{r}\right)$, detto potenziale, tale che $\vec{F}\left(\vec{r}\right)=\left(\vec{\nabla}U\right)\left(\vec{r}\right)$.
+Dim:
+\begin{itemize}
+\item La condizione è necessaria poichè, se la forza posizionale $\vec{F}\left(\vec{r}\right)$
+è conservativa, allora $L_{\gamma\left(A,B\right)}=U\left(\vec{r}_{B}\right)-U\left(\vec{r}_{A}\right)$.
+Dunque per uno spostamento elementare $\text{d}\vec{r}=\text{d}x\hat{i}$
+risulta:
+\[
+\cancel{\text{d}}L=U\left(x+\text{d}x,y,z\right)-U\left(x,y,z\right)\text{ e }\cancel{\text{d}}L=\vec{F}\cdot\text{d}\vec{r}=\vec{F}\cdot\left(\text{d}x\hat{i}\right)=F_{x}\text{d}x\quad\Rightarrow F_{x}=\frac{U\left(x+\text{d}x,y,z\right)-U\left(x,y,z\right)}{\text{d}x}=\frac{\partial U}{\partial x}
+\]
+\[
+\text{Con un ragionamento analogo per \ensuremath{y} e \ensuremath{z} si ottiene }F_{y}=\frac{\partial U}{\partial y},\;F_{z}=\frac{\partial U}{\partial z}\text{ da cui: }\vec{F}=\frac{\partial U}{\partial x}\hat{i}+\frac{\partial U}{\partial y}\hat{j}+\frac{\partial U}{\partial z}\hat{k}=\vec{\nabla}U
+\]
+\item La condizione è sufficiente poichè, se $\vec{F}=\vec{\nabla}U$, allora
+$\cancel{\text{d}}L=\text{d}U=U\left(x+\text{d}x,y+\text{d}y,z+\text{d}z\right)-U\left(x,y,z\right)$.
+Dunque:
+\[
+L_{\gamma\left(A,B\right)}=\left[\cancel{U\left(P_{1}\right)}-U\left(A\right)\right]+\left[\cancel{U\left(P_{2}\right)}-\cancel{U\left(P_{1}\right)}\right]+\cdots+\left[\cancel{U\left(P_{n}\right)}-\cancel{U\left(P_{n-1}\right)}\right]+\left[U\left(B\right)-\cancel{U\left(P_{n}\right)}\right]=U\left(B\right)-U\left(A\right)
+\]
+\end{itemize}
+\begin{center}
+\includegraphics[scale=0.12,bb = 0 0 200 100, draft, type=eps]{img/III_proprieta.PNG}
+\par\end{center}
+
+\subsubsection{d\_di\_26}
+
+La condizione necessaria e sufficiente affinchè la forza posizionale
+$\vec{F}\left(\vec{r}\right)$ definita in un dominio semplicemente
+connesso $\mathscr{D}$ sia conservativa è che il rotore della forza
+sia ovunque nullo nel dominio di definizione $\left(\vec{\nabla}\wedge\vec{F}\right)\left(\vec{r}_{P}\right)=\vec{0},\quad\forall P\in\mathscr{D}\left(\vec{F}\right)$.
+Dim:
+\begin{itemize}
+\item La condizione è necessaria poichè, se la forza posizionale $\vec{F}\left(\vec{r}\right)$
+è conservativa, allora esiste una funzione potenziale $U$ tale che
+$\vec{F}=\vec{\nabla}U$. Perciò $\vec{\nabla}\wedge\vec{F}=\vec{\nabla}\wedge\left(\vec{\nabla}U\right)=\vec{0}$
+perchè il rotore di un gradiente è sempre nullo.
+\item La condizione è sufficiente poichè, se $\left(\vec{\nabla}\wedge\vec{F}\right)\left(\vec{r}_{P}\right)=\vec{0},\quad\forall P\in\mathscr{D}\left(\vec{F}\right)$,
+allora per il teorema di Stokes, scelta una superficie $\varSigma\subset\mathscr{D}$
+che abbia per bordo la curva $\gamma\subset\mathscr{D}$ (sompre possibile
+perchè semplicemente connesso), allora:
+
+$\underset{\gamma=\partial\varSigma}{\ointop}\vec{F}\cdot\text{d}\vec{r}=\underset{\varSigma}{\int\int}\left(\vec{\nabla}\wedge\vec{F}\right)\cdot\hat{n}\text{d}\varSigma=0,\quad\forall\gamma\subset\mathscr{D}\left(\vec{F}\right)$
+pertanto è conservativa.
+\end{itemize}
+\begin{center}
+\includegraphics[scale=0.13,bb = 0 0 200 100, draft, type=eps]{img/d_di_28.PNG}
+\par\end{center}
+
+\pagebreak{}
+
+\subsubsection{d\_di\_27}
+
+Dalla seconda legge di Keplero si trova che la forza di gravità $\vec{F}_{SP}$
+che il sole esercita sui pianeti è una forza centrale. Infatti per
+la costanza della velocità areolare risulta $\frac{1}{2}\vec{r}_{SP}\wedge\vec{v}_{P}=\vec{A}\equiv\text{cost.}$
+per cui derivando membro a membro rispetto al tempo si ottiene: $\underset{\vec{0}}{\underbrace{\frac{1}{2}\vec{v}_{P}\wedge\vec{v}_{P}}}+\frac{1}{2}\vec{r}_{SP}\wedge\vec{a}_{P}=\vec{0}\Rightarrow\vec{r}_{SP}\wedge\vec{a}_{P}=\vec{0}\Rightarrow\vec{r}_{SP}\parallel\vec{a}_{P}$.
+Perciò la forza, avendo la stessa direzione dell'accelerazione è anch'essa
+diretta come il vettore posizionale $\vec{F}_{SP}\parallel\vec{r}_{SP}$.
+
+\subsubsection{d\_di\_28}
+
+L'equazione dell'ellisse di semiassi $\alpha$ (maggiore) e $\beta$
+(minore) ed eccentricità $e$ in coordinate cilindriche è: $r\left(\varphi\right)=\frac{\alpha\left(1-e^{2}\right)}{1-e\cos\varphi}$.
+
+Dalla seconda legge di Keplero sappiamo che $A=\frac{1}{2}r^{2}\dot{\varphi}\equiv\text{cost.}$
+dunque durante un periodo $T$ del moto di rivoluzione
+
+\[
+TA=T\frac{1}{2}r^{2}\dot{\varphi}=\pi\alpha\beta\text{ cioè }\dot{\varphi}=\frac{2\pi}{T}\frac{\alpha\beta}{r^{2}}
+\]
+
+Determiniamo la componente azimutale dell'accelerazione $a_{\varphi}$
+a partire dall'espressione della velocità areolare: 
+\[
+\frac{1}{2}r^{2}\dot{\varphi}\equiv\text{cost.}\Rightarrow\frac{\text{d}\left(r^{2}\dot{\varphi}\right)}{\text{d}t}=0\Rightarrow2r\dot{r}\dot{\varphi}+r^{2}\ddot{\varphi}=r\left(2\dot{r}\dot{\varphi}+r\ddot{\varphi}\right)=ra_{\varphi}=0
+\]
+quindi, essendo $r\neq0$, $a_{\varphi}=0$.
+
+Poichè $a_{r}=\ddot{r}-r\dot{\varphi}^{2}$ ricaviamo il termine $\ddot{r}$
+a partire dall'equazione dell'ellisse e dalla derivata dell'angolo
+$\varphi$ rispetto al tempo:
+
+\[
+r=\frac{\alpha\left(1-e^{2}\right)}{1-e\cos\varphi}\Rightarrow\dot{r}=-\frac{\alpha\left(1-e^{2}\right)}{\left(1-e\cos\varphi\right)^{2}}\left(e\sin\varphi\right)\dot{\varphi}=-\frac{2\pi}{T}\alpha\beta\frac{e\left(\sin\varphi\right)}{\alpha\left(1-e^{2}\right)}\Rightarrow\ddot{r}=-\frac{2\pi}{T}\alpha\beta\frac{e\left(\cos\varphi\right)\dot{\varphi}}{\alpha\left(1-e^{2}\right)}=-\frac{4\pi^{2}}{T^{2}}\frac{\alpha^{2}\beta^{2}}{r^{2}}\frac{e\left(\cos\varphi\right)}{\alpha\left(1-e^{2}\right)}
+\]
+
+Determiniamo ora la componente radiale dell'accelerazione $a_{r}=\ddot{r}-r\dot{\varphi}^{2}$
+dai dati precedentemente calcolati e dalla relazione $\alpha^{2}\left(1-e^{2}\right)=\beta^{2}$:
+\[
+a_{r}=-\frac{4\pi^{2}}{T^{2}}\frac{\alpha^{2}\beta^{2}}{r^{2}}\left[\frac{e\left(\cos\varphi\right)}{\alpha\left(1-e^{2}\right)}+\frac{1}{r}\right]=-\frac{4\pi^{2}}{T^{2}}\frac{\alpha^{2}\beta^{2}}{r^{2}}\left[\frac{e\left(\cos\varphi\right)}{\alpha\left(1-e^{2}\right)}+\frac{1-e\cos\varphi}{\alpha\left(1-e^{2}\right)}\right]=-\frac{4\pi^{2}}{T^{2}}\frac{\alpha^{2}\beta^{2}}{r^{2}}\frac{1}{\alpha\left(1-e^{2}\right)}=-\frac{4\pi^{2}}{T^{2}}\frac{\alpha^{3}}{r^{2}}\frac{\cancel{\beta^{2}}}{\cancel{\alpha^{2}\left(1-e^{2}\right)}}
+\]
+
+Poichè dunque il vettore accelerazione nella base cilindrica vale
+$\vec{a}_{P}=a_{r}\hat{i}_{r}+a_{\varphi}\hat{i}_{\varphi}+a_{z}\hat{k}$
+e $\vec{F}_{SP}=m_{p}\vec{a}_{P}$ allora possiamo dire che $\vec{F}_{SP}=-m_{P}\frac{4\pi^{2}}{T^{2}}\frac{\alpha^{3}}{r^{2}}\hat{i}_{r}$
+perciò la forza di gravità esercitata da due punti materiali ha modulo
+inversamente proporzionale al quadrato della distanza tra i due punti
+materiali.
+
+\subsubsection{d\_di\_29}
+
+Nell'espressione $\vec{F}_{SP}=-m_{P}\frac{4\pi^{2}}{T^{2}}\frac{\alpha^{3}}{r^{2}}\hat{i}_{r}=-m_{P}\frac{k}{r_{SP}^{2}}\hat{r}_{SP}$
+il fattore $k=\frac{4\pi^{2}}{T^{2}}\alpha^{3}$ contiene il rapporto
+tra il cubo del semiasse maggiore $\alpha$ dell'ellisse e il quadrato
+del tempo di rivoluzione $T$ che , per la terza legge di Keplero
+$\left(T^{2}\propto\alpha^{3}\right)$ è lo stesso per tutti i pianeti.
+Per il III principio della dinamica la forza che il sole esercita
+sul pianeta è opposta alla forza che il pianeta esercita sul sole
+e poichè la forza è proporzionale alla massa del pianeta $m_{P}$,
+per ragioni di simmetria, deve essere anche proporzionale alla massa
+del sole $m_{S}$. La costante $k$ dovrà quindi contenere la massa
+del sole: $k=\gamma m_{S}$.
+
+Otteniamo quindi la legge $\vec{F}_{SP}=-\gamma\frac{m_{P}m_{S}}{r_{SP}^{2}}\hat{r}_{SP}$
+dalla quale si nota che la forza di gravità esercitata da due punti
+materiali ha modulo direttamente proporzionale alle masse dei due
+punti materiali.
+\end{document}

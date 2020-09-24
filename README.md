@@ -1,5 +1,4 @@
 # Unibo_computerEngineeringNotes-
-A collection of notes from my computer engineering courses
 
 Credits to Giorgio Renzi for notes:
 - Analisi Matematica T-1
